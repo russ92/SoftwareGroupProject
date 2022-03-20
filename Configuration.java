@@ -2,6 +2,11 @@ import twitter4j.*;
 import twitter4j.conf.ConfigurationBuilder;
 import twitter4j.auth.AccessToken;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.PrintWriter;
+import java.io.FileWriter;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
@@ -36,17 +41,21 @@ public class Configuration {
 //        TwitterFactory tf = new TwitterFactory(Configuration.getConfigurationBuilder().build());
 //
         twitter4j.Twitter twitter = tf.getInstance();
-
-
         Query query = new Query("#Vaccinated");
         QueryResult result = twitter.search(query);
 
         List<Status> status = result.getTweets();
-
+        File Corpus = new File("corpus.txt");
         for(Status s:status) {
             Tweet tweet = new Tweet(s.getId(),s.getUser().getScreenName(), s.getText(), s.getRetweetCount(), s.getCreatedAt());
-            // System.out.println(s.getUser().getName() + " " + s.getText());
-
+            try(FileWriter fw = new FileWriter("corpus.txt", true);
+            BufferedWriter bw = new BufferedWriter(fw);
+            PrintWriter out = new PrintWriter(bw))
+             {
+                out.println(tweet.toString());
+            } catch (Exception e) {
+                //TODO: handle exception
+            }
             System.out.println(tweet.toString());
         }
 
