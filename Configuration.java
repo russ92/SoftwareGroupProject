@@ -145,14 +145,13 @@ public class Configuration {
                 .setOAuthAccessTokenSecret("oTrFpROQkeDoPfpSRNIp6NeqOVQW9rHYOXXV5jLyl5hjA");
         TwitterFactory tf = new TwitterFactory(cb.build());
 
-        // TwitterFactory tf = new
-        // TwitterFactory(Configuration.getConfigurationBuilder().build());
-        //
+        // TwitterFactory tf = new TwitterFactory(Configuration.getConfigurationBuilder().build());
+
         List<String> hashtags = Arrays.asList("#Vaccinated", "#Covid-19", "#VaccineMandate", "#CovidHoax",
                 "#FuckVaccines", "#Vaxxed", "#MicrochipVaccine", "#GatesVaccine", "#NoVaccine", "#GetVaccinated",
                 "#Booster");
         twitter4j.Twitter twitter = tf.getInstance();
-        Query query = new Query(hashtags);
+        Query query = new Query(hashtags.toString());
         QueryResult result = twitter.search(query);
 
         List<Status> status = result.getTweets();
@@ -170,12 +169,12 @@ public class Configuration {
             System.out.println(tweet.toString());
         }
 
-        //Stream tweets
+            //Stream tweets
 
-        TwitterListener tl = new TwitterListener();
-        TwitterStreamRunner tsr = new TwitterStreamRunner(cb, tl);
-        tsr.start();
-
+            TwitterListener tl = new TwitterListener();
+            TwitterStreamRunner tsr = new TwitterStreamRunner(cb, tl);
+            tsr.start();
     }
+
 
 }

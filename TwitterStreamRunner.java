@@ -9,8 +9,13 @@ import javax.annotation.PreDestroy;
 import java.lang.reflect.Array;
 import java.util.Arrays;
 
+
 @Component
 public class TwitterStreamRunner implements StreamRunner {
+
+    private static final String[] HASHTAGS = {"Vaccinated", "Covid-19", "VaccineMandate", "CovidHoax",
+            "FuckVaccines", "Vaxxed", "MicrochipVaccine", "GatesVaccine", "NoVaccine", "GetVaccinated",
+            "Booster"};
 
     private static final org.slf4j.Logger LOG = LoggerFactory.getLogger(TwitterListener.class);
 
@@ -29,11 +34,11 @@ public class TwitterStreamRunner implements StreamRunner {
     public void start() throws TwitterException{
         twitterStream = new TwitterStreamFactory().getInstance();
         twitterStream.addListener(twitterListener);
-        String[] hashtags = {"AntiVax", "Covid", "Vaccines", "GetVaccinated"};
-        FilterQuery filterQuery = new FilterQuery(hashtags);
+
+        FilterQuery filterQuery = new FilterQuery(HASHTAGS);
         twitterStream.filter(filterQuery);
-        LOG.info("Stream using hashtags: ", Arrays.toString(hashtags));
-        
+        LOG.info("Stream using hashtags: ", Arrays.toString(HASHTAGS));
+
     }
 
     @PreDestroy
