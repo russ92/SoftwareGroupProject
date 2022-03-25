@@ -1,5 +1,7 @@
 package sweproject;
 
+import java.util.Scanner;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
@@ -21,20 +23,29 @@ public class TwitterListener extends StatusAdapter {
         System.out.println("\n" + tweet);
         System.out.println(user);
 
-        try (FileWriter fw1 = new FileWriter("VaxData/corpus.txt", true);
-                BufferedWriter bw1 = new BufferedWriter(fw1);
-                PrintWriter out = new PrintWriter(bw1)) {
-            out.println(tweet.toString());
-        } catch (Exception e) {
-            // TODO: handle exception
-        }
+        Scanner scanner = new Scanner("VaxData/corpus.txt");
+        string id = s.getId();
+        while (scanner.hasNextLine()) {
+            String line = scanner.nextLine();
+            if (line.contains(id)) {
+                System.out.println("TWEET ALREADY COLLECTED");
+            } else {
+                try (FileWriter fw1 = new FileWriter("VaxData/corpus.txt", true);
+                        BufferedWriter bw1 = new BufferedWriter(fw1);
+                        PrintWriter out = new PrintWriter(bw1)) {
+                    out.println(tweet.toString());
+                } catch (Exception e) {
+                    // TODO: handle exception
+                }
 
-        try (FileWriter fw2 = new FileWriter("VaxData/accountData.txt", true);
-                BufferedWriter bw2 = new BufferedWriter(fw2);
-                PrintWriter out = new PrintWriter(bw2)) {
-            out.println(user.toString());
-        } catch (Exception e) {
-            // TODO: handle exception
+                try (FileWriter fw2 = new FileWriter("VaxData/accountData.txt", true);
+                        BufferedWriter bw2 = new BufferedWriter(fw2);
+                        PrintWriter out = new PrintWriter(bw2)) {
+                    out.println(user.toString());
+                } catch (Exception e) {
+                    // TODO: handle exception
+                }
+            }
         }
     }
 }
