@@ -1,5 +1,3 @@
-package sweproject;
-
 import twitter4j.TwitterException;
 
 public interface StreamRunner {

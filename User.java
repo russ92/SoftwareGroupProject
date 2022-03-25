@@ -1,5 +1,3 @@
-package sweproject;
-
 public class User {
 
     private long user_id;

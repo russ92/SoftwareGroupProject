@@ -1,5 +1,3 @@
-package sweproject;
-
 //import twitter4j.*;
 //import twitter4j.Twitter;
 //import twitter4j.conf.ConfigurationBuilder;
