@@ -1,4 +1,4 @@
-package main.java.sweproject;
+package sweproject;
 
 //import twitter4j.*;
 //import twitter4j.Twitter;
@@ -114,7 +114,8 @@ import twitter4j.*;
 
         import java.io.BufferedWriter;
         import java.io.File;
-        import java.io.FileWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
         import java.io.PrintWriter;
         import java.io.FileWriter;
 import java.util.*;
@@ -135,14 +136,31 @@ public class Configuration {
     }
 
     public static void main(String[] args) throws TwitterException {
+        String consumerKey="";
+        String consumerSecret="";
+        String accessToken = "";
+        String accessSecret="";
+
+        try(FileReader reader = new FileReader("config.txt")) {
+            Properties properties = new Properties();
+            properties.load(reader);
+
+            consumerKey = properties.getProperty("consumerKey");
+            consumerSecret = properties.getProperty("consumerSecret");
+            accessToken = properties.getProperty("accessToken");
+            accessSecret = properties.getProperty("accessSecret");
+
+        } catch (Exception e) {
+            //TODO: handle exception
+        }
 
         ConfigurationBuilder cb = new ConfigurationBuilder();
 
         cb.setDebugEnabled(true)
-                .setOAuthConsumerKey("gTWIzVqaTvmjacNljrRQgaUIX")
-                .setOAuthConsumerSecret("05gAN6pxHE0h4JvwsvTxa4crr8qGHxz6yQHMhkjOMcXswHABIJ")
-                .setOAuthAccessToken("1500840083271962637-FtvxEI2m3gdBiddNEBrTVfc6xvIHNh")
-                .setOAuthAccessTokenSecret("oTrFpROQkeDoPfpSRNIp6NeqOVQW9rHYOXXV5jLyl5hjA");
+                .setOAuthConsumerKey(consumerKey)
+                .setOAuthConsumerSecret(consumerSecret)
+                .setOAuthAccessToken(accessToken)
+                .setOAuthAccessTokenSecret(accessSecret);
         TwitterFactory tf = new TwitterFactory(cb.build());
 
         // TwitterFactory tf = new TwitterFactory(Configuration.getConfigurationBuilder().build());
@@ -155,18 +173,10 @@ public class Configuration {
         QueryResult result = twitter.search(query);
 
         List<Status> status = result.getTweets();
-        File Corpus = new File("test.txt");
         for (Status s : status) {
             Tweet tweet = new Tweet(s.getId(), s.getUser().getScreenName(), s.getText(), s.getRetweetCount(),
                     s.getCreatedAt());
-            try (FileWriter fw = new FileWriter("corpus.txt", true);
-                 BufferedWriter bw = new BufferedWriter(fw);
-                 PrintWriter out = new PrintWriter(bw)) {
-                out.println(tweet.toString());
-            } catch (Exception e) {
-                // TODO: handle exception
-            }
-            System.out.println(tweet.toString());
+            writer(tweet);
         }
 
             //Stream tweets
@@ -176,5 +186,14 @@ public class Configuration {
             tsr.start();
     }
 
+    public static void writer(Tweet tweet){
+        try (FileWriter fw = new FileWriter("VaxData/vaxTweets.txt", true);
+                 BufferedWriter bw = new BufferedWriter(fw);
+                 PrintWriter out = new PrintWriter(bw)) {
+                out.println(tweet.toString().replace("\n", " "));
+            } catch (Exception e) {
+                // TODO: handle exception
+            }
+    }
 
 }

@@ -17,6 +17,7 @@ public class TwitterListener extends StatusAdapter {
         Tweet tweet = new Tweet(s.getId(), s.getUser().getName(), s.getText(), s.getRetweetCount(),
                 s.getCreatedAt());
         User user = new User(s.getUser().getId(), s.getUser().getName(), s.getUser().getLocation(), s.getUser().getDescription(), s.getUser().getFollowersCount());
+        Configuration.writer(tweet);
         System.out.println("\n" + tweet);
         System.out.println(user);
     }
