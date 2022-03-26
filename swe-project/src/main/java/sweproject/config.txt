@@ -1,7 +1,7 @@
-consumerKey =       gTWIzVqaTvmjacNljrRQgaUIX
-consumerSecret =    05gAN6pxHE0h4JvwsvTxa4crr8qGHxz6yQHMhkjOMcXswHABIJ
-accessToken =       1500840083271962637-FtvxEI2m3gdBiddNEBrTVfc6xvIHNh
-accessTokenSecret = oTrFpROQkeDoPfpSRNIp6NeqOVQW9rHYOXXV5jLyl5hjA
+consumerKey=gTWIzVqaTvmjacNljrRQgaUIX
+consumerSecret=05gAN6pxHE0h4JvwsvTxa4crr8qGHxz6yQHMhkjOMcXswHABIJ
+accessToken=1500840083271962637-FtvxEI2m3gdBiddNEBrTVfc6xvIHNh
+accessTokenSecret=oTrFpROQkeDoPfpSRNIp6NeqOVQW9rHYOXXV5jLyl5hjA
 
 #oauth.accessClientID = ckdNU3U4M0RTYTVFVVpKVzVVcEQ6MTpjaQ
 #oauth.accessClientSecret = eYltvgjy1VYpSGoOEypBaHqcvK4PljF-TmfUBm9J9sH6AxYivZ
