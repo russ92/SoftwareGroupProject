@@ -1,4 +1,4 @@
-package sweproject;
+package main.java.sweproject;
 
 //import twitter4j.*;
 //import twitter4j.Twitter;
