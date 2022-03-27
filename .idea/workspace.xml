@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="Reformatted User and Tweet toString() methods to be like the ProvidedData">
+      <change afterPath="$PROJECT_DIR$/swe-project/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swe-project/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swe-project/VaxData/Users.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swe-project/VaxData/accountData.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swe-project/VaxData/corpus.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swe-project/VaxData/vaxTweets.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swe-project/config.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/Configuration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swe-project/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swe-project/target/classes/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/Configuration.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/Driver.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/TwitterListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Configuration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/Twitter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/twitter4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/twitter4j.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="Owen" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="26tswACS7cHJdQFDlwywtVEGmJh" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/twitter4j-4.0.7" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\nickl\OneDrive\Desktop\SoftwareEngineering\git\swe-project\VaxData\ProvidedData" />
+      <recent name="C:\Users\nickl\OneDrive\Desktop\SoftwareEngineering\git\swe-project\VaxData" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\nickl\OneDrive\Desktop\SoftwareEngineering\git\swe-project" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Configuration" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="sweproject.Configuration" />
+      <module name="swe-project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="sweproject.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Configuration" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="" />
+      <created>1648254455717</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1648254455717</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Working version: streaming and writing tweets into accountData.txt and corpus.txt">
+      <created>1648312183151</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1648312183151</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Provided Data for Sprint 3.">
+      <created>1648312822021</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1648312822021</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Reformatted User and Tweet toString() methods to be like the ProvidedData">
+      <created>1648334484481</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1648334484481</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Reformatted User and Tweet toString() methods to be like the ProvidedData">
+      <created>1648335142607</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1648335142607</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Reformatted User and Tweet toString() methods to be like the ProvidedData">
+      <created>1648338512298</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1648338512298</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Working version: streaming and writing tweets into accountData.txt and corpus.txt" />
+    <MESSAGE value="Provided Data for Sprint 3." />
+    <MESSAGE value="Reformatted User and Tweet toString() methods to be like the ProvidedData" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reformatted User and Tweet toString() methods to be like the ProvidedData" />
+  </component>
+</project>
