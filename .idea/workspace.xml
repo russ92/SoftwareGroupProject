@@ -5,23 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="Reformatted User and Tweet toString() methods to be like the ProvidedData">
-      <change afterPath="$PROJECT_DIR$/swe-project/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/swe-project/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/swe-project/VaxData/Users.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/swe-project/VaxData/accountData.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/swe-project/VaxData/corpus.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/swe-project/VaxData/vaxTweets.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/swe-project/config.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/Configuration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/swe-project/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/swe-project/target/classes/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/Configuration.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/Driver.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/TwitterListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Configuration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/Twitter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/twitter4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/twitter4j.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/StreamRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/StreamRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/StreamRunner.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/StreamRunner.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +30,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/twitter4j-4.0.7" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/AllTogether/AllTogether/WebAppProject" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -123,7 +109,21 @@
       <option name="project" value="LOCAL" />
       <updated>1648338512298</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Reformatted User and Tweet toString() methods to be like the ProvidedData">
+      <created>1648339964803</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1648339964803</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Reformatted User and Tweet toString() methods to be like the ProvidedData">
+      <created>1648339995522</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1648339995522</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

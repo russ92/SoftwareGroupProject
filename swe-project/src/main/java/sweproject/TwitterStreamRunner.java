@@ -15,7 +15,10 @@ public class TwitterStreamRunner implements StreamRunner {
 
     private static final String[] HASHTAGS = {"Vaccinated", "Covid-19", "VaccineMandate", "CovidHoax",
             "FuckVaccines", "Vaxxed", "MicrochipVaccine", "GatesVaccine", "NoVaccine", "GetVaccinated",
-            "Booster"};
+            "Booster", "Omicron", "LongCovid", "CovidIsNotOver", "COVIDisAirborne", "WearAMask", "GetVaxed", "covidiots",
+            "CovidScam", "ArrestFaucci", "VaccineSideEffects", "VaccineDeaths", "VaccineInjuries", "NoCovid",
+            "GetTheDamnVaccine", "CovidIsOver", "CoronaHoax", "CoronaVirus", "OmicronBeGone", "CovidFraud",
+            "SayNoToPoisonVaccines", "fuckFauci"};
 
     private static final org.slf4j.Logger LOG = LoggerFactory.getLogger(TwitterListener.class);
 

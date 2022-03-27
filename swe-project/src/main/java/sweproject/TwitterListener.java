@@ -15,8 +15,8 @@ public class TwitterListener extends StatusAdapter {
 
     private static final Logger LOG = LoggerFactory.getLogger(TwitterListener.class);
 
-    private static final String USER_DATA = "VaxData/accountData.txt";
-    private static final String TWEET_DATA = "VaxData/corpus.txt";
+    private static final String USER_DATA = "VaxData/vax tweets users.txt";
+    private static final String TWEET_DATA = "VaxData/vax tweets.txt";
 
     @Override
     public void onStatus(Status s) {
