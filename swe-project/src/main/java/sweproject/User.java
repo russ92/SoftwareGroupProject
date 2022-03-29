@@ -2,26 +2,16 @@ package sweproject;
 
 public class User {
 
-    private long user_id;
     private String userhandle;
     private String location;
     private String bio;
     private int num_followers;
 
-    public User(long user_id, String userhandle, String location, String bio, int num_followers) {
-        this.user_id = user_id;
+    public User(String userhandle, String location, String bio, int num_followers) {
         this.userhandle = "@" + userhandle.replace("\n", "").replace("\r", "");
         this.location = location.replace("\n", "").replace("\r", "");
         this.bio = bio.replace("\n", "").replace("\r", "");
         this.num_followers = num_followers;
-    }
-
-    public long getUser_id() {
-        return user_id;
-    }
-
-    public void setUser_id(long user_id) {
-        this.user_id = user_id;
     }
 
     public String getUserhandle() {

@@ -23,7 +23,7 @@ public class TwitterListener extends StatusAdapter {
         LOG.info("Twitter Tweets, log info:");
         sweproject.Tweet tweet = new sweproject.Tweet(s.getId(), s.getUser().getScreenName(), s.getText(), s.getRetweetCount(),
                 s.getCreatedAt());
-        sweproject.User user = new sweproject.User(s.getUser().getId(), s.getUser().getScreenName(), s.getUser().getLocation(),
+        sweproject.User user = new sweproject.User(s.getUser().getScreenName(), s.getUser().getLocation(),
                 s.getUser().getDescription(), s.getUser().getFollowersCount());
         System.out.println("\n" + tweet);
         System.out.println(user);
