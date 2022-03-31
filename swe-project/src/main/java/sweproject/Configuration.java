@@ -51,8 +51,7 @@ public class Configuration {
         //Search for old tweets
         List<Status> status = result.getTweets();
         for (Status s : status) {
-            sweproject.Tweet tweet = new sweproject.Tweet(s.getId(), s.getUser().getScreenName(), s.getText(), s.getRetweetCount(),
-                    s.getCreatedAt());
+            sweproject.Tweet tweet = new sweproject.Tweet(s.getId(), s.getUser().getScreenName(), s.getRetweetCount());
             writer(tweet);
         }
 
@@ -63,10 +62,10 @@ public class Configuration {
     }
 
     public static void writer(sweproject.Tweet tweet){
-        try (FileWriter fw = new FileWriter("VaxData/vaxTweets.txt", true);
+        try (FileWriter fw = new FileWriter(TWEET_DATA, true);
              BufferedWriter bw = new BufferedWriter(fw);
              PrintWriter out = new PrintWriter(bw)) {
-            out.println(tweet.toString().replace("\n", " "));
+            out.println(tweet.toString().replace("\n", " ").concat("\n"));
         } catch (Exception e) {
             // TODO: handle exception
         }
