@@ -5,9 +5,10 @@ public class Tweet{
 
     private long status_id;
     private String userhandle;
+    private String text;
     private int num_retweets;
 
-    public Tweet(long status_id, String userhandle, int num_retweets) {
+    public Tweet(long status_id, String userhandle, String text, int num_retweets) {
         this.status_id = status_id;
         this.num_retweets = num_retweets;
     }
@@ -40,6 +41,7 @@ public class Tweet{
     public String toString() {
         return status_id + "\t"
                 + userhandle + "\t"
+                + text + "\t"
                 + num_retweets + "\t";
     }
 

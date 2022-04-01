@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="swe-project">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/out/artifacts/swe_project_jar/swe-project.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
