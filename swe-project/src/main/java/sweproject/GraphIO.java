@@ -1,3 +1,5 @@
+package sweproject;
+
 import java.io.*;
 import java.util.*;
 
@@ -9,7 +11,7 @@ public class GraphIO {
         BufferedWriter bf = null;
 
         try {
-            bf = new BufferWriter(new FileWriter(graph));
+            bf = new BufferedWriter(new FileWriter(graph));
             for (Map.Entry<String, Int> entry : map.entrySet()) {
                 bf.write(entry.getKey() + ":" + entry.getValue());
                 bf.newLine();
