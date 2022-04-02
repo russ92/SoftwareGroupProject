@@ -1,3 +1,5 @@
+package sweproject;
+
 //import twitter4j.*;
 //import twitter4j.Twitter;
 //import twitter4j.conf.ConfigurationBuilder;
@@ -107,14 +109,14 @@
 //}
 
 import twitter4j.*;
-        import twitter4j.conf.ConfigurationBuilder;
-        import twitter4j.auth.AccessToken;
+import twitter4j.conf.ConfigurationBuilder;
+import twitter4j.auth.AccessToken;
 
-        import java.io.BufferedWriter;
-        import java.io.File;
-        import java.io.FileWriter;
-        import java.io.PrintWriter;
-        import java.io.FileWriter;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.PrintWriter;
+import java.io.FileWriter;
 import java.util.*;
 
 public class Configuration {
@@ -145,22 +147,22 @@ public class Configuration {
 
         // TwitterFactory tf = new
         // TwitterFactory(Configuration.getConfigurationBuilder().build());
-        //
+
         List<String> hashtags = Arrays.asList("#Vaccinated", "#Covid-19", "#VaccineMandate", "#CovidHoax",
                 "#FuckVaccines", "#Vaxxed", "#MicrochipVaccine", "#GatesVaccine", "#NoVaccine", "#GetVaccinated",
                 "#Booster");
         twitter4j.Twitter twitter = tf.getInstance();
-        Query query = new Query(hashtags);
+        Query query = new Query(hashtags.toString());
         QueryResult result = twitter.search(query);
 
         List<Status> status = result.getTweets();
-        File Corpus = new File("test.txt");
+        File Corpus = new File("VaxData/corpus1.txt");
         for (Status s : status) {
             Tweet tweet = new Tweet(s.getId(), s.getUser().getScreenName(), s.getText(), s.getRetweetCount(),
                     s.getCreatedAt());
-            try (FileWriter fw = new FileWriter("corpus.txt", true);
-                 BufferedWriter bw = new BufferedWriter(fw);
-                 PrintWriter out = new PrintWriter(bw)) {
+            try (FileWriter fw = new FileWriter("VaxData/corpus1.txt", true);
+                    BufferedWriter bw = new BufferedWriter(fw);
+                    PrintWriter out = new PrintWriter(bw)) {
                 out.println(tweet.toString());
             } catch (Exception e) {
                 // TODO: handle exception
@@ -168,12 +170,11 @@ public class Configuration {
             System.out.println(tweet.toString());
         }
 
-        //Stream tweets
+        // Stream tweets
 
         TwitterListener tl = new TwitterListener();
         TwitterStreamRunner tsr = new TwitterStreamRunner(cb, tl);
         tsr.start();
-
     }
 
 }
