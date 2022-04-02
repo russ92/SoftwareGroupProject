@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49b25b73-7fbc-4c54-b179-cbad7c185b9f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/sweproject/Arc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sweproject/Edge.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sweproject/Graph.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sweproject/Reader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sweproject/RetweetGraph.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sweproject/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sweproject/Configuration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sweproject/GraphIO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sweproject/GraphIO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,6 +19,14 @@
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
@@ -19,7 +34,9 @@
     <option name="version" value="2" />
   </component>
   <component name="ProjectId" id="27Ca2LwfXynq6nlXLPXg8vI7exI" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -60,5 +77,16 @@
       <updated>1648826317468</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

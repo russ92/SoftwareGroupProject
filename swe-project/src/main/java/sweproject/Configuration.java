@@ -102,14 +102,5 @@ public class Configuration {
       // TODO: handle exception
     }
   }
-  public static void writerUser(sweproject.User user) {
-    try (FileWriter fw = new FileWriter(USER_DATA, true);
-         BufferedWriter bw = new BufferedWriter(fw);
-         PrintWriter out = new PrintWriter(bw)) {
-      out.println(user.toString().replace("\n", " "));
-    } catch (Exception e) {
-      // TODO: handle exception
-    }
-  }
 
 }
