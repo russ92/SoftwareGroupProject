@@ -1,4 +1,3 @@
-package sweproject;
 
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
@@ -9,16 +8,8 @@ import javax.annotation.PreDestroy;
 import java.lang.reflect.Array;
 import java.util.Arrays;
 
-
 @Component
 public class TwitterStreamRunner implements StreamRunner {
-
-    private static final String[] HASHTAGS = {"Vaccinated", "Covid-19", "VaccineMandate", "CovidHoax",
-            "FuckVaccines", "Vaxxed", "MicrochipVaccine", "GatesVaccine", "NoVaccine", "GetVaccinated",
-            "Booster", "Omicron", "LongCovid", "CovidIsNotOver", "COVIDisAirborne", "WearAMask", "GetVaxed", "covidiots",
-            "CovidScam", "ArrestFaucci", "VaccineSideEffects", "VaccineDeaths", "VaccineInjuries", "NoCovid",
-            "GetTheDamnVaccine", "CovidIsOver", "CoronaHoax", "CoronaVirus", "OmicronBeGone", "CovidFraud",
-            "SayNoToPoisonVaccines", "fuckFauci"};
 
     private static final org.slf4j.Logger LOG = LoggerFactory.getLogger(TwitterListener.class);
 
@@ -37,11 +28,11 @@ public class TwitterStreamRunner implements StreamRunner {
     public void start() throws TwitterException{
         twitterStream = new TwitterStreamFactory().getInstance();
         twitterStream.addListener(twitterListener);
-
-        FilterQuery filterQuery = new FilterQuery(HASHTAGS);
+        String[] hashtags = {"AntiVax", "Covid", "Vaccines", "GetVaccinated"};
+        FilterQuery filterQuery = new FilterQuery(hashtags);
         twitterStream.filter(filterQuery);
-        LOG.info("Stream using hashtags: ", Arrays.toString(HASHTAGS));
-
+        LOG.info("Stream using hashtags: ", Arrays.toString(hashtags));
+        
     }
 
     @PreDestroy
