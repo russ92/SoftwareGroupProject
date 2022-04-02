@@ -98,7 +98,7 @@ public class GraphIO {
     public static String fileName(int rW) {
         int readOrWrite = rW;
         String name =
-                "C:/Users/owenc/OneDrive/UCD Year 3 Sem 2/SWE Project/Git/SoftwareGroupProject/Graphs/"; // CHANGE THIS PATH AS NEEDED. MUST BE EXACT.
+                "C:\\Users\\nickl\\OneDrive\\Desktop\\SoftwareEngineering\\git\\swe-project\\VaxData\\"; // CHANGE THIS PATH AS NEEDED. MUST BE EXACT.
         if (readOrWrite == 1) {
             boolean exists = true;
             while (exists) {
