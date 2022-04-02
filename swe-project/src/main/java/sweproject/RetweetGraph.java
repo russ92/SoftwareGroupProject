@@ -6,8 +6,8 @@ import java.util.HashMap;
 public class RetweetGraph implements Graph{
 
     @Override
-    public void getEdges() {
-
+    public String getEdges() {
+        return null;
     }
 
     @Override
