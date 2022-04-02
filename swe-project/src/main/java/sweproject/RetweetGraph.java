@@ -2,11 +2,17 @@ package sweproject;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 
 public class RetweetGraph implements Graph{
 
     @Override
-    public String getEdges() {
+    public String getEdgesAsString() {
+        return null;
+    }
+
+    @Override
+    public HashMap getEdges() {
         return null;
     }
 

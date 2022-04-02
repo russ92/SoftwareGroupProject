@@ -1,6 +1,6 @@
 package sweproject;
 
-import javax.sql.rowset.spi.SyncResolver;
+import java.util.Set;
 
 public interface Arc {
     public String getTweetName();
@@ -9,9 +9,9 @@ public interface Arc {
 
     public int strength();
 
-    public String doesArcExistBetween(String s, String d);
+    public Boolean doesArcExist(String s, String d);
 
     public int getNumOfRetweets(String s, String d);
 
-    public String getAllUsersRetweeted(String s);
+    public Set getAllUsersRetweeted(String s);
 }
