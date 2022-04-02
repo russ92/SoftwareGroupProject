@@ -4,9 +4,7 @@ import java.util.*;
 
 import static java.lang.Integer.parseInt;
 
-public class TwitterGraph {
-
-    public static class Graph implements sweproject.Graph, sweproject.Arc {
+public class TwitterGraph implements sweproject.Graph, sweproject.Arc {
 
         private final Map<String, Set<String>> retweetList = new HashMap<>();
         private final Map<String, Map<String, Integer>> weightedRetweets = new HashMap<>();
@@ -111,29 +109,8 @@ public class TwitterGraph {
         }
 
         public static void main(String... args) {
-            Graph graph = new Graph();
-            graph.addArc("@source", "@Potato", 10);
-            graph.addArc("@source", "@Tahoe", 69);
-            graph.addArc("@source", "@Poop", 2);
-            System.out.println("Test getEdgesAsString: ");
-            System.out.println(graph.getEdgesAsString());
-
-            System.out.println("Test getEdges: ");
-            System.out.println(graph.getEdges() + "\n");
-
-            System.out.println("Test doesArcExist()");
-            System.out.println(graph.doesArcExist("@source", "@Potato"));
-            System.out.println(graph.doesArcExist("@source", "@Potat") + "\n");
-
-            System.out.println("Test getNumOfRetweets()");
-            System.out.println(graph.getNumOfRetweets("@source", "@Potato"));
-            System.out.println(graph.getNumOfRetweets("@source", "@Poto") + "\n");
-
-            System.out.println("Test getAllUserRetweets()");
-            System.out.println(graph.getAllUsersRetweeted("@source"));
-            System.out.println(graph.getAllUsersRetweeted("@Potato") + "\n");
-
+            TwitterGraph graph = new TwitterGraph();
+            graph.addArc("@source", "@destination", 111);
             graph.invert();
         }
-    }
 }
