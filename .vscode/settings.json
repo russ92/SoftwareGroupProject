@@ -1,6 +1,0 @@
-{
-    "java.project.referencedLibraries": [
-        "lib/**/*.jar",
-        "twitter4j-core-4.0.7.jar"
-    ]
-}
