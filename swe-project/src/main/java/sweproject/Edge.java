@@ -22,4 +22,9 @@ public class Edge{
     public void updateWeight(int weightUpdate){
         this.weight = weightUpdate;
     }
+
+    @Override
+    public String toString(){
+        return source + " " + destination + " " + weight;
+    }
 }

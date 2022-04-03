@@ -1,7 +1,10 @@
+<<<<<<< HEAD
+=======
 package sweproject;
 
 import java.util.Scanner;
 
+>>>>>>> origin/Owen
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
@@ -14,6 +17,12 @@ public class TwitterListener extends StatusAdapter {
     private static final Logger LOG = LoggerFactory.getLogger(TwitterListener.class);
 
     @Override
+<<<<<<< HEAD
+    public void onStatus(Status status){
+        LOG.info("Twitter = ", status.getText());
+    }
+}
+=======
     public void onStatus(Status s) {
         LOG.info("Twitter Tweets, log info:");
         Tweet tweet = new Tweet(s.getId(), s.getUser().getName(), s.getText(), s.getRetweetCount(),
@@ -49,3 +58,4 @@ public class TwitterListener extends StatusAdapter {
         }
     }
 }
+>>>>>>> origin/Owen

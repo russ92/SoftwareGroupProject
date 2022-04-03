@@ -1,15 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="49b25b73-7fbc-4c54-b179-cbad7c185b9f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/sweproject/Arc.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sweproject/Edge.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sweproject/Graph.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sweproject/Reader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sweproject/RetweetGraph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sweproject/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sweproject/Configuration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sweproject/GraphIO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sweproject/GraphIO.java" afterDir="false" />
+    <list default="true" id="616a8f18-524c-44b5-8f15-2c77027681af" name="Changes" comment="Trying to implement graph nodes, updated formatting of the code">
+      <change afterPath="$PROJECT_DIR$/../lib/readme-libs.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lib/twitter4j-async-4.0.7.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lib/twitter4j-examples-4.0.7.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lib/twitter4j-stream-4.0.7.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sweproject/TwitterGraph.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/sweproject/TwitterGraphTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/sweproject/Arc.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/sweproject/Edge.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/sweproject/Graph.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/sweproject/GraphIO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/sweproject/Reader.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/sweproject/RetweetGraph.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/sweproject/TwitterGraph.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/sweproject/TwitterGraphTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TwitterListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TwitterListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VaxData/accountData.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VaxData/corpus.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VaxData/vax tweets users.txt" beforeDir="false" afterPath="$PROJECT_DIR$/VaxData/vax tweets users.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VaxData/vax tweets.txt" beforeDir="false" afterPath="$PROJECT_DIR$/VaxData/vax tweets.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VaxData/vaxTweets.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sweproject/Arc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sweproject/Arc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sweproject/Edge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sweproject/Edge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sweproject/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sweproject/Graph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sweproject/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sweproject/Reader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sweproject/RetweetGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sweproject/RetweetGraph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sweproject/StreamRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sweproject/StreamRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sweproject/Tweet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sweproject/Tweet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sweproject/TwitterListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sweproject/TwitterListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sweproject/TwitterStreamRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sweproject/TwitterStreamRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sweproject/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sweproject/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sweproject/Configuration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sweproject/Configuration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sweproject/Tweet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sweproject/Tweet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sweproject/TwitterListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sweproject/TwitterListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sweproject/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sweproject/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../twitter4j-core-4.0.7.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/twitter4j-core-4.0.7.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +72,9 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunManager">
@@ -57,6 +87,17 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -88,5 +129,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
