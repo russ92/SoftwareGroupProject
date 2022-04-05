@@ -8,13 +8,10 @@ import java.util.Scanner;
 
 public class GraphIO {
 
-        public static void main(String[] args) {
+        public static void main(String[] args) throws FileNotFoundException {
             System.out.println("GIT");
 
-            HashMap<String, Integer> map = new HashMap<String, Integer>();
-            map.put("@Potato", 10);
-            map.put("@Poop", 2);
-            map.put("@Tahoe", 69);
+            HashMap<String, Map<String, Integer>> map = Reader.Read_Tweets().getEdges();
 
             int loop = 1;
 
@@ -31,14 +28,14 @@ public class GraphIO {
                 }
             }
         }
-    public static void writeToFile(HashMap<String, Integer> map) {
+    public static void writeToFile(HashMap<String, Map<String, Integer>> map) {
         String path = fileName(1);
         File graph = new File(path);
         BufferedWriter bf = null;
         try {
             System.out.println("try");
             bf = new BufferedWriter(new FileWriter(graph));
-            for (Map.Entry<String, Integer> entry : map.entrySet()) {
+            for (Map.Entry<String, Map<String, Integer>> entry : map.entrySet()) {
                 bf.write(entry.getKey() + ":" + entry.getValue());
                 bf.newLine();
             }
@@ -53,52 +50,52 @@ public class GraphIO {
         }
     }
 
-    public static void writeToHashMapMain() {
-        Map<String, Integer> mapFromTxtFile = writeToHashMap();
+    public static void writeToHashMapMain() throws FileNotFoundException {
+        Map<String, Map<String, Integer>> mapFromTxtFile = Reader.Read_Tweets().getEdges();
 
-        for (Map.Entry<String, Integer> entry : mapFromTxtFile.entrySet()) {
+        for (Map.Entry<String, Map<String, Integer>> entry : mapFromTxtFile.entrySet()) {
             System.out.println(entry.getKey() + " : " + entry.getValue());
         }
     }
 
-    public static Map<String, Integer> writeToHashMap() {
-        Map<String, Integer> map = new HashMap<String, Integer>();
-        BufferedReader br = null;
-        String path = fileName(2);
-
-        try {
-            File file = new File(path);
-            br = new BufferedReader(new FileReader(file));
-            String line = null;
-            while ((line = br.readLine()) != null) {
-                String[] parts = line.split(":");
-                String user = parts[0].trim();
-                String numRetweetsStr = parts[1].trim();
-                int numRetweets = Integer.parseInt(numRetweetsStr);
-
-                if (!user.equals("")) {
-                    map.put(user, numRetweets);
-                }
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            if (br != null) {
-                try {
-                    br.close();
-                } catch (Exception e) {
-                }
-            }
-        }
-        return map;
-    }
+//    public static Map<String, Map<String, Integer>> writeToHashMap() {
+//        Map<String, Map<String, Integer>> map = new HashMap<String, Map<String, Integer>>();
+//        BufferedReader br = null;
+//        String path = fileName(2);
+//
+//        try {
+//            File file = new File(path);
+//            br = new BufferedReader(new FileReader(file));
+//            String line = null;
+//            while ((line = br.readLine()) != null) {
+//                String[] parts = line.split(":");
+//                String user = parts[0].trim();
+//                String numRetweetsStr = parts[1].trim();
+//                int numRetweets = Integer.parseInt(numRetweetsStr);
+//
+//                if (!user.equals("")) {
+//                    map.put(user, numRetweets);
+//                }
+//            }
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        } finally {
+//            if (br != null) {
+//                try {
+//                    br.close();
+//                } catch (Exception e) {
+//                }
+//            }
+//        }
+//        return map;
+//    }
 
     // int passed in so that the code can differentiate between creating a new
     // file and loading a file
     public static String fileName(int rW) {
         int readOrWrite = rW;
         String name =
-                "C:\\Users\\nickl\\OneDrive\\Desktop\\SoftwareEngineering\\git\\swe-project\\VaxData\\"; // CHANGE THIS PATH AS NEEDED. MUST BE EXACT.
+                "C:\\Users\\nickl\\OneDrive\\Desktop\\SoftwareEngineering\\git2.0\\swe-project\\VaxData\\"; // CHANGE THIS PATH AS NEEDED. MUST BE EXACT.
         if (readOrWrite == 1) {
             boolean exists = true;
             while (exists) {

@@ -4,16 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/swe-project/VaxData/vaxTweets.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_26_03_2022_15_52__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_26_03_2022_15_52__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_03_2022_15_43__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_03_2022_15_43__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_03_2022_23_48__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_03_2022_23_48__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/Reader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/TwitterGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/TwitterGraph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/Reader.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/Reader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/TwitterGraph.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/TwitterGraph.class" afterDir="false" />
+    <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="Reader class working. Read_Tweets() creates a returns a TwitterGraph">
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/GraphIO.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/GraphIO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,9 +51,22 @@
       <recent name="C:\Users\nickl\OneDrive\Desktop\SoftwareEngineering\git\swe-project" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Reader">
+  <component name="RunManager" selected="Application.GraphIO">
     <configuration name="Configuration" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="sweproject.Configuration" />
+      <module name="swe-project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="sweproject.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GraphIO" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="sweproject.GraphIO" />
       <module name="swe-project" />
       <extension name="coverage">
         <pattern>
@@ -104,6 +109,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.GraphIO" />
         <item itemvalue="Application.Reader" />
         <item itemvalue="JUnit.TwitterGraphTests.testDoesArcExist" />
         <item itemvalue="Application.Configuration" />
@@ -168,7 +174,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648339995522</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Reader class working. Read_Tweets() creates a returns a TwitterGraph">
+      <created>1649178219989</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1649178219989</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -187,6 +200,7 @@
     <MESSAGE value="Working version: streaming and writing tweets into accountData.txt and corpus.txt" />
     <MESSAGE value="Provided Data for Sprint 3." />
     <MESSAGE value="Reformatted User and Tweet toString() methods to be like the ProvidedData" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reformatted User and Tweet toString() methods to be like the ProvidedData" />
+    <MESSAGE value="Reader class working. Read_Tweets() creates a returns a TwitterGraph" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reader class working. Read_Tweets() creates a returns a TwitterGraph" />
   </component>
 </project>
