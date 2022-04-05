@@ -111,6 +111,21 @@ public class TwitterGraph implements sweproject.Graph, sweproject.Arc {
         public static void main(String... args) {
             TwitterGraph graph = new TwitterGraph();
             graph.addArc("@source", "@destination", 111);
-            graph.invert();
+            graph.addArc("@source", "@destinat", 111);
+            graph.addArc("@source", "@den", 111);
+            graph.addArc("@destination", "@source", 111);
+            graph.addArc("@destination", "@den", 111);
+            graph.addArc("@destination", "@destination", 111);
+            graph.addArc("@source", "@source", 111);
+            graph.addArc("@source", "@source", 112);
+            graph.addArc("@source", "@source", 113);
+
+            HashMap<String, Map<String , Integer>> map = graph.getEdges();
+            map.forEach((K,V)->{                        // mapofmaps entries
+                System.out.print("\n" + K + " = ");
+                V.forEach((X,Y)->{                     // inner Hashmap enteries
+                    System.out.print("[" + X + " " + Y + "] ");       // print key and value of inner Hashmap
+                });
+            });
         }
 }

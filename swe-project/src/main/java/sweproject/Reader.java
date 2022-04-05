@@ -3,6 +3,8 @@ package sweproject;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Reader {
 
@@ -10,7 +12,7 @@ public class Reader {
 
         TwitterGraph tweetsGraph = new TwitterGraph();
         try{
-            BufferedReader buf = new BufferedReader(new FileReader("swe-project/VaxData/vax tweets.txt"));
+            BufferedReader buf = new BufferedReader(new FileReader("swe-project/VaxData/vaxTweets.txt"));
             String lineJustFetched = null;
 
             while(true){
@@ -51,7 +53,13 @@ public class Reader {
 
     public static void main(String[] args) throws FileNotFoundException {
 
-        System.out.println(Read_Tweets().getEdges());
+        HashMap<String, Map<String , Integer>> map = Read_Tweets().getEdges();
+        map.forEach((K,V)->{                        // mapofmaps entries
+            System.out.print("\n" + K + " = ");
+            V.forEach((X,Y)->{                     // inner Hashmap enteries
+                System.out.print(X+" "+Y);       // print key and value of inner Hashmap
+            });
+        });
 
     }
 }
