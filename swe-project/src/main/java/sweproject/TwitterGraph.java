@@ -6,8 +6,8 @@ import static java.lang.Integer.parseInt;
 
 public class TwitterGraph implements sweproject.Graph, sweproject.Arc {
 
-        public final Map<String, Set<String>> retweetList = new HashMap<>();
-        public final Map<String, Map<String, Integer>> weightedRetweets = new HashMap<>();
+        private final Map<String, Set<String>> retweetList = new HashMap<>();
+        private final Map<String, Map<String, Integer>> weightedRetweets = new HashMap<>();
 
         // Inverted
         private final Map<String, Set<String>> invertedRetweetList = new HashMap<>();
@@ -52,6 +52,13 @@ public class TwitterGraph implements sweproject.Graph, sweproject.Arc {
             invertedWeightedRetweets.get(e.destination).put(e.source, e.weight);
         }
 
+        public Map<String, Map<String, Integer>> getGraphHashMap(){
+            return weightedRetweets;
+        }
+
+        public Map<String, Map<String, Integer>> getInvertedHashMap(){
+            return invertedWeightedRetweets;
+        }
         //Graph methods
         @Override
         public String getEdgesAsString() {
@@ -127,12 +134,14 @@ public class TwitterGraph implements sweproject.Graph, sweproject.Arc {
             graph.addArc("@source", "@source", 112);
             graph.addArc("@source", "@source", 113);
 
-            HashMap<String, Map<String , Integer>> map = graph.getEdges();
-            map.forEach((K,V)->{                        // mapofmaps entries
-                System.out.print("\n" + K + " = ");
+
+            graph.invertedWeightedRetweets.forEach((K, V)->{
+                System.out.print(K + " = ");
                 V.forEach((X,Y)->{                     // inner Hashmap enteries
                     System.out.print("[" + X + " " + Y + "] ");       // print key and value of inner Hashmap
                 });
             });
+
+            System.out.print("\n" + graph.getInvertedHashMap());
         }
 }

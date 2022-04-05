@@ -23,11 +23,10 @@ public class Reader {
                     String[] lineIn = lineJustFetched.split("\t");
 
                     // Check to see if the tweet is a Retweet
-                    if(lineIn[2].contains("RT ")){
+                    if (lineIn.length == 3 && lineIn[2].startsWith("RT @")) {
                         String user1 = lineIn[1];
                         String user2 = lineIn[2].substring(lineIn[2].indexOf("@"), lineIn[2].indexOf(":"));
-
-                        tweetsGraph.addArc(user1,user2,1);
+                        tweetsGraph.addArc(user1, user2, 1);
                     }
                 }
             }

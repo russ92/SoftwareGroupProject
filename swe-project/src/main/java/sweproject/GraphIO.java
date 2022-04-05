@@ -11,8 +11,8 @@ public class GraphIO {
         public static void main(String[] args) throws FileNotFoundException {
             System.out.println("GIT");
 
-            HashMap<String, Map<String, Integer>> map = Reader.Read_Tweets("swe-project/VaxData/vaxTweets.txt").getEdges();
-            String file = "vaxTweets.txt";
+            HashMap<String, Map<String, Integer>> map = Reader.Read_Tweets("swe-project/VaxData/provided/vax tweets.txt").getEdges();
+            String file = "vax tweets.txt";
 
             int loop = 1;
 
@@ -101,7 +101,7 @@ public class GraphIO {
     public static String fileName(int rW) {
         int readOrWrite = rW;
         String name =
-                "C:\\Users\\nickl\\OneDrive\\Desktop\\SoftwareEngineering\\git2.0\\swe-project\\VaxData\\"; // CHANGE THIS PATH AS NEEDED. MUST BE EXACT.
+                "C:\\Users\\nickl\\OneDrive\\Desktop\\SoftwareEngineering\\git\\swe-project\\VaxData\\"; // CHANGE THIS PATH AS NEEDED. MUST BE EXACT.
         if (readOrWrite == 1) {
             boolean exists = true;
             while (exists) {
