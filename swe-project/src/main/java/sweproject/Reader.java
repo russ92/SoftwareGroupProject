@@ -8,11 +8,11 @@ import java.util.Map;
 
 public class Reader {
 
-    public static TwitterGraph Read_Tweets() throws FileNotFoundException {
+    public static TwitterGraph Read_Tweets(String filename) throws FileNotFoundException {
 
         TwitterGraph tweetsGraph = new TwitterGraph();
         try{
-            BufferedReader buf = new BufferedReader(new FileReader("swe-project/VaxData/vaxTweets.txt"));
+            BufferedReader buf = new BufferedReader(new FileReader(filename));
             String lineJustFetched = null;
 
             while(true){
@@ -27,17 +27,7 @@ public class Reader {
                         String user1 = lineIn[1];
                         String user2 = lineIn[2].substring(lineIn[2].indexOf("@"), lineIn[2].indexOf(":"));
 
-                        // Check to see if the user1 node already exists
-                        if(tweetsGraph.weightedRetweets.containsKey(user1)) {
-                            // Check to see if the user1 and user2 already have an edge, if so increment
-                            if(tweetsGraph.doesArcExist(user1, user2)) {
-                                int count = tweetsGraph.weightedRetweets.get(user1).get(user2) + 1;
-                                tweetsGraph.addArc(user1,user2,count);
-                            }
-                        }
-                        else {
-                            tweetsGraph.addArc(user1, user2, 1);
-                        }
+                        tweetsGraph.addArc(user1,user2,1);
                     }
                 }
             }
@@ -53,11 +43,11 @@ public class Reader {
 
     public static void main(String[] args) throws FileNotFoundException {
 
-        HashMap<String, Map<String , Integer>> map = Read_Tweets().getEdges();
+        HashMap<String, Map<String , Integer>> map = Read_Tweets("swe-project/VaxData/vax tweets.txt").getEdges();
         map.forEach((K,V)->{                        // mapofmaps entries
             System.out.print("\n" + K + " = ");
             V.forEach((X,Y)->{                     // inner Hashmap enteries
-                System.out.print(X+" "+Y);       // print key and value of inner Hashmap
+                System.out.print("["+X+" "+Y+"] ");       // print key and value of inner Hashmap
             });
         });
 

@@ -11,7 +11,8 @@ public class GraphIO {
         public static void main(String[] args) throws FileNotFoundException {
             System.out.println("GIT");
 
-            HashMap<String, Map<String, Integer>> map = Reader.Read_Tweets().getEdges();
+            HashMap<String, Map<String, Integer>> map = Reader.Read_Tweets("swe-project/VaxData/vaxTweets.txt").getEdges();
+            String file = "vaxTweets.txt";
 
             int loop = 1;
 
@@ -21,7 +22,7 @@ public class GraphIO {
                 if (scn.nextLine().equals("1")) {
                     writeToFile(map);
                 } else if (scn.nextLine().equals("2")) {
-                    writeToHashMapMain();
+                    writeToHashMapMain(file);
                     loop = 0;
                 } else {
                     System.out.println("PLEASE SELECT 1 OR 2");
@@ -35,10 +36,15 @@ public class GraphIO {
         try {
             System.out.println("try");
             bf = new BufferedWriter(new FileWriter(graph));
-            for (Map.Entry<String, Map<String, Integer>> entry : map.entrySet()) {
-                bf.write(entry.getKey() + ":" + entry.getValue());
-                bf.newLine();
-            }
+            // String to be written to file.
+            StringBuilder toFile = new StringBuilder();
+            map.forEach((K, V)->{
+                    toFile.append("\n").append(K).append("\t");
+                V.forEach((X,Y)->{
+                    toFile.append(X).append(":").append(Y).append("\t");       // print key and value of inner Hashmap
+                });
+            });
+            bf.write(toFile.toString().trim());
             bf.flush();
         } catch (IOException e) {
             e.printStackTrace();
@@ -50,8 +56,8 @@ public class GraphIO {
         }
     }
 
-    public static void writeToHashMapMain() throws FileNotFoundException {
-        Map<String, Map<String, Integer>> mapFromTxtFile = Reader.Read_Tweets().getEdges();
+    public static void writeToHashMapMain(String file) throws FileNotFoundException {
+        Map<String, Map<String, Integer>> mapFromTxtFile = Reader.Read_Tweets(file).getEdges();
 
         for (Map.Entry<String, Map<String, Integer>> entry : mapFromTxtFile.entrySet()) {
             System.out.println(entry.getKey() + " : " + entry.getValue());

@@ -5,13 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="Working Sprint 3.">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_03_2022_15_43_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_03_2022_15_43__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/vaxTweets.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/vaxTweets.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/GraphIO.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/GraphIO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/Reader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/TwitterGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/TwitterGraph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/Reader.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/Reader.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/TwitterGraph.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/TwitterGraph.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -22,7 +20,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Owen" />
+        <entry key="$PROJECT_DIR$" value="N-Maven" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -209,7 +207,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649179199373</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Working Sprint 3.">
+      <created>1649187522726</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1649187522726</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

@@ -22,7 +22,14 @@ public class TwitterGraph implements sweproject.Graph, sweproject.Arc {
         }
 
         public void addArc(String source, String destination, int weight) {
-            addToRetweetList(new Edge(source,destination,weight));
+            if(weightedRetweets.containsKey(source)) {
+                if(weightedRetweets.get(source).containsKey(destination)) {
+                    int count = weightedRetweets.get(source).get(destination) + weight;
+                    addToRetweetList(new Edge(source, destination, count));
+                }
+                else addToRetweetList(new Edge(source, destination, weight));
+            }
+            else addToRetweetList(new Edge(source, destination, weight));
         }
 
         private void addToRetweetList(Edge e) {
@@ -110,12 +117,12 @@ public class TwitterGraph implements sweproject.Graph, sweproject.Arc {
 
         public static void main(String... args) {
             TwitterGraph graph = new TwitterGraph();
-            graph.addArc("@source", "@destination", 111);
+            graph.addArc("@source", "@destination", 11);
             graph.addArc("@source", "@destinat", 111);
-            graph.addArc("@source", "@den", 111);
-            graph.addArc("@destination", "@source", 111);
-            graph.addArc("@destination", "@den", 111);
-            graph.addArc("@destination", "@destination", 111);
+            graph.addArc("@source", "@den", 12);
+            graph.addArc("@destination", "@source", 1);
+            graph.addArc("@destination", "@den", 121);
+            graph.addArc("@destination", "@destination", 21);
             graph.addArc("@source", "@source", 111);
             graph.addArc("@source", "@source", 112);
             graph.addArc("@source", "@source", 113);
