@@ -11,7 +11,7 @@ public class GraphIO {
         public static void main(String[] args) throws FileNotFoundException {
             System.out.println("GIT");
 
-            HashMap<String, Map<String, Integer>> map = Reader.Read_Tweets("swe-project/VaxData/provided/vax tweets.txt").getEdges();
+            //
             String file = "vax tweets.txt";
 
             int loop = 1;
@@ -20,6 +20,7 @@ public class GraphIO {
                 Scanner scn = new Scanner(System.in);
                 System.out.println("1 to write to text file OR 2 to read from text file: ");
                 if (scn.nextLine().equals("1")) {
+                    HashMap<String, Map<String, Integer>> map = Reader.Read_Tweets("swe-project/VaxData/provided/vax tweets.txt").getEdges();
                     writeToFile(map);
                 } else if (scn.nextLine().equals("2")) {
                     writeToHashMapMain(file);
