@@ -6,8 +6,8 @@ import static java.lang.Integer.parseInt;
 
 public class TwitterGraph implements sweproject.Graph, sweproject.Arc {
 
-        private final Map<String, Set<String>> retweetList = new HashMap<>();
-        private final Map<String, Map<String, Integer>> weightedRetweets = new HashMap<>();
+        public final Map<String, Set<String>> retweetList = new HashMap<>();
+        public final Map<String, Map<String, Integer>> weightedRetweets = new HashMap<>();
 
         // Inverted
         private final Map<String, Set<String>> invertedRetweetList = new HashMap<>();
