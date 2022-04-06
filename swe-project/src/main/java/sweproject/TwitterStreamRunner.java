@@ -1,6 +1,6 @@
 package sweproject;
 
-import org.slf4j.LoggerFactory;
+//import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 import twitter4j.*;
 import twitter4j.conf.ConfigurationBuilder;
@@ -20,7 +20,7 @@ public class TwitterStreamRunner implements StreamRunner {
             "GetTheDamnVaccine", "CovidIsOver", "CoronaHoax", "CoronaVirus", "OmicronBeGone", "CovidFraud",
             "SayNoToPoisonVaccines", "fuckFauci"};
 
-    private static final org.slf4j.Logger LOG = LoggerFactory.getLogger(TwitterListener.class);
+    //private static final org.slf4j.Logger LOG = LoggerFactory.getLogger(TwitterListener.class);
 
     private final ConfigurationBuilder configurationBuilder;
 
@@ -40,14 +40,14 @@ public class TwitterStreamRunner implements StreamRunner {
 
         FilterQuery filterQuery = new FilterQuery(HASHTAGS);
         twitterStream.filter(filterQuery);
-        LOG.info("Stream using hashtags: ", Arrays.toString(HASHTAGS));
+        //LOG.info("Stream using hashtags: ", Arrays.toString(HASHTAGS));
 
     }
 
     @PreDestroy
     public void shutdown(){
         if(twitterStream!=null){
-            LOG.info("Shutdown");
+            //LOG.info("Shutdown");
             twitterStream.shutdown();
         }
     }
