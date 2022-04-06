@@ -103,14 +103,14 @@ public class GraphIO {
     public static String fileName(int rW) {
         int readOrWrite = rW;
         String name =
-                "C:\\Users\\nickl\\OneDrive\\Desktop\\SoftwareEngineering\\git\\swe-project\\VaxData\\"; // CHANGE THIS PATH AS NEEDED. MUST BE EXACT.
+                "C:\\Users\\nickl\\OneDrive\\Desktop\\SoftwareEngineering\\git\\swe-project\\VaxData\\Graphs\\"; // CHANGE THIS PATH AS NEEDED. MUST BE EXACT.
         if (readOrWrite == 1) {
             boolean exists = true;
             while (exists) {
                 System.out.println("write file");
                 Scanner scn = new Scanner(System.in);
                 System.out.println("ENTER FILE NAME:");
-                // ToDo : Error handling
+                //ToDo : Error handling
                 // String name isn't reset to null if file already exist,
                 // resulting in 'ExistingName.txtNewName.txt' as file's name.
                 name = name + scn.nextLine() + ".txt";
