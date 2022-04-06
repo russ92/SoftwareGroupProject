@@ -11,8 +11,8 @@ public class GraphIO {
         public static void main(String[] args) throws FileNotFoundException {
             System.out.println("GIT");
 
-            //
-            String file = "vax tweets.txt";
+            // File to be written as a graph
+            String file = "swe-project/VaxData/provided/vax tweets.txt";
 
             int loop = 1;
 
@@ -20,7 +20,8 @@ public class GraphIO {
                 Scanner scn = new Scanner(System.in);
                 System.out.println("1 to write to text file OR 2 to read from text file: ");
                 if (scn.nextLine().equals("1")) {
-                    HashMap<String, Map<String, Integer>> map = Reader.Read_Tweets("swe-project/VaxData/provided/vax tweets.txt").getEdges();
+                    //
+                    HashMap<String, Map<String, Integer>> map = Reader.Read_Tweets(file).getEdges();
                     writeToFile(map);
                 } else if (scn.nextLine().equals("2")) {
                     writeToHashMapMain(file);
@@ -109,6 +110,9 @@ public class GraphIO {
                 System.out.println("write file");
                 Scanner scn = new Scanner(System.in);
                 System.out.println("ENTER FILE NAME:");
+                // ToDo : Error handling
+                // String name isn't reset to null if file already exist,
+                // resulting in 'ExistingName.txtNewName.txt' as file's name.
                 name = name + scn.nextLine() + ".txt";
                 File f = new File(name);
                 if (f.exists()) {
