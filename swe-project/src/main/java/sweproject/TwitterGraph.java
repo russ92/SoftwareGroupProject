@@ -59,6 +59,20 @@ public class TwitterGraph implements sweproject.Graph, sweproject.Arc {
         public Map<String, Map<String, Integer>> getInvertedHashMap(){
             return invertedWeightedRetweets;
         }
+
+        public List<Evangelists> getEvangelists(){
+            List<Evangelists> angels = new ArrayList<>();
+            for (String p : weightedRetweets.keySet() ) {
+                int count = 0;
+                for (String c : weightedRetweets.get(p).keySet() ) {
+                    count += weightedRetweets.get(p).get(c);
+                }
+                angels.add(new Evangelists(p, count));
+            }
+
+            angels.sort(Collections.reverseOrder());
+            return angels;
+        }
         //Graph methods
         @Override
         public String getEdgesAsString() {
@@ -134,14 +148,22 @@ public class TwitterGraph implements sweproject.Graph, sweproject.Arc {
             graph.addArc("@source", "@source", 112);
             graph.addArc("@source", "@source", 113);
 
+//            for (String p : graph.weightedRetweets.keySet() ) {
+//                System.out.println(p + " : ");
+//                for (String c : graph.weightedRetweets.get(p).keySet() ) {
+//                    ArrayList<Integer> g = new ArrayList<>(graph.weightedRetweets.get(p).get(c));
+//                    System.out.print(c);
+//                    System.out.print(graph.weightedRetweets.get(p).get(c));
+//                }
+//            }
 
-            graph.invertedWeightedRetweets.forEach((K, V)->{
-                System.out.print(K + " = ");
-                V.forEach((X,Y)->{                     // inner Hashmap enteries
-                    System.out.print("[" + X + " " + Y + "] ");       // print key and value of inner Hashmap
-                });
-            });
+//            graph.weightedRetweets.forEach((K, V)->{
+//                System.out.print(K + " = \n");
+//                V.forEach((X,Y)->{                     // inner Hashmap enteries
+//                    System.out.print("[" + X + " " + Y + "] ");       // print key and value of inner Hashmap
+//                });
+//            });
 
-            System.out.print("\n" + graph.getInvertedHashMap());
+
         }
 }

@@ -9,17 +9,35 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="Print to text file working with provided vax tweets.txt file.">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/sprint3_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/swe_project_sprint3_jar.xml" afterDir="false" />
+    <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="Reformatted User and Tweet toString() methods to be like the ProvidedData">
+      <change afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/Evangelists.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_26_03_2022_15_52__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_26_03_2022_15_52__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_03_2022_23_48__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_03_2022_23_48__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/out/artifacts/swe-project.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/GraphIO.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/GraphIO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/Reader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/TwitterGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/TwitterGraph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/TwitterListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/TwitterListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/TwitterStreamRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/TwitterStreamRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/swe-project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/swe-project.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/GraphIO.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/GraphIO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/Reader.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/Reader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/TwitterGraph.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/TwitterGraph.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/TwitterListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/TwitterListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/TwitterStreamRunner.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/TwitterStreamRunner.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -38,12 +56,11 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/swe-project/src/main/java/sweproject/TwitterGraph.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/swe-project/src/main/java/sweproject/Reader.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/swe-project/pom.xml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Configuration.class" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/swe-project/src/main/java/sweproject/Tweet.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/swe-project/src/main/java/sweproject/GraphIO.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/swe-project/src/main/java/sweproject/TwitterGraph.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/swe-project/pom.xml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/swe-project/src/main/java/sweproject/Reader.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
@@ -66,7 +83,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/swe-project/out/artifacts/sprint3" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/swe-project/VaxData" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -74,6 +91,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\nickl\OneDrive\Desktop\SoftwareEngineering\project\swe-project\VaxData" />
       <recent name="C:\Users\nickl\OneDrive\Desktop\SoftwareEngineering\git\swe-project\VaxData\provided" />
       <recent name="C:\Users\nickl\OneDrive\Desktop\SoftwareEngineering\git\swe-project\VaxData\ProvidedData" />
       <recent name="C:\Users\nickl\OneDrive\Desktop\SoftwareEngineering\git\swe-project\VaxData" />
@@ -84,7 +102,7 @@
       <recent name="C:\Users\nickl\OneDrive\Desktop\SoftwareEngineering\git\swe-project" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TwitterGraph">
+  <component name="RunManager" selected="Application.Configuration">
     <configuration name="Configuration" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="sweproject.Configuration" />
       <module name="swe-project" />
@@ -155,10 +173,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TwitterGraph" />
         <item itemvalue="Application.Configuration" />
         <item itemvalue="Application.GraphIO" />
         <item itemvalue="Application.Reader" />
+        <item itemvalue="Application.TwitterGraph" />
         <item itemvalue="JUnit.TwitterGraphTests.testDoesArcExist" />
       </list>
     </recent_temporary>

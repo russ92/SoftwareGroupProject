@@ -18,7 +18,9 @@ public class GraphIO {
 
             while (loop == 1) {
                 Scanner scn = new Scanner(System.in);
-                System.out.println("1 to write to text file OR 2 to read from text file: ");
+                System.out.println("1 to write to text file \n" +
+                                    "OR 2 to read from text file \n" +
+                                    "OR 3 to print first 100 angels to a file:");
                 if (scn.nextLine().equals("1")) {
                     //
                     HashMap<String, Map<String, Integer>> map = Reader.Read_Tweets(file).getEdges();
@@ -26,11 +28,49 @@ public class GraphIO {
                 } else if (scn.nextLine().equals("2")) {
                     writeToHashMapMain(file);
                     loop = 0;
+                } else if (scn.nextLine().equals("3")) {
+                    System.out.println("Creating graph...");
+                    TwitterGraph graph = Reader.Read_Tweets(file);
+                    System.out.println("Creating list of angels...");
+                    List<Evangelists> angels = graph.getEvangelists();
+                    writeAngelsToFile(angels);
+                    loop = 0;
                 } else {
-                    System.out.println("PLEASE SELECT 1 OR 2");
+                    System.out.println("PLEASE SELECT 1 OR 2 OR 3");
                 }
             }
         }
+
+    private static void writeAngelsToFile(List<Evangelists> angels) {
+//        for(Evangelists e: angels) {
+//            if (e.getNumRetweets()>100) {
+//                System.out.println(e);
+//            }
+//        }
+
+        String path = fileName(1);
+        File graph = new File(path);
+        BufferedWriter bf = null;
+        try {
+            System.out.println("Writing to file...");
+            bf = new BufferedWriter(new FileWriter(graph));
+            // String to be written to file.
+            StringBuilder toFile = new StringBuilder();
+            for (int i = 0; i < 100; i++){
+                toFile.append("\n").append(angels.get(i));
+                }
+            bf.write(toFile.toString().trim());
+            bf.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                bf.close();
+            } catch (Exception e) {
+            }
+        }
+    }
+
     public static void writeToFile(HashMap<String, Map<String, Integer>> map) {
         String path = fileName(1);
         File graph = new File(path);
@@ -103,7 +143,7 @@ public class GraphIO {
     public static String fileName(int rW) {
         int readOrWrite = rW;
         String name =
-                "C:\\Users\\nickl\\OneDrive\\Desktop\\SoftwareEngineering\\git\\swe-project\\VaxData\\Graphs\\"; // CHANGE THIS PATH AS NEEDED. MUST BE EXACT.
+                "C:\\Users\\nickl\\OneDrive\\Desktop\\SoftwareEngineering\\project\\swe-project\\VaxData\\Graphs\\"; // CHANGE THIS PATH AS NEEDED. MUST BE EXACT.
         if (readOrWrite == 1) {
             boolean exists = true;
             while (exists) {

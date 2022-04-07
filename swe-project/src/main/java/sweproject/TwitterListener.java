@@ -1,7 +1,7 @@
 package sweproject;
 
-
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 import twitter4j.Status;
 import twitter4j.StatusAdapter;
@@ -13,14 +13,14 @@ import java.io.PrintWriter;
 @Component
 public class TwitterListener extends StatusAdapter {
 
-    // private static final Logger LOG = LoggerFactory.getLogger(TwitterListener.class);
+    private static final Logger LOG = LoggerFactory.getLogger(TwitterListener.class);
 
     private static final String USER_DATA = "VaxData/vax tweets users.txt";
     private static final String TWEET_DATA = "VaxData/vax tweets.txt";
 
     @Override
     public void onStatus(Status s) {
-        // LOG.info("Twitter Tweets, log info:");
+        LOG.info("Twitter Tweets, log info:");
         Tweet tweet = new Tweet(s.getId(), s.getUser().getScreenName(), s.getText(), s.getRetweetCount(),
                 s.getCreatedAt());
         sweproject.User user = new sweproject.User(s.getUser().getScreenName(), s.getGeoLocation().toString(),
