@@ -1,8 +1,5 @@
 package sweproject;
 
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 import twitter4j.FilterQuery;
 import twitter4j.TwitterException;
@@ -51,8 +48,6 @@ public class TwitterStreamRunner implements StreamRunner {
             "fuckFauci"
     };
 
-    private static final Logger LOG = LoggerFactory.getLogger(TwitterListener.class);
-
     private final ConfigurationBuilder configurationBuilder;
 
     private final TwitterListener twitterListener;
@@ -72,13 +67,12 @@ public class TwitterStreamRunner implements StreamRunner {
 
         FilterQuery filterQuery = new FilterQuery(HASHTAGS);
         twitterStream.filter(filterQuery);
-        LOG.info("Stream using hashtags: ", Arrays.toString(HASHTAGS));
+        System.out.println("Streaming tweets from twitter using the hashtags: " + "\n" + Arrays.toString(HASHTAGS));
     }
 
     @PreDestroy
     public void shutdown() {
         if (twitterStream != null) {
-            LOG.info("Shutdown");
             twitterStream.shutdown();
         }
     }
