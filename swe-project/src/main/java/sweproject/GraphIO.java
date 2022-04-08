@@ -21,14 +21,16 @@ public class GraphIO {
                 System.out.println("1 to write to text file \n" +
                                     "OR 2 to read from text file \n" +
                                     "OR 3 to print first 100 angels to a file:");
-                if (scn.nextLine().equals("1")) {
-                    //
+                if (scn.nextInt() == 1) {
+                    System.out.println("Creating graph...");
                     HashMap<String, Map<String, Integer>> map = Reader.Read_Tweets(file).getEdges();
+                    System.out.println("Writing graph...");
                     writeToFile(map);
-                } else if (scn.nextLine().equals("2")) {
+                    loop = 0;
+                } else if (scn.nextInt() == 2) {
                     writeToHashMapMain(file);
                     loop = 0;
-                } else if (scn.nextLine().equals("3")) {
+                } else if (scn.nextInt() == 3) {
                     System.out.println("Creating graph...");
                     TwitterGraph graph = Reader.Read_Tweets(file);
                     System.out.println("Creating list of angels...");
@@ -142,12 +144,11 @@ public class GraphIO {
     // file and loading a file
     public static String fileName(int rW) {
         int readOrWrite = rW;
-        String name =
-                "C:\\Users\\nickl\\OneDrive\\Desktop\\SoftwareEngineering\\project\\swe-project\\VaxData\\Graphs\\"; // CHANGE THIS PATH AS NEEDED. MUST BE EXACT.
+        String name = "swe-project\\VaxData\\Graphs\\"; // CHANGE THIS PATH AS NEEDED. MUST BE EXACT.
         if (readOrWrite == 1) {
             boolean exists = true;
             while (exists) {
-                System.out.println("write file");
+                System.out.println("Writing to file...");
                 Scanner scn = new Scanner(System.in);
                 System.out.println("ENTER FILE NAME:");
                 //ToDo : Error handling
@@ -165,7 +166,7 @@ public class GraphIO {
         } else {
             boolean exists = false;
             while (!exists) {
-                System.out.println("read file");
+                System.out.println("Reading file...");
                 Scanner scn = new Scanner(System.in);
                 System.out.println("ENTER FILE NAME:");
                 name = name + scn.nextLine() + ".txt";
