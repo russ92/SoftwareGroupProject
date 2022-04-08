@@ -9,16 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="Stream logger deleted.&#10;Deleted the stream logger from TwitterListener and TwitterStreamRunner. Using a previous version of User and Tweet classes as well.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="Streaming tweets working again.">
       <change beforePath="$PROJECT_DIR$/swe-project/VaxData/vax tweets users.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/vax tweets users.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swe-project/VaxData/vax tweets.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/vax tweets.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/TwitterListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/TwitterListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/src/test/java/sweproject/UserTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/test/java/sweproject/UserTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/Configuration.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/Configuration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/TwitterListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/TwitterListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/test-classes/sweproject/UserTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/test-classes/sweproject/UserTests.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -316,7 +309,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649450009841</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Streaming tweets working again.">
+      <created>1649450587171</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1649450587171</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -340,6 +340,7 @@
     <MESSAGE value="Print to text file working with provided vax tweets.txt file." />
     <MESSAGE value="List of angels added.&#10;Method added to TwitterGraph that returns an ArrayList of all people who retweeted and the number of times they retweeted. Prints first 100 to a file in GraphIO class." />
     <MESSAGE value="Stream logger deleted.&#10;Deleted the stream logger from TwitterListener and TwitterStreamRunner. Using a previous version of User and Tweet classes as well." />
-    <option name="LAST_COMMIT_MESSAGE" value="Stream logger deleted.&#10;Deleted the stream logger from TwitterListener and TwitterStreamRunner. Using a previous version of User and Tweet classes as well." />
+    <MESSAGE value="Streaming tweets working again." />
+    <option name="LAST_COMMIT_MESSAGE" value="Streaming tweets working again." />
   </component>
 </project>
