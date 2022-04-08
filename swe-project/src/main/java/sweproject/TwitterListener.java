@@ -19,11 +19,11 @@ public class TwitterListener extends StatusAdapter {
 
         Tweet tweet = new Tweet(s.getId(), s.getUser().getScreenName(), s.getText(), s.getRetweetCount(),
                 s.getCreatedAt());
-        System.out.println("\n" + tweet);
+        System.out.println(tweet);
 
-//        User user = new sweproject.User(s.getUser().getScreenName(), s.getGeoLocation().toString(),
-//                s.getUser().getDescription(), s.getUser().getFollowersCount());
-//        System.out.println(user);
+        User user = new User(s.getUser().getScreenName(), s.getUser().getLocation(),
+                s.getUser().getDescription(), s.getUser().getFollowersCount());
+        System.out.print(user);
 
         // Write to files
         try (FileWriter fw1 = new FileWriter(TWEET_DATA, true);
@@ -34,12 +34,12 @@ public class TwitterListener extends StatusAdapter {
             // TODO: handle exception
         }
 
-//        try (FileWriter fw2 = new FileWriter(USER_DATA, true);
-//             BufferedWriter bw2 = new BufferedWriter(fw2);
-//             PrintWriter out = new PrintWriter(bw2)) {
-//            out.print(user);
-//        } catch (Exception e) {
-//            // TODO: handle exception
-//        }
+        try (FileWriter fw2 = new FileWriter(USER_DATA, true);
+             BufferedWriter bw2 = new BufferedWriter(fw2);
+             PrintWriter out = new PrintWriter(bw2)) {
+            out.print(user);
+        } catch (Exception e) {
+            // TODO: handle exception
+        }
     }
 }
