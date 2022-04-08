@@ -9,16 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="New tweets and Twitter users added from streaming.">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_log4j_over_slf4j_1_7_25.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" beforeDir="false" />
+    <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="GraphIO scanner.&#10;Changed the if statements in the main method from nextLine() to nextInt()">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/GraphIO.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/GraphIO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/src/test/java/sweproject/UserTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/test/java/sweproject/UserTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/swe-project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/swe-project.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/GraphIO.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/GraphIO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/test-classes/sweproject/UserTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/test-classes/sweproject/UserTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/Reader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/TwitterGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/TwitterGraph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/Reader.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/Reader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/TwitterGraph.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/TwitterGraph.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +91,7 @@
       <recent name="C:\Users\nickl\OneDrive\Desktop\SoftwareEngineering\git\swe-project" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.GraphIO">
+  <component name="RunManager" selected="Application.Reader">
     <configuration name="Configuration" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="sweproject.Configuration" />
       <module name="swe-project" />
@@ -166,10 +162,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Reader" />
         <item itemvalue="Application.GraphIO" />
         <item itemvalue="JUnit.UserTests.testUserToString" />
         <item itemvalue="Application.Configuration" />
-        <item itemvalue="Application.Reader" />
         <item itemvalue="Application.TwitterGraph" />
       </list>
     </recent_temporary>
@@ -330,7 +326,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649451032025</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="GraphIO scanner.&#10;Changed the if statements in the main method from nextLine() to nextInt()">
+      <created>1649453969852</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1649453969852</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -357,6 +360,7 @@
     <MESSAGE value="Streaming tweets working again." />
     <MESSAGE value="New tweets and twitter users added from streaming." />
     <MESSAGE value="New tweets and Twitter users added from streaming." />
-    <option name="LAST_COMMIT_MESSAGE" value="New tweets and Twitter users added from streaming." />
+    <MESSAGE value="GraphIO scanner.&#10;Changed the if statements in the main method from nextLine() to nextInt()" />
+    <option name="LAST_COMMIT_MESSAGE" value="GraphIO scanner.&#10;Changed the if statements in the main method from nextLine() to nextInt()" />
   </component>
 </project>
