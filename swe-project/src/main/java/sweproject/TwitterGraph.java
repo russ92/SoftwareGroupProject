@@ -52,8 +52,8 @@ public class TwitterGraph implements sweproject.Graph, sweproject.Arc {
             invertedWeightedRetweets.get(e.destination).put(e.source, e.weight);
         }
 
-        public Map<String, Map<String, Integer>> getGraphHashMap(){
-            return weightedRetweets;
+        public HashMap<String, Map<String, Integer>> getGraphHashMap(){
+            return (HashMap<String, Map<String, Integer>>) weightedRetweets;
         }
 
         public Map<String, Map<String, Integer>> getInvertedHashMap(){
