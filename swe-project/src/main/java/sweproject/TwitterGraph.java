@@ -127,12 +127,4 @@ public class TwitterGraph implements sweproject.Graph, sweproject.Arc {
         else return 0;
     }
 
-    public static void main(String[] args) throws FileNotFoundException {
-        TwitterGraph g = Reader.Read_Tweets();
-        Map<String, Map<String, Integer>> map = g.getEdges();
-        System.out.println(map.get("@EssexPR").toString());
-        System.out.println(g.getTotalRetweets("@EssexPR"));
-        System.out.println(g.getTotalTimesRetweeted("@EssexPR"));
-    }
-
 }

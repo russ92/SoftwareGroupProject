@@ -48,12 +48,17 @@ public class GraphIO {
                     List<Evangelists> angels = graph.getInvertedEvangelists();
                     writeAngelsToFile(angels);
                     incomplete = false;
+//                } else if (scn.nextInt() == 5) {
+//                    System.out.println("Creating graph...");
+//                    TwitterGraph graph = Reader.Read_Tweets();
+//                    System.out.println("Creating list of retweet angels...");
+//                    List<Evangelists> angels = Stances.assignStances();
+//                    writeStancesToFile(angels);
+//                    incomplete = false;
                 } else if (scn.nextInt() == 5) {
-                    System.out.println("Creating graph...");
-                    TwitterGraph graph = Reader.Read_Tweets();
-                    System.out.println("Creating list of retweet angels...");
-                    List<Evangelists> angels = Stances.assignStances();
-                    writeAngelsToFile(angels);
+                    System.out.println("Assigning stances to users...");
+                    Map<String, Integer> angels = Stances.assignStances();
+                    writeHashMapStancesToFile(angels);
                     incomplete = false;
                 } else {
                     System.out.println("PLEASE SELECT 1 OR 2 OR 3 OR 4 OR 5");
@@ -61,18 +66,18 @@ public class GraphIO {
             }
         }
 
-    private static void writeStancesToFile(List<Evangelists> angels) {
+    public static void writeHashMapStancesToFile(Map<String, Integer> map) {
         String path = fileName(1);
         File graph = new File(path);
         BufferedWriter bf = null;
         try {
-            System.out.println("Writing to file...");
+            System.out.println("try");
             bf = new BufferedWriter(new FileWriter(graph));
             // String to be written to file.
             StringBuilder toFile = new StringBuilder();
-            for (Evangelists angel : angels) {
-                toFile.append("\n").append(angel);
-            }
+            map.forEach((K, V)->{
+                toFile.append("\n").append(K).append("\t").append(V);
+            });
             bf.write(toFile.toString().trim());
             bf.flush();
         } catch (IOException e) {
@@ -86,6 +91,32 @@ public class GraphIO {
             }
         }
     }
+
+//    private static void writeStancesToFile(List<Evangelists> angels) {
+//        String path = fileName(1);
+//        File graph = new File(path);
+//        BufferedWriter bf = null;
+//        try {
+//            System.out.println("Writing to file...");
+//            bf = new BufferedWriter(new FileWriter(graph));
+//            // String to be written to file.
+//            StringBuilder toFile = new StringBuilder();
+//            for (Evangelists angel : angels) {
+//                toFile.append("\n").append(angel);
+//            }
+//            bf.write(toFile.toString().trim());
+//            bf.flush();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        } finally {
+//            try {
+//                assert bf != null;
+//                bf.close();
+//            } catch (Exception e) {
+//                e.printStackTrace();
+//            }
+//        }
+//    }
 
     private static void writeAngelsToFile(List<Evangelists> angels) {
         String path = fileName(1);
