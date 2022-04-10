@@ -7,11 +7,19 @@ import java.util.*;
 
 public class Reader {
 
-    public static TwitterGraph Read_Tweets(String filename){
+    private static String angelsFile = "swe-project/VaxData/Graphs/angels.txt";
+    public String getAngelsFile(){ return angelsFile; }
+    public void setAngelsFile(String file){ angelsFile = file;}
+
+    private static String graphFile = "swe-project/VaxData/provided/vax tweets.txt";
+    public String getGraphFile(){ return graphFile; }
+    public void setGraphFile(String file){ graphFile = file;}
+
+    public static TwitterGraph Read_Tweets(){
 
         TwitterGraph tweetsGraph = new TwitterGraph();
         try{
-            BufferedReader buf = new BufferedReader(new FileReader(filename));
+            BufferedReader buf = new BufferedReader(new FileReader(graphFile));
             String lineJustFetched;
 
             while(true){
@@ -44,12 +52,12 @@ public class Reader {
         return tweetsGraph;
     }
 
-    public static List<Evangelists> Read_Angels(String filename){
+    public static List<Evangelists> Read_Angels(){
 
         List<Evangelists> angels = new ArrayList<>();
 
         try{
-            BufferedReader buf = new BufferedReader(new FileReader(filename));
+            BufferedReader buf = new BufferedReader(new FileReader(angelsFile));
             String lineJustFetched;
             
             while(true){
@@ -62,7 +70,7 @@ public class Reader {
                     if (lineIn.length == 3 && lineIn[0].startsWith("@")) {
                         String source = lineIn[0];
                         int numRetweets = Integer.parseInt(lineIn[1]);
-                        int stance = Integer.parseInt(lineIn[1]);
+                        int stance = Integer.parseInt(lineIn[2]);
                         angels.add(new Evangelists(source, numRetweets, stance));
                     }
                 }
@@ -77,14 +85,16 @@ public class Reader {
 
     public static void main(String[] args) throws FileNotFoundException {
 
-        String file = "swe-project\\VaxData\\vax tweets.txt";
+        String file = "swe-project\\VaxData\\Graphs\\UpdateList.txt";
 
 //        System.out.println("Creating graph...");
 //        TwitterGraph graph = Reader.Read_Tweets(file);
 //        System.out.println("Creating list of angels...");
 //        Map<String, Map<String, Integer>> mapGraph = graph.invert();
 //        List<Evangelists> angels = graph.getInvertedEvangelists();
-        List<Evangelists> angels = Read_Angels("swe-project\\VaxData\\Graphs\\angels.txt");
+        Reader r = new Reader();
+        r.setAngelsFile(file);
+        List<Evangelists> angels = Read_Angels();
         System.out.println(angels);
 
 //        mapGraph.forEach((K,V)->{

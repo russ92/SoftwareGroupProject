@@ -8,7 +8,7 @@ public class Evangelists implements Comparable<Evangelists> {
     public Evangelists(String angel, Integer numRetweets, Integer stance) {
         this.angel = angel;
         this.numRetweets = numRetweets;
-        this.stance = 0;
+        this.stance = stance;
     }
 
     public String getAngel() { return angel; }

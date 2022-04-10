@@ -92,6 +92,22 @@ public class TwitterGraph implements sweproject.Graph, sweproject.Arc {
         return angels;
     }
 
+    public int getTotalRetweets(String user){
+        int count = 0;
+        for(String u : weightedRetweets.get(user).keySet()){
+            count += weightedRetweets.get(user).get(u);
+        }
+        return count;
+    }
+
+    public int getTotalTimesRetweeted(String user){
+        int count = 0;
+        for(String u : invertedWeightedRetweets.get(user).keySet()){
+            count += invertedWeightedRetweets.get(user).get(u);
+        }
+        return count;
+    }
+
     // 2b, 2c, 2d of Sprint 3
     @Override
     public Set getVertex(String user){
@@ -112,10 +128,11 @@ public class TwitterGraph implements sweproject.Graph, sweproject.Arc {
     }
 
     public static void main(String[] args) throws FileNotFoundException {
-        TwitterGraph g = Reader.Read_Tweets("swe-project/VaxData/provided/vax tweets.txt");
+        TwitterGraph g = Reader.Read_Tweets();
         Map<String, Map<String, Integer>> map = g.getEdges();
-        //map.get("@BernieSpofforth").put("@EssexPR", 2);
-        System.out.println(map.get("@BernieSpofforth").get("@EssexPR").toString());
+        System.out.println(map.get("@EssexPR").toString());
+        System.out.println(g.getTotalRetweets("@EssexPR"));
+        System.out.println(g.getTotalTimesRetweeted("@EssexPR"));
     }
 
 }

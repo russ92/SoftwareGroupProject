@@ -24,7 +24,7 @@ public class GraphIO {
                                     "OR 4 to print top 100 retweeted angels to a file:");
                 if (scn.nextInt() == 1) {
                     System.out.println("Creating graph...");
-                    Map<String, Map<String, Integer>> map = Reader.Read_Tweets(file).getEdges();
+                    Map<String, Map<String, Integer>> map = Reader.Read_Tweets().getEdges();
                     System.out.println("Writing graph...");
                     writeToFile(map);
                     incomplete = false;
@@ -35,14 +35,14 @@ public class GraphIO {
                     if(g.doesArcExist("@DealRael", "@JamesMelville")) System.out.println(g.getNumOfRetweets("@DealRael","@JamesMelville"));
                 } else if (scn.nextInt() == 3) {
                     System.out.println("Creating graph...");
-                    TwitterGraph graph = Reader.Read_Tweets(file);
+                    TwitterGraph graph = Reader.Read_Tweets();
                     System.out.println("Creating list of angels...");
                     List<Evangelists> angels = graph.getEvangelists();
                     writeAngelsToFile(angels);
                     incomplete = false;
                 } else if (scn.nextInt() == 4) {
                     System.out.println("Creating graph...");
-                    TwitterGraph graph = Reader.Read_Tweets(file);
+                    TwitterGraph graph = Reader.Read_Tweets();
                     System.out.println("Creating list of retweet angels...");
                     List<Evangelists> angels = graph.getInvertedEvangelists();
                     writeAngelsToFile(angels);
