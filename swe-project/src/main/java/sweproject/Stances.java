@@ -14,22 +14,26 @@ public class Stances {
         List<Evangelists> angels = Reader.Read_Angels();
 
         List<Evangelists> everyoneElse = new ArrayList<>();
-        int iterations = 0;
+        int iterations = 1;
 
-        while (iterations <= 1) {
+        while (iterations < 9) {
+            System.out.println(angels.size());
             for (Evangelists a : angels) {
                 ArrayList<String> names = new ArrayList<>();
+
+                // List of angel names whose stances won't be changed.
                 for (Evangelists n : angels) {
                     names.add(n.getAngel());
                 }
+
                 if (map.containsKey(a.getAngel())) {
                     for (String g : map.get(a.getAngel()).keySet()) {
                         int numRetweets = graph.getTotalTimesRetweeted(g);
                         int stance = a.getStance();
                         Evangelists newAngel = new Evangelists(g, numRetweets, stance);
 
-                        if (!names.contains(g)) {
-                            System.out.println("Adding new user...\t" + newAngel);
+                        // Check if newAngel already has a stance
+                        if (!names.contains(g) && !everyoneElse.contains(newAngel)) {
                             everyoneElse.add(newAngel);
                         }
                     }
@@ -37,7 +41,12 @@ public class Stances {
                 }
             }
 
-            angels.addAll(everyoneElse);
+            System.out.println("Iteration " + iterations);
+
+            // Remove duplicates from the list of angels
+            List<Evangelists> everyoneElseCopy = new ArrayList<>(everyoneElse);
+            everyoneElseCopy.removeAll(angels);
+            angels.addAll(everyoneElseCopy);
             iterations++;
         }
 
@@ -45,6 +54,6 @@ public class Stances {
     }
 
     public static void main(String [] args){
-        System.out.println(Stances.assignStances());
+        System.out.println(Stances.assignStances().size());
     }
 }
