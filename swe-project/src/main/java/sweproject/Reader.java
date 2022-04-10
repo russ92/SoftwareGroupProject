@@ -7,7 +7,7 @@ import java.util.*;
 
 public class Reader {
 
-    private static String angelsFile = "swe-project/VaxData/Graphs/angels.txt";
+    private static String angelsFile = "VaxData/Graphs/angels.txt";
     public String getAngelsFile(){ return angelsFile; }
     public void setAngelsFile(String file){ angelsFile = file;}
 
