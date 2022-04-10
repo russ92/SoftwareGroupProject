@@ -82,25 +82,4 @@ public class Reader {
         }
         return angels;
     }
-
-    public static void main(String[] args) throws FileNotFoundException {
-
-        String file = "swe-project\\VaxData\\Graphs\\UpdateList.txt";
-
-//        System.out.println("Creating graph...");
-//        TwitterGraph graph = Reader.Read_Tweets(file);
-//        System.out.println("Creating list of angels...");
-//        Map<String, Map<String, Integer>> mapGraph = graph.invert();
-//        List<Evangelists> angels = graph.getInvertedEvangelists();
-        Reader r = new Reader();
-        r.setAngelsFile(file);
-        List<Evangelists> angels = Read_Angels();
-        System.out.println(angels);
-
-//        mapGraph.forEach((K,V)->{
-//            System.out.print("\n" + K + "\t");
-//            V.forEach((X,Y)-> System.out.print(X+":"+Y+"\t"));
-//        });
-
-    }
 }
