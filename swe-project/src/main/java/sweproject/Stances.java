@@ -16,7 +16,7 @@ public class Stances {
         List<Evangelists> everyoneElse = new ArrayList<>();
         int iterations = 1;
 
-        while (iterations < 9) {
+        while (iterations < 13) {
             System.out.println(angels.size());
             for (Evangelists a : angels) {
                 ArrayList<String> names = new ArrayList<>();
