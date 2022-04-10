@@ -12,7 +12,7 @@ public class GraphIO {
             System.out.println("GIT");
 
             // File to be written as a graph
-            String file = "swe-project/VaxData/provided/vax tweets.txt";
+            String file = "VaxData/provided/vax tweets.txt";
 
             boolean incomplete = true;
 

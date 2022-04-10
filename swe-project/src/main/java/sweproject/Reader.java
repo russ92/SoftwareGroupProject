@@ -11,7 +11,7 @@ public class Reader {
     public String getAngelsFile(){ return angelsFile; }
     public void setAngelsFile(String file){ angelsFile = file;}
 
-    private static String graphFile = "swe-project/VaxData/provided/vax tweets.txt";
+    private static String graphFile = "VaxData/provided/vax tweets.txt";
     public String getGraphFile(){ return graphFile; }
     public void setGraphFile(String file){ graphFile = file;}
 
