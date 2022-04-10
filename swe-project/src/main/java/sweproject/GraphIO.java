@@ -14,42 +14,46 @@ public class GraphIO {
             // File to be written as a graph
             String file = "swe-project/VaxData/provided/vax tweets.txt";
 
-            int loop = 1;
+            boolean incomplete = true;
 
-            while (loop == 1) {
+            while (incomplete) {
                 Scanner scn = new Scanner(System.in);
-                System.out.println("1 to write to text file \n" +
-                                    "OR 2 to read from text file \n" +
-                                    "OR 3 to print first 100 angels to a file:");
+                System.out.println("1 to write to the graph to a text file \n" +
+                                    "OR 2 to read a graph in from text file \n" +
+                                    "OR 3 to print top 100 angels to a file \n" +
+                                    "OR 4 to print top 100 retweeted angels to a file:");
                 if (scn.nextInt() == 1) {
                     System.out.println("Creating graph...");
-                    HashMap<String, Map<String, Integer>> map = Reader.Read_Tweets(file).getEdges();
+                    Map<String, Map<String, Integer>> map = Reader.Read_Tweets(file).getEdges();
                     System.out.println("Writing graph...");
                     writeToFile(map);
-                    loop = 0;
+                    incomplete = false;
                 } else if (scn.nextInt() == 2) {
-                    writeToHashMapMain(file);
-                    loop = 0;
+                    TwitterGraph g = writeToHashMap();
+                    incomplete = false;
+                    System.out.println(g.getEdges());
+                    if(g.doesArcExist("@DealRael", "@JamesMelville")) System.out.println(g.getNumOfRetweets("@DealRael","@JamesMelville"));
                 } else if (scn.nextInt() == 3) {
                     System.out.println("Creating graph...");
                     TwitterGraph graph = Reader.Read_Tweets(file);
                     System.out.println("Creating list of angels...");
                     List<Evangelists> angels = graph.getEvangelists();
                     writeAngelsToFile(angels);
-                    loop = 0;
+                    incomplete = false;
+                } else if (scn.nextInt() == 3) {
+                    System.out.println("Creating graph...");
+                    TwitterGraph graph = Reader.Read_Tweets(file);
+                    System.out.println("Creating list of retweet angels...");
+                    List<Evangelists> angels = graph.getInvertedEvangelists();
+                    writeAngelsToFile(angels);
+                    incomplete = false;
                 } else {
-                    System.out.println("PLEASE SELECT 1 OR 2 OR 3");
+                    System.out.println("PLEASE SELECT 1 OR 2 OR 3 OR 4");
                 }
             }
         }
 
     private static void writeAngelsToFile(List<Evangelists> angels) {
-//        for(Evangelists e: angels) {
-//            if (e.getNumRetweets()>100) {
-//                System.out.println(e);
-//            }
-//        }
-
         String path = fileName(1);
         File graph = new File(path);
         BufferedWriter bf = null;
@@ -67,13 +71,15 @@ public class GraphIO {
             e.printStackTrace();
         } finally {
             try {
+                assert bf != null;
                 bf.close();
             } catch (Exception e) {
+                e.printStackTrace();
             }
         }
     }
 
-    public static void writeToFile(HashMap<String, Map<String, Integer>> map) {
+    public static void writeToFile(Map<String, Map<String, Integer>> map) {
         String path = fileName(1);
         File graph = new File(path);
         BufferedWriter bf = null;
@@ -94,58 +100,62 @@ public class GraphIO {
             e.printStackTrace();
         } finally {
             try {
+                assert bf != null;
                 bf.close();
             } catch (Exception e) {
+                e.printStackTrace();
             }
         }
     }
 
-    public static void writeToHashMapMain(String file) throws FileNotFoundException {
-        Map<String, Map<String, Integer>> mapFromTxtFile = Reader.Read_Tweets(file).getEdges();
-
-        for (Map.Entry<String, Map<String, Integer>> entry : mapFromTxtFile.entrySet()) {
-            System.out.println(entry.getKey() + " : " + entry.getValue());
-        }
-    }
-
-//    public static Map<String, Map<String, Integer>> writeToHashMap() {
-//        Map<String, Map<String, Integer>> map = new HashMap<String, Map<String, Integer>>();
-//        BufferedReader br = null;
-//        String path = fileName(2);
-//
-//        try {
-//            File file = new File(path);
-//            br = new BufferedReader(new FileReader(file));
-//            String line = null;
-//            while ((line = br.readLine()) != null) {
-//                String[] parts = line.split(":");
-//                String user = parts[0].trim();
-//                String numRetweetsStr = parts[1].trim();
-//                int numRetweets = Integer.parseInt(numRetweetsStr);
-//
-//                if (!user.equals("")) {
-//                    map.put(user, numRetweets);
-//                }
-//            }
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        } finally {
-//            if (br != null) {
-//                try {
-//                    br.close();
-//                } catch (Exception e) {
-//                }
-//            }
+//    public static void writeToHashMapMain(String file) throws FileNotFoundException {
+//        Map<String, Map<String, Integer>> mapFromTxtFile = Reader.Read_Tweets(file).getGraphHashMap();
+//        for (Map.Entry<String, Map<String, Integer>> entry : mapFromTxtFile.entrySet()) {
+//            System.out.println(entry.getKey() + " : " + entry.getValue());
 //        }
-//        return map;
 //    }
+
+    public static TwitterGraph writeToHashMap() {
+        TwitterGraph graph = new TwitterGraph();
+        String path = fileName(2);
+        File file = new File(path);
+
+        try{
+            BufferedReader buf = new BufferedReader(new FileReader(file));
+            String lineJustFetched = null;
+
+            while(true){
+                lineJustFetched = buf.readLine();
+                if(lineJustFetched == null){
+                    break;
+                }else{
+                    String[] lineIn = lineJustFetched.split("\t");
+                    String source = lineIn[0];
+
+                    for(int i = 1; i<lineIn.length; i++ ){
+                        String[] retweet = lineIn[i].split(":");
+                        int numRetweets = Integer.parseInt(retweet[1]);
+                        String destination = retweet[0];
+
+                        graph.addArc(source, destination, numRetweets);
+
+                    }
+                }
+            }
+
+            buf.close();
+
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        return graph;
+    }
 
     // int passed in so that the code can differentiate between creating a new
     // file and loading a file
     public static String fileName(int rW) {
-        int readOrWrite = rW;
         String name = "swe-project\\VaxData\\Graphs\\"; // CHANGE THIS PATH AS NEEDED. MUST BE EXACT.
-        if (readOrWrite == 1) {
+        if (rW == 1) {
             boolean exists = true;
             while (exists) {
                 System.out.println("Writing to file...");
@@ -157,8 +167,8 @@ public class GraphIO {
                 name = name + scn.nextLine() + ".txt";
                 File f = new File(name);
                 if (f.exists()) {
-                    exists = true;
-                    System.out.println("FILE ALREADY EXISTS");
+                    System.out.println("FILE: " + name + " ALREADY EXISTS");
+                    //name = "";
                 } else {
                     exists = false;
                 }
@@ -175,11 +185,11 @@ public class GraphIO {
                 if (f.exists()) {
                     exists = true;
                 } else {
-                    exists = false;
-                    System.out.println("FILE DOES NOT EXIST");
+                    System.out.println("FILE: " + name + " DOESN'T EXISTS");
+                    //name = "";
                 }
             }
         }
-    return name;
-}
+        return name;
+    }
 }
