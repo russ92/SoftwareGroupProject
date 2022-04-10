@@ -9,7 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="Official working JAR?&#10;Run from outside the /swe-project folder i.e. &gt; java -jar swe-project/out/artifacts/swe-project.jar" />
+    <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="Cleaned up folder, end of sprint 4." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -468,7 +468,28 @@
       <option name="project" value="LOCAL" />
       <updated>1649632813433</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Official working JAR?&#10;Run from outside the /swe-project folder i.e. &gt; java -jar swe-project/out/artifacts/swe-project.jar">
+      <created>1649633049949</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1649633049949</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Cleaned up folder, end of sprint 4.">
+      <created>1649633318069</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1649633318069</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Cleaned up folder, end of sprint 4.">
+      <created>1649633346924</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1649633346924</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -484,7 +505,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Working version: streaming and writing tweets into accountData.txt and corpus.txt" />
     <MESSAGE value="Provided Data for Sprint 3." />
     <MESSAGE value="Reformatted User and Tweet toString() methods to be like the ProvidedData" />
     <MESSAGE value="Reader class working. Read_Tweets() creates a returns a TwitterGraph" />
@@ -509,6 +529,7 @@
     <MESSAGE value="Jar working?" />
     <MESSAGE value="Jar working2.0?" />
     <MESSAGE value="Official working JAR?&#10;Run from outside the /swe-project folder i.e. &gt; java -jar swe-project/out/artifacts/swe-project.jar" />
-    <option name="LAST_COMMIT_MESSAGE" value="Official working JAR?&#10;Run from outside the /swe-project folder i.e. &gt; java -jar swe-project/out/artifacts/swe-project.jar" />
+    <MESSAGE value="Cleaned up folder, end of sprint 4." />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleaned up folder, end of sprint 4." />
   </component>
 </project>
