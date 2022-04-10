@@ -16,7 +16,7 @@ public class Stances {
         List<Evangelists> everyoneElse = new ArrayList<>();
         int iterations = 1;
 
-        while (iterations < 13) {
+        while (iterations < 12) {
             System.out.println(angels.size());
             for (Evangelists a : angels) {
                 ArrayList<String> names = new ArrayList<>();
@@ -34,6 +34,7 @@ public class Stances {
 
                         // Check if newAngel already has a stance
                         if (!names.contains(g) && !everyoneElse.contains(newAngel)) {
+                            // System.out.println(newAngel);
                             everyoneElse.add(newAngel);
                         }
                     }

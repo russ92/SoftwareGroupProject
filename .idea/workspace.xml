@@ -11,7 +11,9 @@
   <component name="ChangeListManager">
     <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="Error checking adjusted.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/GraphIO.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/GraphIO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/Stances.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/Stances.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/Stances.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/Stances.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +90,7 @@
       <recent name="C:\Users\nickl\OneDrive\Desktop\SoftwareEngineering\git\swe-project" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Stances">
+  <component name="RunManager" selected="Application.GraphIO">
     <configuration name="GraphIO" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="sweproject.GraphIO" />
       <module name="swe-project" />
@@ -159,10 +161,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.GraphIO" />
         <item itemvalue="Application.Stances" />
         <item itemvalue="Application.TwitterGraph" />
         <item itemvalue="Application.Reader" />
-        <item itemvalue="Application.GraphIO" />
         <item itemvalue="JUnit.TwitterGraphTests.testInvert" />
       </list>
     </recent_temporary>
@@ -379,7 +381,21 @@
       <option name="project" value="LOCAL" />
       <updated>1649621007058</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Error checking adjusted.">
+      <created>1649621715427</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1649621715427</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Error checking adjusted.">
+      <created>1649622473713</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1649622473713</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

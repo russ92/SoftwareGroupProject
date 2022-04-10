@@ -21,7 +21,8 @@ public class GraphIO {
                 System.out.println("1 to write to the graph to a text file \n" +
                                     "OR 2 to read a graph in from text file \n" +
                                     "OR 3 to print top 100 angels to a file \n" +
-                                    "OR 4 to print top 100 retweeted angels to a file:");
+                                    "OR 4 to print top 100 retweeted angels to a file \n" +
+                                    "OR 5 to print stances to a file:");
                 if (scn.nextInt() == 1) {
                     System.out.println("Creating graph...");
                     Map<String, Map<String, Integer>> map = Reader.Read_Tweets().getEdges();
@@ -47,11 +48,44 @@ public class GraphIO {
                     List<Evangelists> angels = graph.getInvertedEvangelists();
                     writeAngelsToFile(angels);
                     incomplete = false;
+                } else if (scn.nextInt() == 5) {
+                    System.out.println("Creating graph...");
+                    TwitterGraph graph = Reader.Read_Tweets();
+                    System.out.println("Creating list of retweet angels...");
+                    List<Evangelists> angels = Stances.assignStances();
+                    writeAngelsToFile(angels);
+                    incomplete = false;
                 } else {
-                    System.out.println("PLEASE SELECT 1 OR 2 OR 3 OR 4");
+                    System.out.println("PLEASE SELECT 1 OR 2 OR 3 OR 4 OR 5");
                 }
             }
         }
+
+    private static void writeStancesToFile(List<Evangelists> angels) {
+        String path = fileName(1);
+        File graph = new File(path);
+        BufferedWriter bf = null;
+        try {
+            System.out.println("Writing to file...");
+            bf = new BufferedWriter(new FileWriter(graph));
+            // String to be written to file.
+            StringBuilder toFile = new StringBuilder();
+            for (Evangelists angel : angels) {
+                toFile.append("\n").append(angel);
+            }
+            bf.write(toFile.toString().trim());
+            bf.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                assert bf != null;
+                bf.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
 
     private static void writeAngelsToFile(List<Evangelists> angels) {
         String path = fileName(1);
