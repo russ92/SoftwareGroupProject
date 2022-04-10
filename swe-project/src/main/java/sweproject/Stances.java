@@ -41,10 +41,6 @@ public class Stances {
     }
 
     public static void analysisStances(){
-//        Reader reader = new Reader();
-//        reader.setAngelsFile("swe-project/VaxData/Graphs/assignedStances.txt");
-//        List<Evangelists> angels = reader.Read_Angels();
-
         Map<String, Integer> angels = Stances.assignStances();
 
         int countAnti = 0;

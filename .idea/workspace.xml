@@ -9,12 +9,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="Write stances to file 30,000 users.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/GraphIO.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/GraphIO.java" afterDir="false" />
+    <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="Write hashMapStances.">
+      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/Graphs/FullGraph.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/other/FullGraph.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/Graphs/UpdateList.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/other/UpdateList.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/Graphs/assignedStances.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/other/assignedStances.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/Graphs/listOfAngels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/other/listOfAngels.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/Graphs/listOfInvertedAngels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/other/listOfInvertedAngels.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/Graphs/stances.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/other/stances.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/Stances.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/Stances.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/GraphIO.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/GraphIO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/Stances.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/Stances.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -417,7 +419,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649627227429</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Write hashMapStances.">
+      <created>1649630508416</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1649630508416</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -452,6 +461,7 @@
     <MESSAGE value="Error checking adjusted." />
     <MESSAGE value="Write stances to file." />
     <MESSAGE value="Write stances to file 30,000 users." />
-    <option name="LAST_COMMIT_MESSAGE" value="Write stances to file 30,000 users." />
+    <MESSAGE value="Write hashMapStances." />
+    <option name="LAST_COMMIT_MESSAGE" value="Write hashMapStances." />
   </component>
 </project>
