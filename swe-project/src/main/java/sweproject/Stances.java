@@ -55,5 +55,34 @@ public class Stances {
 
     public static void main(String [] args){
         System.out.println(Stances.assignStances().size());
+
+        // Output for 12 iterations
+//        Creating graph...
+//        Getting angels (most influential users)...
+//        100
+//        Iteration 1
+//        1587
+//        Iteration 2
+//        5236
+//        Iteration 3
+//        12723
+//        Iteration 4
+//        20784
+//        Iteration 5
+//        25790
+//        Iteration 6
+//        29428
+//        Iteration 7
+//        30689
+//        Iteration 8
+//        31166
+//        Iteration 9
+//        31301
+//        Iteration 10
+//        31328
+//        Iteration 11
+//        31376
+//        Iteration 12
+//        31378
     }
 }
