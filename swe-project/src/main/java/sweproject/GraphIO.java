@@ -40,7 +40,7 @@ public class GraphIO {
                     List<Evangelists> angels = graph.getEvangelists();
                     writeAngelsToFile(angels);
                     incomplete = false;
-                } else if (scn.nextInt() == 3) {
+                } else if (scn.nextInt() == 4) {
                     System.out.println("Creating graph...");
                     TwitterGraph graph = Reader.Read_Tweets(file);
                     System.out.println("Creating list of retweet angels...");

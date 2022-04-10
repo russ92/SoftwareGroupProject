@@ -9,24 +9,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="Reader file updated.&#10;Works with the data we collected.">
+    <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="Inverted Angels listed added.&#10;New method in TwitterGraph that creates a list of angels from the inverted graph.">
+      <change afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/Stances.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swe-project/swe-project.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/Graphs/angelsTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/Arc.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/Arc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/Evangelists.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/Evangelists.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/Graph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/GraphIO.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/GraphIO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/Reader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/RetweetGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/RetweetGraph.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/TwitterGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/TwitterGraph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/src/test/java/sweproject/TwitterGraphTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/test/java/sweproject/TwitterGraphTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/Arc.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/Arc.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/Graph.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/Graph.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/Evangelists.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/Evangelists.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/GraphIO.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/GraphIO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/Reader.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/Reader.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/RetweetGraph.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/RetweetGraph.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/TwitterGraph.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/TwitterGraph.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/test-classes/sweproject/TwitterGraphTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/test-classes/sweproject/TwitterGraphTests.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +58,6 @@
     <setting file="file://$PROJECT_DIR$/swe-project/src/main/java/sweproject/Tweet.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/swe-project/src/main/java/sweproject/GraphIO.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/swe-project/src/main/java/sweproject/TwitterGraph.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/swe-project/pom.xml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/swe-project/src/main/java/sweproject/Reader.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="JpbToolWindowState">
@@ -84,8 +81,8 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/swe-project/out/artifacts/stream" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/twitter4j-4.0.7" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
@@ -103,7 +100,7 @@
       <recent name="C:\Users\nickl\OneDrive\Desktop\SoftwareEngineering\git\swe-project" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.GraphIO">
+  <component name="RunManager" selected="Application.Reader">
     <configuration name="GraphIO" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="sweproject.GraphIO" />
       <module name="swe-project" />
@@ -130,7 +127,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TwitterGraphTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TwitterGraph" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="sweproject.TwitterGraph" />
       <module name="swe-project" />
       <extension name="coverage">
         <pattern>
@@ -138,9 +136,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="sweproject" />
-      <option name="MAIN_CLASS_NAME" value="sweproject.TwitterGraphTests" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -179,11 +174,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.GraphIO" />
         <item itemvalue="Application.Reader" />
+        <item itemvalue="Application.GraphIO" />
+        <item itemvalue="Application.TwitterGraph" />
         <item itemvalue="JUnit.TwitterGraphTests.testInvert" />
         <item itemvalue="JUnit.TwitterGraphTests.testGetEdges" />
-        <item itemvalue="JUnit.TwitterGraphTests" />
       </list>
     </recent_temporary>
   </component>
@@ -357,7 +352,21 @@
       <option name="project" value="LOCAL" />
       <updated>1649455200546</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Inverted Angels listed added.&#10;New method in TwitterGraph that creates a list of angels from the inverted graph.">
+      <created>1649549505883</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1649549505883</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Inverted Angels listed added.&#10;New method in TwitterGraph that creates a list of angels from the inverted graph.">
+      <created>1649549616939</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1649549616939</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -386,6 +395,7 @@
     <MESSAGE value="New tweets and Twitter users added from streaming." />
     <MESSAGE value="GraphIO scanner.&#10;Changed the if statements in the main method from nextLine() to nextInt()" />
     <MESSAGE value="Reader file updated.&#10;Works with the data we collected." />
-    <option name="LAST_COMMIT_MESSAGE" value="Reader file updated.&#10;Works with the data we collected." />
+    <MESSAGE value="Inverted Angels listed added.&#10;New method in TwitterGraph that creates a list of angels from the inverted graph." />
+    <option name="LAST_COMMIT_MESSAGE" value="Inverted Angels listed added.&#10;New method in TwitterGraph that creates a list of angels from the inverted graph." />
   </component>
 </project>

@@ -1,5 +1,6 @@
 package sweproject;
 
+import java.io.FileNotFoundException;
 import java.util.*;
 
 import static java.lang.Integer.parseInt;
@@ -108,6 +109,13 @@ public class TwitterGraph implements sweproject.Graph, sweproject.Arc {
             return weightedRetweets.get(user1).get(user2);
         }
         else return 0;
+    }
+
+    public static void main(String[] args) throws FileNotFoundException {
+        TwitterGraph g = Reader.Read_Tweets("swe-project/VaxData/provided/vax tweets.txt");
+        Map<String, Map<String, Integer>> map = g.getEdges();
+        //map.get("@BernieSpofforth").put("@EssexPR", 2);
+        System.out.println(map.get("@BernieSpofforth").get("@EssexPR").toString());
     }
 
 }
