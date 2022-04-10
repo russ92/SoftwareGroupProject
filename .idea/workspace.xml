@@ -9,14 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="Write hashMapStances.">
-      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/Graphs/FullGraph.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/other/FullGraph.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/Graphs/UpdateList.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/other/UpdateList.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/Graphs/assignedStances.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/other/assignedStances.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/Graphs/listOfAngels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/other/listOfAngels.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/Graphs/listOfInvertedAngels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/other/listOfInvertedAngels.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/Graphs/stances.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/other/stances.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/Stances.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/Stances.java" afterDir="false" />
+    <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="Cleaned folder.">
+      <change beforePath="$PROJECT_DIR$/swe-project/out/artifacts/swe_project_jar/swe-project.jar" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,8 +68,8 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/twitter4j-4.0.7" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/swe-project/out/artifacts" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
@@ -88,6 +82,8 @@
       <recent name="C:\Users\nickl\OneDrive\Desktop\SoftwareEngineering\git\swe-project\VaxData" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\nickl\OneDrive\Desktop\SoftwareEngineering\project\swe-project\VaxData\Graphs" />
+      <recent name="C:\Users\nickl\OneDrive\Desktop\SoftwareEngineering\project\swe-project\VaxData\other" />
       <recent name="C:\Users\nickl\OneDrive\Desktop\SoftwareEngineering\git\swe-project\VaxData\Graphs" />
       <recent name="C:\Users\nickl\OneDrive\Desktop\SoftwareEngineering\git\swe-project\out\artifacts\sprint3" />
       <recent name="C:\Users\nickl\OneDrive\Desktop\SoftwareEngineering\git\swe-project" />
@@ -426,7 +422,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649630508416</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Cleaned folder.">
+      <created>1649630721630</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1649630721630</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -462,6 +465,7 @@
     <MESSAGE value="Write stances to file." />
     <MESSAGE value="Write stances to file 30,000 users." />
     <MESSAGE value="Write hashMapStances." />
-    <option name="LAST_COMMIT_MESSAGE" value="Write hashMapStances." />
+    <MESSAGE value="Cleaned folder." />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleaned folder." />
   </component>
 </project>
