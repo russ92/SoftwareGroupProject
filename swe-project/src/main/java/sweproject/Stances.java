@@ -27,9 +27,7 @@ public class Stances {
                 if (map.containsKey(a)){
                     for (String g : map.get(a).keySet()) {
                         int stance = angelMap.get(a);
-
                         angelMap.put(g, stance);
-                        System.out.println(g + "\t" + stance);
                     }
 
                 }
