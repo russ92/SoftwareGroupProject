@@ -1,5 +1,6 @@
 package sweproject;
 
+import java.util.Date;
 
 public class Tweet{
 
@@ -11,6 +12,8 @@ public class Tweet{
 
     public Tweet(long status_id, String userhandle, String text, int num_retweets, Date timestamp) {
         this.status_id = status_id;
+        this.userhandle = "@" + userhandle.replace("\n", "").replace("\r", "");
+        this.text = text.replace("\n", "").replace("\r", "");
         this.num_retweets = num_retweets;
         this.timestamp = timestamp;
     }
@@ -61,6 +64,7 @@ public class Tweet{
                 + userhandle + "\t"
                 + text + "\t"
                 + num_retweets + "\t"
+                + timestamp + "\n";
     }
 
 //    public boolean occurs(Tweet tweet) {

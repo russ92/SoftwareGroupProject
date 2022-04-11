@@ -59,7 +59,11 @@ public class Configuration {
         //Stream tweets
         sweproject.TwitterListener tl = new sweproject.TwitterListener();
         sweproject.TwitterStreamRunner tsr = new sweproject.TwitterStreamRunner(cb, tl);
-        tsr.start();
+        try {
+            tsr.start();
+        } catch (Exception e) {
+            tsr.shutdown();
+        }
     }
 
     public static void writer(sweproject.Tweet tweet){
@@ -71,35 +75,4 @@ public class Configuration {
             // TODO: handle exception
         }
     }
-
-
-
-    // Testing config.txt file, no input detected
-
-//    public static void main(String[] args){
-//        String consumerKey="";
-//        String consumerSecret="";
-//        String accessToken = "";
-//        String accessSecret="";
-//
-//        try(FileReader reader = new FileReader("config.txt")) {
-//            Properties properties = new Properties();
-//            properties.load(reader);
-//
-//            consumerKey = properties.getProperty("consumerKey");
-//            consumerSecret = properties.getProperty("consumerSecret");
-//            accessToken = properties.getProperty("accessToken");
-//            accessSecret = properties.getProperty("accessSecret");
-//
-//        } catch (Exception e) {
-//            //TODO: handle exception
-//        }
-//
-//        System.out.println(consumerKey);
-//        System.out.println(consumerSecret);
-//        System.out.println(accessToken);
-//        System.out.println(accessSecret);
-//
-//    }
-
 }

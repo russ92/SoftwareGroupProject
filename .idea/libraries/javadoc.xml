@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="javadoc">
+    <CLASSES />
+    <JAVADOC>
+      <root url="file://$USER_HOME$/Downloads/twitter4j-4.0.7/twitter4j-appengine/javadoc" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="file://$USER_HOME$/Downloads/twitter4j-4.0.7/twitter4j-appengine/src/main/java" />
+      <root url="file://$USER_HOME$/Downloads/twitter4j-4.0.7/twitter4j-appengine/src/test/java" />
+    </SOURCES>
+  </library>
+</component>
