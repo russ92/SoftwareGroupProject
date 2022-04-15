@@ -14,7 +14,7 @@ public class TwitterGraph implements Graph, Arc {
         list.computeIfAbsent(source, key -> new TreeSet<>());
     }
 
-    public void addInvertedSourceNode(String source) { list.computeIfAbsent(source, key -> new TreeSet<>());}
+    public void addInvertedSourceNode(String source) { invertedList.computeIfAbsent(source, key -> new TreeSet<>());}
 
     public void addArc(String source, String destination, int weight) {
         if(weightedList.containsKey(source)) {
@@ -33,7 +33,7 @@ public class TwitterGraph implements Graph, Arc {
 
         //inverted map
         addInvertedSourceNode(e.destination);
-        //invertedList.get(e.destination).add(e.source);
+        invertedList.get(e.destination).add(e.source);
 
         setWeight(new Edge(e.source, e.destination, e.weight));
     }
