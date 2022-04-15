@@ -11,10 +11,6 @@ public class GraphIO {
 
         public static void main(String[] args) throws FileNotFoundException {
             System.out.println("GIT");
-            GetProperties prop = new GetProperties();
-
-            // File to be written as a graph
-            String file = prop.getGraphFilepath();
 
             boolean incomplete = true;
 
@@ -25,31 +21,34 @@ public class GraphIO {
                                     "OR 3 to print top 100 angels to a file \n" +
                                     "OR 4 to print top 100 retweeted angels to a file \n" +
                                     "OR 5 to print stances of users to a file:");
-                if (scn.nextInt() == 1) {
+
+                int choice = scn.nextInt();
+
+                if (choice == 1) {
                     System.out.println("Creating graph...");
                     Map<String, Map<String, Integer>> map = Reader.Read_Tweets().getEdges();
                     System.out.println("Writing graph...");
                     writeToFile(map);
                     incomplete = false;
-                } else if (scn.nextInt() == 2) {
+                } else if (choice == 2) {
                     TwitterGraph g = Reader.Read_HashMap();
                     incomplete = false;
                     System.out.println(g.getEdges());
-                } else if (scn.nextInt() == 3) {
+                } else if (choice == 3) {
                     System.out.println("Creating graph...");
                     TwitterGraph graph = Reader.Read_Tweets();
                     System.out.println("Creating list of angels...");
                     List<Evangelists> angels = graph.getEvangelists();
                     writeAngelsToFile(angels);
                     incomplete = false;
-                } else if (scn.nextInt() == 4) {
+                } else if (choice == 4) {
                     System.out.println("Creating graph...");
                     TwitterGraph graph = Reader.Read_HashMap();
                     System.out.println("Creating list of retweet angels...");
                     List<Evangelists> angels = graph.getInvertedEvangelists();
                     writeAngelsToFile(angels);
                     incomplete = false;
-                } else if (scn.nextInt() == 5) {
+                } else if (choice == 5) {
                     System.out.println("Assigning stances to users...");
                     Map<String, Integer> angels = Stances.assignStances();
                     writeHashMapStancesToFile(angels);
