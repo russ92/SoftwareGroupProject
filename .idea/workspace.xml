@@ -9,42 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="Maven JAR added.&#10;To run &gt;java -jar swe-project/target/swe-project-0.0.1-SNAPSHOT-jar-with-dependencies.jar&#10;  Compiled by &gt;mvn clean compile assembly:single">
-      <change afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/GetProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/vax tweets users.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/vax tweets users.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/vax tweets.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/vax tweets.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/Arc.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/Arc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/Configuration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/Edge.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/Edge.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/Evangelists.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/Evangelists.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/Graph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/GraphIO.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/GraphIO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/Reader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/RetweetGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/RetweetGraph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/Stances.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/Stances.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/TwitterGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/TwitterGraph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/TwitterListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/TwitterListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/src/main/resources/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/resources/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/src/main/resources/twitter4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/resources/twitter4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/src/test/java/sweproject/TwitterGraphTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/test/java/sweproject/TwitterGraphTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/Arc.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/Configuration.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/Configuration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/Edge.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/Evangelists.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/Graph.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/GraphIO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/Reader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/RetweetGraph.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/Stances.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/TwitterGraph.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/TwitterListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/TwitterListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/twitter4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/twitter4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/test-classes/sweproject/TwitterGraphTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/test-classes/sweproject/TwitterGraphTests.class" afterDir="false" />
-    </list>
+    <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="Cleaned up folder, end of sprint 4." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -75,9 +40,9 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/swe-project/src/main/java/sweproject/Tweet.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/TwitterGraph.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/Reader.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/GraphIO.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/swe-project/src/main/java/sweproject/GraphIO.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/swe-project/src/main/java/sweproject/TwitterGraph.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/swe-project/src/main/java/sweproject/Reader.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
@@ -122,38 +87,25 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.GraphIO">
-    <configuration name="Configuration" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="sweproject.Configuration" />
-      <module name="swe-project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="sweproject.graph.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GetProperties" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="sweproject.GetProperties" />
-      <module name="swe-project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="sweproject.graph.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="GraphIO" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="sweproject.graph.GraphIO" />
+      <option name="MAIN_CLASS_NAME" value="sweproject.GraphIO" />
       <module name="swe-project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="sweproject.graph.*" />
+          <option name="PATTERN" value="sweproject.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Reader" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="sweproject.Reader" />
+      <module name="swe-project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="sweproject.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -162,11 +114,11 @@
       </method>
     </configuration>
     <configuration name="Stances" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="sweproject.graph.Stances" />
+      <option name="MAIN_CLASS_NAME" value="sweproject.Stances" />
       <module name="swe-project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="sweproject.graph.*" />
+          <option name="PATTERN" value="sweproject.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -175,11 +127,11 @@
       </method>
     </configuration>
     <configuration name="TwitterGraph" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="sweproject.graph.TwitterGraph" />
+      <option name="MAIN_CLASS_NAME" value="sweproject.TwitterGraph" />
       <module name="swe-project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="sweproject.graph.*" />
+          <option name="PATTERN" value="sweproject.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -187,13 +139,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TwitterGraphTests.testInvert" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="swe-project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="sweproject.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="sweproject" />
+      <option name="MAIN_CLASS_NAME" value="sweproject.TwitterGraphTests" />
+      <option name="METHOD_NAME" value="testInvert" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.GraphIO" />
-        <item itemvalue="Application.Configuration" />
-        <item itemvalue="Application.GetProperties" />
         <item itemvalue="Application.Stances" />
         <item itemvalue="Application.TwitterGraph" />
+        <item itemvalue="Application.Reader" />
+        <item itemvalue="JUnit.TwitterGraphTests.testInvert" />
       </list>
     </recent_temporary>
   </component>
