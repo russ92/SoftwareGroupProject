@@ -1,10 +1,11 @@
 package sweproject;
 
+import sweproject.graph.sprint2.TwitterListener;
+import sweproject.graph.sprint2.TwitterStreamRunner;
 import twitter4j.*;
 import twitter4j.Twitter;
 import twitter4j.conf.ConfigurationBuilder;
 
-import javax.jws.Oneway;
 import java.io.*;
 import java.util.*;
 
@@ -59,8 +60,8 @@ public class Configuration {
 
 
         //Stream tweets
-        sweproject.TwitterListener tl = new sweproject.TwitterListener();
-        sweproject.TwitterStreamRunner tsr = new sweproject.TwitterStreamRunner(cb, tl);
+        TwitterListener tl = new TwitterListener();
+        TwitterStreamRunner tsr = new TwitterStreamRunner(cb, tl);
         try {
             tsr.start();
         } catch (Exception e) {

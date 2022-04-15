@@ -40,7 +40,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>sweproject.graph.sprint4.GraphIO</mainClass>
+                            <mainClass>sweproject.graph.sprint3.GraphIO</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>

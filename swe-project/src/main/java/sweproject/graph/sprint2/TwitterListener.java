@@ -1,6 +1,9 @@
-package sweproject;
+package sweproject.graph.sprint2;
 
 import org.springframework.stereotype.Component;
+import sweproject.GetProperties;
+import sweproject.Tweet;
+import sweproject.User;
 import twitter4j.Status;
 import twitter4j.StatusAdapter;
 

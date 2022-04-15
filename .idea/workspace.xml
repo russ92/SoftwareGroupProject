@@ -9,14 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="Initial implementation of Hashtag Graph.&#10;Not working overall. Main error, extracting only the hashtags.&#10;Also, errors when creating the inverted graph -NullPointException">
-      <change afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint5/WriteHashtags.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint4/TwitterGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint4/TwitterGraph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint5/Hashtags.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint5/Hashtags.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/application.properties" afterDir="false" />
-    </list>
+    <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="Hashtags Graph working.&#10;By splitting the tweet text into a string array, the graph is able to read all the hashtags separately.&#10;Prints the graph through the WriteHashtags class." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -174,13 +167,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1648254455717</updated>
-    </task>
-    <task id="LOCAL-00001" summary="Working version: streaming and writing tweets into accountData.txt and corpus.txt">
-      <created>1648312183151</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1648312183151</updated>
     </task>
     <task id="LOCAL-00002" summary="Provided Data for Sprint 3.">
       <created>1648312822021</created>
@@ -504,7 +490,28 @@
       <option name="project" value="LOCAL" />
       <updated>1650039223762</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="Bug fixed.&#10;Scanner scans next integer, instead of having to enter choice multiple times.">
+      <created>1650059748325</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1650059748325</updated>
+    </task>
+    <task id="LOCAL-00049" summary="Hashtags Graph working.&#10;By splitting the tweet text into a string array, the graph is able to read all the hashtags separately.&#10;Prints the graph through the WriteHashtags class.">
+      <created>1650059925510</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1650059925510</updated>
+    </task>
+    <task id="LOCAL-00050" summary="Hashtags Graph working.&#10;By splitting the tweet text into a string array, the graph is able to read all the hashtags separately.&#10;Prints the graph through the WriteHashtags class.">
+      <created>1650060819125</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1650060819125</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -520,8 +527,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Reformatted User and Tweet toString() methods to be like the ProvidedData" />
-    <MESSAGE value="Reader class working. Read_Tweets() creates a returns a TwitterGraph" />
     <MESSAGE value="Working Sprint 3." />
     <MESSAGE value="Print to text file working with provided vax tweets.txt file." />
     <MESSAGE value="List of angels added.&#10;Method added to TwitterGraph that returns an ArrayList of all people who retweeted and the number of times they retweeted. Prints first 100 to a file in GraphIO class." />
@@ -545,7 +550,9 @@
     <MESSAGE value="Official working JAR?&#10;Run from outside the /swe-project folder i.e. &gt; java -jar swe-project/out/artifacts/swe-project.jar" />
     <MESSAGE value="Cleaned up folder, end of sprint 4." />
     <MESSAGE value="Initial implementation of Hashtag Graph.&#10;Not working overall. Main error, extracting only the hashtags.&#10;Also, errors when creating the inverted graph -NullPointException" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial implementation of Hashtag Graph.&#10;Not working overall. Main error, extracting only the hashtags.&#10;Also, errors when creating the inverted graph -NullPointException" />
+    <MESSAGE value="Bug fixed.&#10;Scanner scans next integer, instead of having to enter choice multiple times." />
+    <MESSAGE value="Hashtags Graph working.&#10;By splitting the tweet text into a string array, the graph is able to read all the hashtags separately.&#10;Prints the graph through the WriteHashtags class." />
+    <option name="LAST_COMMIT_MESSAGE" value="Hashtags Graph working.&#10;By splitting the tweet text into a string array, the graph is able to read all the hashtags separately.&#10;Prints the graph through the WriteHashtags class." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

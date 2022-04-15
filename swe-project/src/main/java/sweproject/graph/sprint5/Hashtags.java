@@ -1,11 +1,10 @@
 package sweproject.graph.sprint5;
 
 import sweproject.GetProperties;
-import sweproject.graph.sprint4.TwitterGraph;
+import sweproject.graph.sprint3.TwitterGraph;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
-import java.util.Arrays;
 
 public class Hashtags {
 

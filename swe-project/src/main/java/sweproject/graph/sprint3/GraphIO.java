@@ -1,6 +1,7 @@
-package sweproject.graph.sprint4;
+package sweproject.graph.sprint3;
 
 import sweproject.GetProperties;
+import sweproject.graph.sprint4.Stances;
 
 import java.io.*;
 import java.util.*;

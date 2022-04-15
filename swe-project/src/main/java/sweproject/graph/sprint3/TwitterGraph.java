@@ -1,4 +1,9 @@
-package sweproject.graph.sprint4;
+package sweproject.graph.sprint3;
+
+import sweproject.graph.sprint3.Arc;
+import sweproject.graph.sprint3.Edge;
+import sweproject.graph.sprint3.Evangelists;
+import sweproject.graph.sprint3.Graph;
 
 import java.util.*;
 public class TwitterGraph implements Graph, Arc {

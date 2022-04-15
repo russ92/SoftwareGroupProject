@@ -1,4 +1,4 @@
-package sweproject;
+package sweproject.graph.sprint2;
 
 import twitter4j.TwitterException;
 
