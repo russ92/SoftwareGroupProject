@@ -52,4 +52,7 @@ public class Hashtags {
         return hashtagGraph;
     }
 
+    //ToDo: Assign mean stances for hashtags from user
+    //ToDo:
+
 }
