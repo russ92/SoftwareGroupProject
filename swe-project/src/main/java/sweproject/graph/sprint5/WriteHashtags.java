@@ -2,9 +2,6 @@ package sweproject.graph.sprint5;
 
 import sweproject.GetProperties;
 import sweproject.graph.sprint4.Evangelists;
-import sweproject.graph.sprint4.Reader;
-import sweproject.graph.sprint4.Stances;
-import sweproject.graph.sprint4.TwitterGraph;
 
 import java.io.*;
 import java.util.List;
