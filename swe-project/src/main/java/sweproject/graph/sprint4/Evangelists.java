@@ -1,4 +1,4 @@
-package sweproject.graph.sprint3;
+package sweproject.graph.sprint4;
 
 public class Evangelists implements Comparable<Evangelists> {
     private final String angel;

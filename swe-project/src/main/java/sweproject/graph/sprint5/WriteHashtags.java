@@ -1,7 +1,7 @@
 package sweproject.graph.sprint5;
 
 import sweproject.GetProperties;
-import sweproject.graph.sprint3.Evangelists;
+import sweproject.graph.sprint4.Evangelists;
 
 import java.io.*;
 import java.util.List;
