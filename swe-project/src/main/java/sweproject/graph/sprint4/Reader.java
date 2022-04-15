@@ -1,6 +1,7 @@
-package sweproject.graph;
+package sweproject.graph.sprint4;
 
 import sweproject.GetProperties;
+import sweproject.graph.sprint5.Hashtags;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

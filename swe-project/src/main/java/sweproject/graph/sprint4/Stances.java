@@ -1,4 +1,4 @@
-package sweproject.graph;
+package sweproject.graph.sprint4;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;

@@ -1,4 +1,4 @@
-package sweproject.graph;
+package sweproject.graph.sprint4;
 
 import sweproject.GetProperties;
 

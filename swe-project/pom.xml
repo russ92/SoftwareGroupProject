@@ -4,8 +4,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.example</groupId>
-    <artifactId>swe-project</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <artifactId>swe</artifactId>
+    <version>sprint5</version>
 
     <name>swe-project</name>
     <description>Software Engineering Project 2022</description>
@@ -40,11 +40,11 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>sweproject.GraphIO</mainClass>
+                            <mainClass>sweproject.graph.sprint4.GraphIO</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
-                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                        <descriptorRef>jar</descriptorRef>
                     </descriptorRefs>
                 </configuration>
             </plugin>

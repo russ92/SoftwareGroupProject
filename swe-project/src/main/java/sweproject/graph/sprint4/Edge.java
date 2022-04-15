@@ -1,4 +1,4 @@
-package sweproject.graph;
+package sweproject.graph.sprint4;
 
 public class Edge{
     String source,destination;

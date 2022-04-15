@@ -1,6 +1,4 @@
-package sweproject.graph;
-
-import sweproject.graph.Graph;
+package sweproject.graph.sprint4;
 
 import java.util.HashMap;
 import java.util.List;
