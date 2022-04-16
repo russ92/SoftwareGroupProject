@@ -33,7 +33,7 @@ public class TwitterListener extends StatusAdapter {
              PrintWriter out = new PrintWriter(bw1)) {
             out.print(tweet);
         } catch (Exception e) {
-            // TODO: handle exception
+            System.out.println("--- ERROR ---\n" + e.getLocalizedMessage());
         }
 
         try (FileWriter fw2 = new FileWriter(prop.getUserFilepath(), true);
@@ -41,7 +41,7 @@ public class TwitterListener extends StatusAdapter {
              PrintWriter out = new PrintWriter(bw2)) {
             out.print(user);
         } catch (Exception e) {
-            // TODO: handle exception
+            System.out.println("--- ERROR ---\n" + e.getLocalizedMessage());
         }
     }
 }

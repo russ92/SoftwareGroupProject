@@ -3,7 +3,6 @@ package sweproject.graph.sprint4;
 import sweproject.graph.sprint3.Reader;
 import sweproject.graph.sprint3.TwitterGraph;
 
-import java.io.FileNotFoundException;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 

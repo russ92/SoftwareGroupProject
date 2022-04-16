@@ -5,6 +5,7 @@ import sweproject.graph.sprint3.TwitterGraph;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.util.Map;
 
 public class Hashtags {
 
@@ -53,6 +54,11 @@ public class Hashtags {
     }
 
     //ToDo: Assign mean stances for hashtags from user
+//
+//    public static Map<String, Integer> assignHashtagStances(){
+//
+//    }
+
     //ToDo:
 
 }
