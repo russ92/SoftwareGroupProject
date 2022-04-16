@@ -1,8 +1,10 @@
 package sweproject;
 
 import org.junit.jupiter.api.Test;
+import sweproject.graph.sprint3.TwitterGraph;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 public class TwitterGraphTests {
 
@@ -22,9 +24,6 @@ public class TwitterGraphTests {
     @Test
     public void testGetEdges(){
         assertEquals(graph().getEdges().toString(), "{@source={@Tahoe=69, @Potato=10, @Poop=2}}");
-        assertEquals(graph().getEdgesAsString(), "@Poop : 2\n" +
-                                                        "@Potato : 10\n" +
-                                                        "@Tahoe : 69" + "\n");
     }
 
     @Test
@@ -36,13 +35,13 @@ public class TwitterGraphTests {
 
     @Test
     public void testGetAllUserRetweets(){
-        assertEquals(graph().getAllUsersRetweeted("@source").toString(), "[@Poop, @Potato, @Tahoe]");
+        assertEquals(graph().getVertex("@source").toString(), "[@Poop, @Potato, @Tahoe]");
 
-        assertEquals(graph().getAllUsersRetweeted("@Potato"), null);
+        assertNull(graph().getVertex("@Potato").toString());
     }
 
-//    @Test
-//    public void testInvert(){
-//        assertEquals(graph().invert(), "[@Poop, @Potato, @Tahoe]");
-//    }
+    @Test
+    public void testInvert(){
+        assertEquals(graph().invert().toString(), "{@Tahoe={@source=69}, @Potato={@source=10}, @Poop={@source=2}}");
+    }
 }

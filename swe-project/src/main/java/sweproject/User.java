@@ -1,15 +1,17 @@
 package sweproject;
+
 public class User {
+
 
     private String userhandle;
     private String location;
     private String bio;
     private int num_followers;
 
-    public User(String userhandle, String location, String bio, int num_followers) {
-        this.userhandle = userhandle.replace("\n", "").replace("\r", "");;
-        this.location = location.replace("\n", "").replace("\r", "");;
-        this.bio = bio.replace("\n", "").replace("\r", "");;
+    public User( String userhandle, String location, String bio, int num_followers) {
+        this.userhandle = "@" + userhandle.replace("\n", "").replace("\r", "");
+        this.location = location.replace("\n", "").replace("\r", "");
+        this.bio = bio.replace("\n", "").replace("\r", "");
         this.num_followers = num_followers;
     }
 
@@ -47,9 +49,9 @@ public class User {
 
     @Override
     public String toString() {
-        return  userhandle + "\t"
+        return    userhandle + "\t"
                 + location + "\t"
                 + bio + "\t"
-                + num_followers + "\n" ;
+                + num_followers + "\n";
     }
 }
