@@ -11,16 +11,6 @@ import java.util.*;
 
 public class Configuration {
 
-
-    private static final String USER_DATA = "VaxData/vax tweets users.txt";
-    private static final String TWEET_DATA = "VaxData/vax tweets.txt";
-    private static final String[] HASHTAGS = {"Vaccinated", "Covid-19", "VaccineMandate", "CovidHoax",
-            "FuckVaccines", "Vaxxed", "MicrochipVaccine", "GatesVaccine", "NoVaccine", "GetVaccinated",
-            "Booster", "Omicron", "LongCovid", "CovidIsNotOver", "COVIDisAirborne", "WearAMask", "GetVaxed", "covidiots",
-            "CovidScam", "ArrestFaucci", "VaccineSideEffects", "VaccineDeaths", "VaccineInjuries", "NoCovid",
-            "GetTheDamnVaccine", "CovidIsOver", "CoronaHoax", "CoronaVirus", "OmicronBeGone", "CovidFraud",
-            "SayNoToPoisonVaccines", "fuckFauci"};
-
     public static ConfigurationBuilder getConfigurationBuilder() throws IOException {
 
         ConfigurationBuilder cb = new ConfigurationBuilder();
