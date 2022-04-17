@@ -62,15 +62,15 @@ public class Stances {
         System.out.println("Anti stances: " + countAnti + "\nPro stances: " + countPro);
     }
 
-    public static void main(String [] args){
-        Map<String, Integer> n = Stances.assignStances();
-        System.out.println(n + "\n" + n.size() + " size" );
-        int max = 0;
-        for(String u: n.keySet()){
-            if(n.get(u) < max){
-                max = n.get(u);
-            }
-        }
-        System.out.println("Min = " + max);
-    }
+//    public static void main(String [] args){
+//        Map<String, Integer> n = Stances.assignStances();
+//        System.out.println(n + "\n" + n.size() + " size" );
+//        int max = 0;
+//        for(String u: n.keySet()){
+//            if(n.get(u) < max){
+//                max = n.get(u);
+//            }
+//        }
+//        System.out.println("Min = " + max);
+//    }
 }

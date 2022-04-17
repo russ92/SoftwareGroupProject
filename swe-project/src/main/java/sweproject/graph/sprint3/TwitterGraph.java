@@ -127,12 +127,12 @@ public class TwitterGraph implements Graph, Arc {
         else return 0;
     }
 
-    public static void main(String [] args){
-        TwitterGraph g = Reader.Read_Tweets();
-        Map<String, Map<String, Integer>> m = g.getEdges();
-        for(String n : m.keySet()) {
-            System.out.println(g.getTotalRetweets(n));
-        }
-    }
+//    public static void main(String [] args){
+//        TwitterGraph g = Reader.Read_Tweets();
+//        Map<String, Map<String, Integer>> m = g.getEdges();
+//        for(String n : m.keySet()) {
+//            System.out.println(g.getTotalRetweets(n));
+//        }
+//    }
 
 }

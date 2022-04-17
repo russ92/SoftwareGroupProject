@@ -63,7 +63,6 @@ public class Hashtags {
         TwitterGraph graph = Read_Hashtags();
 
         Map<String, Map<String, Integer>> map = graph.getEdges();
-        Map<String, Map<String, Integer>> invertedMap = graph.invert();
         System.out.println("Getting hashtags...");
 
         Map<String, Integer> users = Reader.Read_Stances();
@@ -90,8 +89,8 @@ public class Hashtags {
 
     //ToDo:
 
-    public static void main(String[] args) throws FileNotFoundException {
-        System.out.println(assignHashtagStances());
-    }
+//    public static void main(String[] args) throws FileNotFoundException {
+//        System.out.println(assignHashtagStances());
+//    }
 
 }
