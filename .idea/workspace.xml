@@ -2,16 +2,19 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="Sprint5:jar" />
+      <artifact name="sprint5:jar" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="Part 3b.">
-      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint5/Hashtags.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint5/Hashtags.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint5/WriteHashtags.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint5/WriteHashtags.java" afterDir="false" />
+    <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="Write to file.&#10;Sprint 5.">
+      <change beforePath="$PROJECT_DIR$/swe-project/out/artifacts/swe-project.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint5/Hashtags.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint5/Hashtags.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/target/swe-sprint5-jar-with-dependencies.jar" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/swe-sprint5-jar-with-dependencies.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/target/test-classes/sweproject/TwitterGraphTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/target/test-classes/sweproject/UserTests.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +70,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/swe-project" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/swe-project/out/artifacts" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -198,20 +201,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1648254455717</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Print to text file working with provided vax tweets.txt file.">
-      <created>1649205634375</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1649205634375</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Print to text file working with provided vax tweets.txt file.">
-      <created>1649205653804</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1649205653804</updated>
     </task>
     <task id="LOCAL-00017" summary="Print to text file working with provided vax tweets.txt file.">
       <created>1649205910046</created>
@@ -542,7 +531,21 @@
       <option name="project" value="LOCAL" />
       <updated>1650235129316</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="Write to file.&#10;Sprint 5.">
+      <created>1650235385663</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1650235385663</updated>
+    </task>
+    <task id="LOCAL-00065" summary="Write to file.&#10;Sprint 5.">
+      <created>1650235499909</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1650235499909</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -558,7 +561,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Stance variable added.&#10;Stance added as an int to Evangelists and reads/writes to file with a default value of 0." />
     <MESSAGE value="First version of iterating through graph.&#10;Comparing initial list of angels to the graph and assigning stances to the users who retweet the angels. It returns a list of Evangelists." />
     <MESSAGE value="Error checking adjusted." />
     <MESSAGE value="Write stances to file." />
@@ -583,7 +585,8 @@
     <MESSAGE value="JAR added.&#10;Run from outside the swe-project directory: java -jar swe-project/out/artifacts/swe-project.jar&#10;Output is written to swe-project/VaxData/Sprint5" />
     <MESSAGE value="Updated Stances.&#10;1 iteration to 15." />
     <MESSAGE value="Part 3b." />
-    <option name="LAST_COMMIT_MESSAGE" value="Part 3b." />
+    <MESSAGE value="Write to file.&#10;Sprint 5." />
+    <option name="LAST_COMMIT_MESSAGE" value="Write to file.&#10;Sprint 5." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
