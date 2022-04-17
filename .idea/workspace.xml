@@ -2,19 +2,16 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="sprint5:jar" />
+      <artifact name="swe-5:jar" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="Write to file.&#10;Sprint 5.">
-      <change beforePath="$PROJECT_DIR$/swe-project/out/artifacts/swe-project.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint5/Hashtags.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint5/Hashtags.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/swe-sprint5-jar-with-dependencies.jar" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/swe-sprint5-jar-with-dependencies.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/test-classes/sweproject/TwitterGraphTests.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/test-classes/sweproject/UserTests.class" beforeDir="false" />
+    <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="JARs added.&#10;Sprint 5">
+      <change beforePath="$PROJECT_DIR$/swe-project/out/artifacts/swe.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,13 +198,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1648254455717</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Print to text file working with provided vax tweets.txt file.">
-      <created>1649205910046</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1649205910046</updated>
     </task>
     <task id="LOCAL-00018" summary="List of angels added.&#10;Method added to TwitterGraph that returns an ArrayList of all people who retweeted and the number of times they retweeted. Prints first 100 to a file in GraphIO class.">
       <created>1649337643628</created>
@@ -545,7 +535,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650235499909</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="JARs added.&#10;Sprint 5">
+      <created>1650235858161</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1650235858161</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -561,7 +558,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="First version of iterating through graph.&#10;Comparing initial list of angels to the graph and assigning stances to the users who retweet the angels. It returns a list of Evangelists." />
     <MESSAGE value="Error checking adjusted." />
     <MESSAGE value="Write stances to file." />
     <MESSAGE value="Write stances to file 30,000 users." />
@@ -586,7 +582,8 @@
     <MESSAGE value="Updated Stances.&#10;1 iteration to 15." />
     <MESSAGE value="Part 3b." />
     <MESSAGE value="Write to file.&#10;Sprint 5." />
-    <option name="LAST_COMMIT_MESSAGE" value="Write to file.&#10;Sprint 5." />
+    <MESSAGE value="JARs added.&#10;Sprint 5" />
+    <option name="LAST_COMMIT_MESSAGE" value="JARs added.&#10;Sprint 5" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
