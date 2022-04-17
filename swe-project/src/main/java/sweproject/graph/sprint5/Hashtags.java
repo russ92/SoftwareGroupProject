@@ -7,6 +7,7 @@ import sweproject.graph.sprint3.TwitterGraph;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -85,6 +86,51 @@ public class Hashtags {
         hashtagMap.replaceAll((h, v) -> v / (graph.getTotalTimesRetweeted(h)));
 
         return hashtagMap;
+    }
+
+    public static Map<String, Integer> assignHashStances() {
+
+        System.out.println("Creating graph...");
+        TwitterGraph hashtags = Hashtags.Read_Hashtags();
+        Map<String, Map<String, Integer>> mapHashtags = hashtags.getEdges();
+
+        System.out.println("Getting users who don't have a stance...");
+        Map<String, Integer> stances = Reader.Read_StancesHashtags();
+        System.out.println("Getting hashtag stances...");
+        ConcurrentHashMap<String, Integer> hashMap = new ConcurrentHashMap<>();
+
+        for (String unassigned : mapHashtags.keySet()) {
+            if(!stances.containsKey(unassigned)) {
+                hashMap.put(unassigned, 0);
+            }
+        }
+
+        System.out.println(stances.size());
+        System.out.println(hashMap.size());
+
+        for (String u : hashMap.keySet()){
+            if(mapHashtags.containsKey(u)) {
+                for (String h : mapHashtags.get(u).keySet()) {
+                    if(stances.containsKey(h)) {
+                        int stance = stances.get(h);
+                        if (hashMap.containsKey(h)) {
+                            hashMap.put(u, (hashMap.get(u) + stance));
+                        } else {
+                            hashMap.put(u, stance);
+                        }
+                    }
+                }
+            }
+        }
+
+        hashMap.replaceAll((h, v) -> v / (hashtags.getTotalRetweets(h)));
+
+        return hashMap;
+    }
+
+    public static void main(String[] args) throws FileNotFoundException {
+        System.out.println(assignHashStances().size());
+        System.out.println(assignHashStances());
     }
 
     //ToDo:

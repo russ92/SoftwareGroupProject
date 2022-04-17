@@ -159,9 +159,9 @@ public class Reader {
                     break;
                 }else{
                     String[] lineIn = lineJustFetched.split("\t");
-                    if(lineIn.length == 3) {
+                    if(lineIn.length == 2) {
                         String hashtag = lineIn[0];
-                        int stance = Integer.parseInt(lineIn[2]);
+                        int stance = Integer.parseInt(lineIn[1]);
                         stances.put(hashtag, stance);
                     }
                 }
