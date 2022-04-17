@@ -1,0 +1,29 @@
+username	retweets	assigned stance	manual stance
+@hjelle_brian	63	1000	1000
+@kellyhayhoe	39	-1000	-1000
+@CollierDems	24	1000	1000
+@AZBethLewis	50	1000	1000
+@mofowear	38	-1000	-1000
+@VFreedoms	28	-1000	-1000
+@CelioCyl	71	-1000	-1000
+@ZaidZamanHamid	166	-1000	-1000
+@mofowear	38	-1000	-1000
+@NNutritionista	30	-1000	-1000	10
+@PrinceySOV	31	-1000	-1000
+@k_mahlburg	275	-1000	-1000
+@RedaBensalem6	50	-1000	-1000
+@momma4liberty	54	-1000	-1000
+@bstabell	69	1000	1000
+@Truth_S_eeker	34	-1000	-1000
+@HuffmanForNC	234	1000	1000
+@danniboi2011	70	-1000	-1000
+@SpaceFromGreece	67	-1000	-1000
+@ChelseaClinton	205	1000	1000	20
+@SlipknotZowie	30	-1000	-1000
+@BarnettforAZ	49	-1000	-1000
+@Surgeon_General	35	1000	1000
+@US_ArmyVet	206	-1000	-1000
+@PirateIreland	7	1000	-1000	25
+
+right by algroythem 24/25
+accuracy 96%
