@@ -23,7 +23,7 @@ public class Stances {
         System.out.println(angelMap.size());
         int iterations = 0;
 
-        while (iterations < 1) {
+        while (iterations < 15) {
             System.out.println("Iteration " + (iterations+1));
 
             for (String a : angelMap.keySet()){
@@ -38,9 +38,9 @@ public class Stances {
                     }
                 }
             }
-            angelMap.replaceAll((a, v) -> v / (graph.getTotalTimesRetweeted(a)));
             iterations++;
         }
+        angelMap.replaceAll((a, v) -> v / (graph.getTotalTimesRetweeted(a)));
 
         return angelMap;
     }
@@ -66,11 +66,20 @@ public class Stances {
 //        Map<String, Integer> n = Stances.assignStances();
 //        System.out.println(n + "\n" + n.size() + " size" );
 //        int max = 0;
+//        int count = 0;
+//        int avg = 0;
 //        for(String u: n.keySet()){
-//            if(n.get(u) < max){
+//            if(n.get(u) > max){
 //                max = n.get(u);
 //            }
+//            if(n.get(u) != 0){
+//                count++;
+//            }
+//            avg += n.get(u);
 //        }
-//        System.out.println("Min = " + max);
+//        System.out.println("Max = " + max);
+//        System.out.println("Avg = " + avg/n.size());
+//        System.out.println("Count '0' = " + count);
+//        System.out.println("Size: " + n.size());
 //    }
 }
