@@ -41,6 +41,10 @@ public class GetProperties {
         return myProperties.getProperty("hashmap");
     }
 
+    public String getStancesFilepath() {
+        return myProperties.getProperty("stances");
+    }
+
     public String getUserToHashtagFilepath() {
         return myProperties.getProperty("hashtagToUser");
     }

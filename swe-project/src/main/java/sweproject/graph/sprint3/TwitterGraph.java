@@ -92,8 +92,10 @@ public class TwitterGraph implements Graph, Arc {
 
     public int getTotalRetweets(String user){
         int count = 0;
-        for(String u : weightedList.get(user).keySet()){
-            count += weightedList.get(user).get(u);
+        if(weightedList.containsKey(user)) {
+            for (String u : weightedList.get(user).keySet()) {
+                count += weightedList.get(user).get(u);
+            }
         }
         return count;
     }
@@ -119,10 +121,18 @@ public class TwitterGraph implements Graph, Arc {
 
     @Override
     public int getNumOfRetweets(String user1, String user2){
-        if(list.get(user1).contains(user2)){
-            return weightedList.get(user1).get(user2);
+        if(invertedList.get(user1).contains(user2)){
+            return invertedWeightedList.get(user1).get(user2);
         }
         else return 0;
+    }
+
+    public static void main(String [] args){
+        TwitterGraph g = Reader.Read_Tweets();
+        Map<String, Map<String, Integer>> m = g.getEdges();
+        for(String n : m.keySet()) {
+            System.out.println(g.getTotalRetweets(n));
+        }
     }
 
 }

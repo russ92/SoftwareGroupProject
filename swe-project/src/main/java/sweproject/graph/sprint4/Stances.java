@@ -11,7 +11,7 @@ public class Stances {
     public static Map<String, Integer> assignStances(){
         System.out.println("Creating graph...");
         TwitterGraph graph = Reader.Read_Tweets();
-        Map<String, Map<String, Integer>> map = graph.getEdges();
+        Map<String, Map<String, Integer>> map = graph.invert();
         System.out.println("Getting angels (most influential users)...");
 
         List<Evangelists> angels = Reader.Read_Angels();
@@ -23,20 +23,32 @@ public class Stances {
 
         int iterations = 0;
 
-        while (iterations < 15) {
+        while (iterations < 1) {
             System.out.println("Iteration " + (iterations+1));
 
             for (String a : angelMap.keySet()){
                 if (map.containsKey(a)){
                     for (String g : map.get(a).keySet()) {
-                        int stance = angelMap.get(a);
-                        angelMap.put(g, stance);
+                        int stance = angelMap.get(a)/graph.getNumOfRetweets(a, g);
+                        if (angelMap.containsKey(g)) {
+                            angelMap.put(g, angelMap.get(g) + stance);
+                        } else {
+                            // int rt = graph.getTotalRetweets(g) - graph.getNumOfRetweets(g, a);
+//                        if (rt > 0) {
+//                            int i = (stance / rt);
+//                        }
+//                        System.out.println(g + " " + stance + "\n");
+//                        System.out.println(graph.getTotalRetweets(g) + " - " + graph.getNumOfRetweets(g, a) + " = " + rt);
+                            angelMap.put(g, stance);
+                        }
                     }
 
                 }
             }
             iterations++;
         }
+
+        //angelMap.replaceAll((a, v) -> v / (graph.getTotalTimesRetweeted(a)));
 
         return angelMap;
     }
@@ -56,5 +68,11 @@ public class Stances {
         }
 
         System.out.println("Anti stances: " + countAnti + "\nPro stances: " + countPro);
+    }
+
+    public static void main(String [] args){
+        Map<String, Integer> n = Stances.assignStances();
+        System.out.println(n + "\n" + n.size() + " size" );
+        //Stances.analysisStances();
     }
 }

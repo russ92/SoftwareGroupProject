@@ -1,11 +1,14 @@
 package sweproject.graph.sprint5;
 
 import sweproject.GetProperties;
+import sweproject.graph.sprint3.Reader;
 import sweproject.graph.sprint3.TwitterGraph;
 
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class Hashtags {
 
@@ -32,7 +35,7 @@ public class Hashtags {
 
                     if (lineIn.length == 3 && lineIn[2].contains("#")) {
                         String user = lineIn[1].trim();
-                        String text = lineIn[2].replace("\n", "").replace("\t", " ");
+                        String text = lineIn[2].replace("\n", " ").replace("\t", " ").replace(",", " ");
                         String[] hashtags = text.split(" ");
 
                         for (String h : hashtags) {
@@ -54,11 +57,41 @@ public class Hashtags {
     }
 
     //ToDo: Assign mean stances for hashtags from user
-//
-//    public static Map<String, Integer> assignHashtagStances(){
-//
-//    }
+
+    public static Map<String, Integer> assignHashtagStances(){
+        System.out.println("Creating graph...");
+        TwitterGraph graph = Read_Hashtags();
+
+        Map<String, Map<String, Integer>> map = graph.getEdges();
+        Map<String, Map<String, Integer>> invertedMap = graph.invert();
+        System.out.println("Getting hashtags...");
+
+        Map<String, Integer> users = Reader.Read_Stances();
+
+        ConcurrentHashMap<String, Integer> hashtagMap = new ConcurrentHashMap<>();
+
+        for (String u : map.keySet()){
+            for (String h : map.get(u).keySet()) {
+                if(users.containsKey(u)) {
+                    int stance = users.get(u);
+                    if(hashtagMap.containsKey(h)) {
+                        hashtagMap.put(h, hashtagMap.get(h) + stance);
+                    } else {
+                        hashtagMap.put(h, stance);
+                    }
+                }
+            }
+        }
+
+        hashtagMap.replaceAll((h, v) -> v / (graph.getTotalTimesRetweeted(h)));
+
+        return hashtagMap;
+    }
 
     //ToDo:
+
+    public static void main(String[] args) throws FileNotFoundException {
+        System.out.println(assignHashtagStances());
+    }
 
 }
