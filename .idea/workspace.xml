@@ -2,14 +2,19 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="Sprint5:jar" />
+      <artifact name="sprint5:jar" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="Merged 'N-Maven' into 'Nicholas' branch." />
+    <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="Merged 'N-Maven' into 'Nicholas' branch.&#10;Plan to see if I can get this branch working with VS code instead of Intellij.">
+      <change afterPath="$PROJECT_DIR$/swe-project/out/artifacts/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/out/artifacts/swe-project.jar" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/out/artifacts/swe-project.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/target/swe-sprint5-jar-with-dependencies.jar" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/swe-sprint5-jar-with-dependencies.jar" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -184,13 +189,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1648254455717</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Print to text file working with provided vax tweets.txt file.">
-      <created>1649203805771</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1649203805771</updated>
     </task>
     <task id="LOCAL-00015" summary="Print to text file working with provided vax tweets.txt file.">
       <created>1649205634375</created>
@@ -528,7 +526,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650218455678</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="Merged 'N-Maven' into 'Nicholas' branch.&#10;Plan to see if I can get this branch working with VS code instead of Intellij.">
+      <created>1650218913366</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1650218913366</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -544,7 +549,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Inverted Angels listed added.&#10;New method in TwitterGraph that creates a list of angels from the inverted graph." />
     <MESSAGE value="Stance variable added.&#10;Stance added as an int to Evangelists and reads/writes to file with a default value of 0." />
     <MESSAGE value="First version of iterating through graph.&#10;Comparing initial list of angels to the graph and assigning stances to the users who retweet the angels. It returns a list of Evangelists." />
     <MESSAGE value="Error checking adjusted." />
@@ -569,7 +573,8 @@
     <MESSAGE value="Hashtag stances written to file.&#10;Option 4 in the WriteHashtags file writes the all hashtags and their associated stance to a file. &#10;hashtagStances saved with the output. However, still errors with some hashtags like trailing... and miscellaneous characters before as well as after the hashtag." />
     <MESSAGE value="JAR added.&#10;Run from outside the swe-project directory: java -jar swe-project/out/artifacts/swe-project.jar&#10;Output is written to swe-project/VaxData/Sprint5" />
     <MESSAGE value="Merged 'N-Maven' into 'Nicholas' branch." />
-    <option name="LAST_COMMIT_MESSAGE" value="Merged 'N-Maven' into 'Nicholas' branch." />
+    <MESSAGE value="Merged 'N-Maven' into 'Nicholas' branch.&#10;Plan to see if I can get this branch working with VS code instead of Intellij." />
+    <option name="LAST_COMMIT_MESSAGE" value="Merged 'N-Maven' into 'Nicholas' branch.&#10;Plan to see if I can get this branch working with VS code instead of Intellij." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
