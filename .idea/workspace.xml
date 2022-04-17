@@ -9,12 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="Merged 'N-Maven' into 'Nicholas' branch.&#10;Plan to see if I can get this branch working with VS code instead of Intellij.">
-      <change afterPath="$PROJECT_DIR$/swe-project/out/artifacts/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/out/artifacts/swe-project.jar" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/out/artifacts/swe-project.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/swe-sprint5-jar-with-dependencies.jar" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/swe-sprint5-jar-with-dependencies.jar" afterDir="false" />
-    </list>
+    <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="JAR working.&#10;application.properties file path variables work without swe-project/ in the path file." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -189,27 +184,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1648254455717</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Print to text file working with provided vax tweets.txt file.">
-      <created>1649205634375</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1649205634375</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Print to text file working with provided vax tweets.txt file.">
-      <created>1649205653804</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1649205653804</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Print to text file working with provided vax tweets.txt file.">
-      <created>1649205910046</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1649205910046</updated>
     </task>
     <task id="LOCAL-00018" summary="List of angels added.&#10;Method added to TwitterGraph that returns an ArrayList of all people who retweeted and the number of times they retweeted. Prints first 100 to a file in GraphIO class.">
       <created>1649337643628</created>
@@ -533,7 +507,28 @@
       <option name="project" value="LOCAL" />
       <updated>1650218913366</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="JAR working.&#10;application.properties file path variables work without swe-project/ in the path file.">
+      <created>1650219964373</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1650219964373</updated>
+    </task>
+    <task id="LOCAL-00065" summary="JAR working.&#10;application.properties file path variables work without swe-project/ in the path file.">
+      <created>1650219990920</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1650219990920</updated>
+    </task>
+    <task id="LOCAL-00066" summary="JAR working.&#10;application.properties file path variables work without swe-project/ in the path file.">
+      <created>1650220014951</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1650220014951</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -549,7 +544,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Stance variable added.&#10;Stance added as an int to Evangelists and reads/writes to file with a default value of 0." />
     <MESSAGE value="First version of iterating through graph.&#10;Comparing initial list of angels to the graph and assigning stances to the users who retweet the angels. It returns a list of Evangelists." />
     <MESSAGE value="Error checking adjusted." />
     <MESSAGE value="Write stances to file." />
@@ -574,7 +568,8 @@
     <MESSAGE value="JAR added.&#10;Run from outside the swe-project directory: java -jar swe-project/out/artifacts/swe-project.jar&#10;Output is written to swe-project/VaxData/Sprint5" />
     <MESSAGE value="Merged 'N-Maven' into 'Nicholas' branch." />
     <MESSAGE value="Merged 'N-Maven' into 'Nicholas' branch.&#10;Plan to see if I can get this branch working with VS code instead of Intellij." />
-    <option name="LAST_COMMIT_MESSAGE" value="Merged 'N-Maven' into 'Nicholas' branch.&#10;Plan to see if I can get this branch working with VS code instead of Intellij." />
+    <MESSAGE value="JAR working.&#10;application.properties file path variables work without swe-project/ in the path file." />
+    <option name="LAST_COMMIT_MESSAGE" value="JAR working.&#10;application.properties file path variables work without swe-project/ in the path file." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
