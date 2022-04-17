@@ -94,9 +94,10 @@ public class Hashtags {
         TwitterGraph hashtags = Hashtags.Read_Hashtags();
         Map<String, Map<String, Integer>> mapHashtags = hashtags.getEdges();
 
-        System.out.println("Getting users who don't have a stance...");
-        Map<String, Integer> stances = Reader.Read_StancesHashtags();
         System.out.println("Getting hashtag stances...");
+        Map<String, Integer> stances = Reader.Read_StancesHashtags();
+
+        System.out.println("Getting users who don't have a stance...");
         ConcurrentHashMap<String, Integer> hashMap = new ConcurrentHashMap<>();
 
         for (String unassigned : mapHashtags.keySet()) {
@@ -104,9 +105,6 @@ public class Hashtags {
                 hashMap.put(unassigned, 0);
             }
         }
-
-        System.out.println(stances.size());
-        System.out.println(hashMap.size());
 
         for (String u : hashMap.keySet()){
             if(mapHashtags.containsKey(u)) {
@@ -127,16 +125,4 @@ public class Hashtags {
 
         return hashMap;
     }
-
-    public static void main(String[] args) throws FileNotFoundException {
-        System.out.println(assignHashStances().size());
-        System.out.println(assignHashStances());
-    }
-
-    //ToDo:
-
-//    public static void main(String[] args) throws FileNotFoundException {
-//        System.out.println(assignHashtagStances());
-//    }
-
 }
