@@ -17,12 +17,13 @@ public class HashStances {
 
         List<Evangelists> angels = Reader.Read_Angels();
         ConcurrentHashMap<String, Integer> angelMap = new ConcurrentHashMap<>();
-
+        Map<String, Integer> hashMap = Reader.Read_StancesHashtags();
+        
         for (Evangelists n : angels) {
             if(n.getStance()==0)
                 angelMap.put(n.getAngel(), n.getStance());
         }
-        
+
         System.out.println(angelMap.size());
         int iterations = 0;
 
