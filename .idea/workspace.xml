@@ -9,10 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="JARs added.&#10;Sprint 5">
-      <change beforePath="$PROJECT_DIR$/swe-project/out/artifacts/swe.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/resources/application.properties" afterDir="false" />
-    </list>
+    <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="Working Maven JAR.&#10;Sprint 5" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,7 +29,6 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -198,20 +194,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1648254455717</updated>
-    </task>
-    <task id="LOCAL-00018" summary="List of angels added.&#10;Method added to TwitterGraph that returns an ArrayList of all people who retweeted and the number of times they retweeted. Prints first 100 to a file in GraphIO class.">
-      <created>1649337643628</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1649337643628</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Stream logger deleted.&#10;Deleted the stream logger from TwitterListener and TwitterStreamRunner. Using a previous version of User and Tweet classes as well.">
-      <created>1649450009841</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1649450009841</updated>
     </task>
     <task id="LOCAL-00020" summary="Streaming tweets working again.">
       <created>1649450587171</created>
@@ -542,7 +524,21 @@
       <option name="project" value="LOCAL" />
       <updated>1650235858161</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="JARs added.&#10;Sprint 5">
+      <created>1650236193684</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1650236193684</updated>
+    </task>
+    <task id="LOCAL-00068" summary="Working Maven JAR.&#10;Sprint 5">
+      <created>1650236829371</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1650236829371</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -558,7 +554,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Error checking adjusted." />
     <MESSAGE value="Write stances to file." />
     <MESSAGE value="Write stances to file 30,000 users." />
     <MESSAGE value="Write hashMapStances." />
@@ -583,7 +578,8 @@
     <MESSAGE value="Part 3b." />
     <MESSAGE value="Write to file.&#10;Sprint 5." />
     <MESSAGE value="JARs added.&#10;Sprint 5" />
-    <option name="LAST_COMMIT_MESSAGE" value="JARs added.&#10;Sprint 5" />
+    <MESSAGE value="Working Maven JAR.&#10;Sprint 5" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working Maven JAR.&#10;Sprint 5" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
