@@ -53,6 +53,10 @@ public class GetProperties {
         return myProperties.getProperty("userToHashtag");
     }
 
+    public String getSprintFolderFilepath() {
+        return myProperties.getProperty("sprint");
+    }
+
     public String getPrintToFilepath() {
         return myProperties.getProperty("print");
     }

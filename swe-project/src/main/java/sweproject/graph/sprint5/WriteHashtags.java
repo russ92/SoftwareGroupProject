@@ -142,7 +142,7 @@ public class WriteHashtags {
     // file and loading a file
     public static String fileName(int rW) {
         GetProperties prop = new GetProperties();
-        String name = prop.getPrintToFilepath(); // CHANGE THIS PATH IN application.properties
+        String name = prop.getSprintFolderFilepath(); // CHANGE THIS PATH IN application.properties (sprint)
         if (rW == 1) {
             boolean exists = true;
             while (exists) {
