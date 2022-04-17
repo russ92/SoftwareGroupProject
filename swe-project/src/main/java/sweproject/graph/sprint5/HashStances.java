@@ -18,7 +18,7 @@ public class HashStances {
         List<Evangelists> angels = Reader.Read_Angels();
         ConcurrentHashMap<String, Integer> angelMap = new ConcurrentHashMap<>();
         Map<String, Integer> hashMap = Reader.Read_StancesHashtags();
-        
+
         for (Evangelists n : angels) {
             if(n.getStance()==0)
                 angelMap.put(n.getAngel(), n.getStance());
@@ -31,16 +31,8 @@ public class HashStances {
             System.out.println("Iteration " + (iterations + 1));
 
             for (String a : angelMap.keySet()) {
-                if (map.containsKey(a)) {
-                    for (String u : map.get(a).keySet()) {
-                        int stance = angelMap.get(a);
-                        if (angelMap.containsKey(u)) {
-                            angelMap.put(u, (angelMap.get(u) + stance) / 2);
-                        } else {
-                            angelMap.put(u, stance);
-                        }
-                    }
-                }
+//                if (){
+//                }
             }
             angelMap.replaceAll((a, v) -> v / (graph.getTotalTimesRetweeted(a)));
             iterations++;
