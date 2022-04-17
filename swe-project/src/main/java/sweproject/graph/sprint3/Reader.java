@@ -145,4 +145,33 @@ public class Reader {
         }
         return stances;
     }
+    public static Map<String, Integer> Read_StancesHashtags() {
+        GetProperties prop = new GetProperties();
+        Map<String, Integer> stances = new HashMap<>();
+
+        try{
+            BufferedReader buf = new BufferedReader(new FileReader(prop.gethashtagFilepath()));
+            String lineJustFetched = null;
+
+            while(true){
+                lineJustFetched = buf.readLine();
+                if(lineJustFetched == null){
+                    break;
+                }else{
+                    String[] lineIn = lineJustFetched.split("\t");
+                    if(lineIn.length == 3) {
+                        String hashtag = lineIn[0];
+                        int stance = Integer.parseInt(lineIn[2]);
+                        stances.put(hashtag, stance);
+                    }
+                }
+            }
+
+            buf.close();
+
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        return stances;
+    }
 }

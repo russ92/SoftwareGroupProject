@@ -61,4 +61,5 @@ public class GetProperties {
         return myProperties.getProperty("print");
     }
 
+    public String gethashtagFilepath() { return myProperties.getProperty("hashtag"); }
 }
