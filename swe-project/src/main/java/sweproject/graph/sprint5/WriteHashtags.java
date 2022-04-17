@@ -24,7 +24,8 @@ public class WriteHashtags {
             System.out.println("1 to write the userToHashtag graph to a text file \n" +
                     "OR 2 to write a hashtagToUser graph to text file \n" +
                     "OR 3 to write the 100 most popular hashtags to text file \n" +
-                    "OR 4 to write the hashtags with stances to text file: ");
+                    "OR 4 to write the hashtags with stances to text file: \n" +
+                    "OR 5 to write the user stances from hashtags stances they use to text file:");
 
             int choice = scn.nextInt();
 
@@ -51,8 +52,13 @@ public class WriteHashtags {
                 System.out.println("Writing hashtags...");
                 writeHashtagStancesToFile(hashtags);
                 incomplete = false;
-            } else {
-                System.out.println("PLEASE ENTER 1 OR 2 OR 3 OR 4");
+            } else if (choice == 5) {
+                Map<String, Integer> hashtags = Hashtags.assignHashStances();
+                System.out.println("Writing users...");
+                writeHashtagStancesToFile(hashtags);
+                incomplete = false;
+            }else {
+                System.out.println("PLEASE ENTER 1 OR 2 OR 3 OR 4 OR 5");
             }
         }
     }
