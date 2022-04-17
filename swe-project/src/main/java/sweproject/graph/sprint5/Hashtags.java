@@ -53,10 +53,28 @@ public class Hashtags {
         return hashtagGraph;
     }
 
-    //ToDo: Assign mean stances for hashtags from user
+//    ToDo: Assign mean stances for hashtags from user
 //
 //    public static Map<String, Integer> assignHashtagStances(){
+//      List<Evangelists> angels = Reader.Read_Tweets();
+//        ConcurrentHashMap<String, Integer> hashtagMap = new ConcurrentHashMap<>();
 //
+//        for (Evangelists n : hashtags) {
+//            hashtagMap.put(n.getHashtag(), n.getStance());
+//        }
+//
+//
+//            for (String a : hashtagMap.keySet()){
+//                if (map.containsKey(a)){
+//                    for (String g : map.get(a).keySet()) {
+//                        int stance = hashtagMap.get(a);
+//                        hashtagMap.put(g, stance);
+//                    }
+//
+//                }
+//            }
+//
+//        return hashtagMap;
 //    }
 
     //ToDo:
