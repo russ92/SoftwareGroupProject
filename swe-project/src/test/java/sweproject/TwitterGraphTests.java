@@ -1,6 +1,7 @@
 package sweproject;
 
 import org.junit.jupiter.api.Test;
+import sweproject.graph.sprint3.TwitterGraph;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
