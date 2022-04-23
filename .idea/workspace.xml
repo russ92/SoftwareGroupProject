@@ -9,14 +9,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="Check that all hashtags are correct.">
+    <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="Working checkHashtags.&#10;Checks that there are no addition characters attached to the hashtags.&#10;New files saved in VaxData/Sprint6/">
+      <change afterPath="$PROJECT_DIR$/swe-project/VaxData/provided/lexicon.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint5/Hashtags.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint5/Hashtags.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/GetProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/GetProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint6/Lexicon.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint6/Lexicon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swe-project/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swe-project/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint5/HashStances.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint5/Hashtags.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint5/Hashtags.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint5/WriteHashtags.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint5/WriteHashtags.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/GetProperties.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/GetProperties.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint6/Lexicon.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint6/Lexicon.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,11 +73,12 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/nickl/OneDrive/Desktop/SoftwareEngineering/project&quot;
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/nickl/OneDrive/Desktop/SoftwareEngineering/project/swe-project/VaxData/provided&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\nickl\OneDrive\Desktop\SoftwareEngineering\project\swe-project\VaxData\provided" />
       <recent name="C:\Users\nickl\OneDrive\Desktop\SoftwareEngineering\project\swe-project\VaxData" />
       <recent name="C:\Users\nickl\OneDrive\Desktop\SoftwareEngineering\git\swe-project\VaxData\provided" />
       <recent name="C:\Users\nickl\OneDrive\Desktop\SoftwareEngineering\git\swe-project\VaxData\ProvidedData" />
@@ -90,7 +92,7 @@
       <recent name="C:\Users\nickl\OneDrive\Desktop\SoftwareEngineering\git\swe-project\VaxData\Graphs" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.WriteHashtags">
+  <component name="RunManager" selected="Application.Lexicon">
     <configuration name="Configuration" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="sweproject.Configuration" />
       <module name="swe" />
@@ -117,8 +119,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HashStances" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="sweproject.graph.sprint5.HashStances" />
+    <configuration name="Hashtags" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="sweproject.graph.sprint5.Hashtags" />
       <module name="swe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/swe-project" />
       <extension name="coverage">
@@ -131,13 +133,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Hashtags" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="sweproject.graph.sprint5.Hashtags" />
+    <configuration name="Lexicon" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="sweproject.graph.sprint6.Lexicon" />
       <module name="swe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/swe-project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="sweproject.graph.sprint5.*" />
+          <option name="PATTERN" value="sweproject.graph.sprint6.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -161,19 +162,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.Lexicon" />
       <item itemvalue="Application.Configuration" />
       <item itemvalue="Application.Hashtags" />
       <item itemvalue="Application.WriteHashtags" />
       <item itemvalue="Application.GraphIO" />
-      <item itemvalue="Application.HashStances" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Lexicon" />
         <item itemvalue="Application.WriteHashtags" />
         <item itemvalue="Application.Hashtags" />
         <item itemvalue="Application.GraphIO" />
         <item itemvalue="Application.Configuration" />
-        <item itemvalue="Application.HashStances" />
       </list>
     </recent_temporary>
   </component>
@@ -185,20 +186,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1648254455717</updated>
-    </task>
-    <task id="LOCAL-00022" summary="GraphIO scanner.&#10;Changed the if statements in the main method from nextLine() to nextInt()">
-      <created>1649453969852</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1649453969852</updated>
-    </task>
-    <task id="LOCAL-00023" summary="Reader file updated.&#10;Works with the data we collected.">
-      <created>1649455200546</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1649455200546</updated>
     </task>
     <task id="LOCAL-00024" summary="Inverted Angels listed added.&#10;New method in TwitterGraph that creates a list of angels from the inverted graph.">
       <created>1649549505883</created>
@@ -529,7 +516,21 @@
       <option name="project" value="LOCAL" />
       <updated>1650728349095</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="Working checkHashtags.&#10;Checks that there are no addition characters attached to the hashtags.&#10;New files saved in VaxData/Sprint6/">
+      <created>1650750979472</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1650750979472</updated>
+    </task>
+    <task id="LOCAL-00072" summary="Working checkHashtags.&#10;Checks that there are no addition characters attached to the hashtags.&#10;New files saved in VaxData/Sprint6/">
+      <created>1650751010752</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1650751010752</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -544,7 +545,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Write hashMapStances." />
     <MESSAGE value="Cleaned folder." />
     <MESSAGE value="Jar added." />
     <MESSAGE value="Jar working?" />
@@ -569,7 +569,8 @@
     <MESSAGE value="Working Maven JAR.&#10;Sprint 5" />
     <MESSAGE value="Both JARs work from within swe-project directory.&#10;java -jar swe-project/out/artifacts/swe.jar&#10;OR&#10;java -jar swe-project/target/artifacts/swe-sprint5-jar-with-dependencies.jar" />
     <MESSAGE value="Check that all hashtags are correct." />
-    <option name="LAST_COMMIT_MESSAGE" value="Check that all hashtags are correct." />
+    <MESSAGE value="Working checkHashtags.&#10;Checks that there are no addition characters attached to the hashtags.&#10;New files saved in VaxData/Sprint6/" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working checkHashtags.&#10;Checks that there are no addition characters attached to the hashtags.&#10;New files saved in VaxData/Sprint6/" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

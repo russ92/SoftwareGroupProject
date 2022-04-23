@@ -61,5 +61,6 @@ public class GetProperties {
         return myProperties.getProperty("print");
     }
 
+    public String getLexiconFilepath() { return myProperties.getProperty("lexicon"); }
     public String gethashtagFilepath() { return myProperties.getProperty("hashtag"); }
 }
