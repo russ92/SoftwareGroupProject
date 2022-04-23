@@ -9,43 +9,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="Both JARs work from within swe-project directory.&#10;java -jar swe-project/out/artifacts/swe.jar&#10;OR&#10;java -jar swe-project/target/artifacts/swe-sprint5-jar-with-dependencies.jar">
-      <change afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint6/HashtagAnalysis.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint6/Lexicon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+    <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="Check that all hashtags are correct.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint5/HashStances.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint5/Hashtags.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint5/Hashtags.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint5/WriteHashtags.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint5/WriteHashtags.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swe-project/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/META-INF/MANIFEST.MF" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/swe-project/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/Configuration.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/Configuration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/GetProperties.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/GetProperties.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/Tweet.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/Tweet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint2/StreamRunner.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint2/StreamRunner.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint2/TwitterListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint2/TwitterListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint2/TwitterStreamRunner.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint2/TwitterStreamRunner.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint3/Arc.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint3/Arc.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint3/Edge.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint3/Edge.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint3/Graph.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint3/Graph.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint3/GraphIO.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint3/GraphIO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint3/Reader.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint3/Reader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint3/RetweetGraph.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint3/RetweetGraph.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint3/TwitterGraph.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint3/TwitterGraph.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint4/Evangelists.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint4/Evangelists.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint4/Stances.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint4/Stances.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint5/HashStances.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint5/HashStances.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint5/HashStances.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint5/Hashtags.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint5/Hashtags.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint5/WriteHashtags.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint5/WriteHashtags.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/twitter4j.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/swe-sprint5-jar-with-dependencies.jar" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/swe-sprint5-jar-with-dependencies.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/test-classes/sweproject/TwitterGraphTests.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/test-classes/sweproject/UserTests.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +90,7 @@
       <recent name="C:\Users\nickl\OneDrive\Desktop\SoftwareEngineering\git\swe-project\VaxData\Graphs" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.GraphIO">
+  <component name="RunManager" selected="Application.WriteHashtags">
     <configuration name="Configuration" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="sweproject.Configuration" />
       <module name="swe" />
@@ -198,10 +169,10 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.GraphIO" />
         <item itemvalue="Application.WriteHashtags" />
-        <item itemvalue="Application.Configuration" />
         <item itemvalue="Application.Hashtags" />
+        <item itemvalue="Application.GraphIO" />
+        <item itemvalue="Application.Configuration" />
         <item itemvalue="Application.HashStances" />
       </list>
     </recent_temporary>
@@ -214,13 +185,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1648254455717</updated>
-    </task>
-    <task id="LOCAL-00021" summary="New tweets and Twitter users added from streaming.">
-      <created>1649451032025</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1649451032025</updated>
     </task>
     <task id="LOCAL-00022" summary="GraphIO scanner.&#10;Changed the if statements in the main method from nextLine() to nextInt()">
       <created>1649453969852</created>
@@ -558,7 +522,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650237054904</updated>
     </task>
-    <option name="localTasksCounter" value="70" />
+    <task id="LOCAL-00070" summary="Check that all hashtags are correct.">
+      <created>1650728349094</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1650728349095</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -573,7 +544,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Write stances to file 30,000 users." />
     <MESSAGE value="Write hashMapStances." />
     <MESSAGE value="Cleaned folder." />
     <MESSAGE value="Jar added." />
@@ -598,7 +568,8 @@
     <MESSAGE value="JARs added.&#10;Sprint 5" />
     <MESSAGE value="Working Maven JAR.&#10;Sprint 5" />
     <MESSAGE value="Both JARs work from within swe-project directory.&#10;java -jar swe-project/out/artifacts/swe.jar&#10;OR&#10;java -jar swe-project/target/artifacts/swe-sprint5-jar-with-dependencies.jar" />
-    <option name="LAST_COMMIT_MESSAGE" value="Both JARs work from within swe-project directory.&#10;java -jar swe-project/out/artifacts/swe.jar&#10;OR&#10;java -jar swe-project/target/artifacts/swe-sprint5-jar-with-dependencies.jar" />
+    <MESSAGE value="Check that all hashtags are correct." />
+    <option name="LAST_COMMIT_MESSAGE" value="Check that all hashtags are correct." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

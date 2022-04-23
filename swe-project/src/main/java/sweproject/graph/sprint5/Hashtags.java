@@ -7,8 +7,7 @@ import sweproject.graph.sprint3.TwitterGraph;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class Hashtags {
@@ -36,8 +35,8 @@ public class Hashtags {
 
                     if (lineIn.length == 3 && lineIn[2].contains("#")) {
                         String user = lineIn[1].trim();
-                        String text = lineIn[2].replace("\n", " ").replace("\t", " ");
-                        String[] hashtags = checkHashtags(text);
+                        String text = lineIn[2].replace("\n", " ").replace("\t", " ").replace(".", " ").replace(",", " ");
+                        List<String> hashtags = checkHashtags(text);
 
                         for (String h : hashtags) {
                             if (h.contains("#")) {
@@ -57,15 +56,12 @@ public class Hashtags {
         return hashtagGraph;
     }
 
-    public static String[] checkHashtags(String input){
+    public static List<String> checkHashtags(String input){
         String[] uncheckedHashtags = input.split(" ");
-        String[] confirmedHashtags = new String[uncheckedHashtags.length];
-        int count = 0;
+        List<String> confirmedHashtags = new ArrayList<>();
         for (String uncheckedHashtag : uncheckedHashtags) {
             if (uncheckedHashtag.contains("#")) {
-                String checked = uncheckedHashtag.replace(",", "").trim();
-                confirmedHashtags[count] += removeLeadingChars(checked).replaceAll("[^a-zA-Z ]", "");
-                count++;
+                confirmedHashtags.add(removeLeadingChars(uncheckedHashtag).replaceAll("[^#a-zA-Z ]", ""));
             }
         }
         return confirmedHashtags;
