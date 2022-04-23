@@ -36,8 +36,8 @@ public class Hashtags {
 
                     if (lineIn.length == 3 && lineIn[2].contains("#")) {
                         String user = lineIn[1].trim();
-                        String text = lineIn[2].replace("\n", " ").replace("\t", " ").replace(",", " ");
-                        String[] hashtags = text.split(" ");
+                        String text = lineIn[2].replace("\n", " ").replace("\t", " ");
+                        String[] hashtags = checkHashtags(text);
 
                         for (String h : hashtags) {
                             if (h.contains("#")) {
@@ -55,6 +55,28 @@ public class Hashtags {
         }
 
         return hashtagGraph;
+    }
+
+    public static String[] checkHashtags(String input){
+        String[] uncheckedHashtags = input.split(" ");
+        String[] confirmedHashtags = new String[uncheckedHashtags.length];
+        int count = 0;
+        for (String uncheckedHashtag : uncheckedHashtags) {
+            if (uncheckedHashtag.contains("#")) {
+                String checked = uncheckedHashtag.replace(",", "").trim();
+                confirmedHashtags[count] += removeLeadingChars(checked).replaceAll("[^a-zA-Z ]", "");
+                count++;
+            }
+        }
+        return confirmedHashtags;
+    }
+
+    public static String removeLeadingChars(String s) {
+        StringBuilder sb = new StringBuilder(s);
+        while (sb.length() > 0 && !(sb.charAt(0) == '#')) {
+            sb.deleteCharAt(0);
+        }
+        return sb.toString();
     }
 
     //ToDo: Assign mean stances for hashtags from user
@@ -88,41 +110,43 @@ public class Hashtags {
         return hashtagMap;
     }
 
-    public static Map<String, Integer> assignHashStances() {
+    public static Map<String, Integer> assignUserStancesFromHashtags() {
 
         System.out.println("Creating graph...");
         TwitterGraph hashtags = Hashtags.Read_Hashtags();
-        Map<String, Map<String, Integer>> mapHashtags = hashtags.getEdges();
+        // Hashmap of all Hashtag stances
+        Map<String, Map<String, Integer>> initialHashmap = hashtags.getEdges();
 
         System.out.println("Getting hashtag stances...");
         Map<String, Integer> stances = Reader.Read_StancesHashtags();
 
+        // Hashmap with all other users that are going to be assigned a stance
         System.out.println("Getting users who don't have a stance...");
-        ConcurrentHashMap<String, Integer> hashMap = new ConcurrentHashMap<>();
+        ConcurrentHashMap<String, Integer> completeHashmap = new ConcurrentHashMap<>();
 
-        for (String unassigned : mapHashtags.keySet()) {
+        for (String unassigned : initialHashmap.keySet()) {
             if(!stances.containsKey(unassigned)) {
-                hashMap.put(unassigned, 0);
+                completeHashmap.put(unassigned, 0);
             }
         }
 
-        for (String u : hashMap.keySet()){
-            if(mapHashtags.containsKey(u)) {
-                for (String h : mapHashtags.get(u).keySet()) {
+        for (String u : completeHashmap.keySet()){
+            if(initialHashmap.containsKey(u)) {
+                for (String h : initialHashmap.get(u).keySet()) {
                     if(stances.containsKey(h)) {
                         int stance = stances.get(h);
-                        if (hashMap.containsKey(h)) {
-                            hashMap.put(u, (hashMap.get(u) + stance));
+                        if (completeHashmap.containsKey(h)) {
+                            completeHashmap.put(u, (completeHashmap.get(u) + stance));
                         } else {
-                            hashMap.put(u, stance);
+                            completeHashmap.put(u, stance);
                         }
                     }
                 }
             }
         }
 
-        hashMap.replaceAll((h, v) -> v / (hashtags.getTotalRetweets(h)));
+        completeHashmap.replaceAll((h, v) -> v / (hashtags.getTotalRetweets(h)));
 
-        return hashMap;
+        return completeHashmap;
     }
 }

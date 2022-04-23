@@ -53,7 +53,7 @@ public class WriteHashtags {
                 writeHashtagStancesToFile(hashtags);
                 incomplete = false;
             } else if (choice == 5) {
-                Map<String, Integer> hashtags = Hashtags.assignHashStances();
+                Map<String, Integer> hashtags = Hashtags.assignUserStancesFromHashtags();
                 System.out.println("Writing users...");
                 writeHashtagStancesToFile(hashtags);
                 incomplete = false;
