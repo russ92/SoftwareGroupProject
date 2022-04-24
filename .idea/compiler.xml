@@ -11,7 +11,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="swe" target="1.8" />
+      <module name="swe" target="8" />
       <module name="swe-project" target="8" />
     </bytecodeTargetLevel>
   </component>
