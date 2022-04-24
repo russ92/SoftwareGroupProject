@@ -108,7 +108,9 @@ public class HashtagAnalysis {
                             for(String sref : ref) {
                                 graph.addArc(h, s, sref);
                                 String gist = hashtagGist(sref);
-                                graph.addArc(h, s, gist);
+                                if (!Objects.equals(gist, "")){
+                                    graph.addArc(h, s, gist.toLowerCase(Locale.ROOT));
+                                }
                             }
                         }
                     }

@@ -9,7 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="Write Hashtag Lexicon Graphs to file.">
+    <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="Write Hashtag Lexicon Graphs to file with gist.">
+      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/Sprint6/hashtagGist.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint6/HashtagAnalysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint6/HashtagAnalysis.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -181,13 +182,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1648254455717</updated>
-    </task>
-    <task id="LOCAL-00027" summary="First version of iterating through graph.&#10;Comparing initial list of angels to the graph and assigning stances to the users who retweet the angels. It returns a list of Evangelists.">
-      <created>1649616964213</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1649616964213</updated>
     </task>
     <task id="LOCAL-00028" summary="First version of iterating through graph.&#10;Comparing initial list of angels to the graph and assigning stances to the users who retweet the angels. It returns a list of Evangelists.">
       <created>1649616977666</created>
@@ -525,7 +519,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650837447508</updated>
     </task>
-    <option name="localTasksCounter" value="76" />
+    <task id="LOCAL-00076" summary="Write Hashtag Lexicon Graphs to file with gist.">
+      <created>1650837850510</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1650837850510</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -541,7 +542,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Jar added." />
     <MESSAGE value="Jar working?" />
     <MESSAGE value="Jar working2.0?" />
     <MESSAGE value="Official working JAR?&#10;Run from outside the /swe-project folder i.e. &gt; java -jar swe-project/out/artifacts/swe-project.jar" />
@@ -566,7 +566,8 @@
     <MESSAGE value="HashtagGraph class created.&#10;For the lexicon provided, the #hashtag for the graph is set to the string &quot;Given-Lexicon&quot; in Read_LexiconToHashmap()." />
     <MESSAGE value="Filter out hashtags that are fully uppercase." />
     <MESSAGE value="Write Hashtag Lexicon Graphs to file." />
-    <option name="LAST_COMMIT_MESSAGE" value="Write Hashtag Lexicon Graphs to file." />
+    <MESSAGE value="Write Hashtag Lexicon Graphs to file with gist." />
+    <option name="LAST_COMMIT_MESSAGE" value="Write Hashtag Lexicon Graphs to file with gist." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
