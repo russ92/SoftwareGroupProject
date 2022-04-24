@@ -38,6 +38,22 @@ public class HashtagAnalysis {
         return type;
     }
 
+    public static int individual(String hashtag) {
+
+        String[] person = { "Fauci", "Trump", "Biden", "Pelosi", "Schumer", "Cruz" };
+
+        int len = 0;
+        int type = 0;
+        while (len != person.length) {
+            if (hashtag.contains(person[len])) {
+                type = 1;
+            }
+            len++;
+        }
+
+        return type;
+    }
+
     public static void main(String[] args) {
         String s = "#FauciIsAHero";
         String tag = HashtagAnalysis.splitCamelCaseHashtag(s);
