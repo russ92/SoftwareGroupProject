@@ -15,19 +15,20 @@ public class HashtagAnalysis {
 
     public static int acceptingOrRejecting(String hashtag) {
 
-        String[] accepting = { "Praise", "Love", "Hero" };
+        String[] accepting = { "Hero", "Praise", "Love" };
         String[] rejecting = { "Fuck", "Hate", "Fire", "Fake" };
 
         int len = 0;
         int type = 2;
-        while (len != accepting.length) {
+        while (len != rejecting.length) {
             if (hashtag.contains(rejecting[len])) {
                 type = 0;
             }
             len++;
         }
 
-        if (type != 2) {
+        len = 0;
+        if (type == 2) {
             while (len != accepting.length) {
                 if (hashtag.contains(accepting[len])) {
                     type = 1;
@@ -69,6 +70,30 @@ public class HashtagAnalysis {
         }
 
         return type;
+    }
+
+    public static String hashtagGist(String hashtag) {
+        String tagTarget = "";
+        int acceptRejectNum = acceptingOrRejecting(hashtag);
+        int individualNum = individual(hashtag);
+        int locationNUm = location(hashtag);
+
+        if (acceptRejectNum == 0) {
+            tagTarget += "REJECTING ";
+        }
+        if (acceptRejectNum == 1) {
+            tagTarget += "ACCEPTING ";
+        }
+
+        if (individualNum == 1) {
+            tagTarget += "INDIVIDUAL";
+        }
+
+        if (locationNUm == 1) {
+            tagTarget += "LOCATION";
+        }
+
+        return tagTarget;
     }
 
     public static void main(String[] args) {
