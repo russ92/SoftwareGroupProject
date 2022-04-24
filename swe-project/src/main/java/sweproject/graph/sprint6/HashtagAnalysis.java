@@ -6,10 +6,7 @@ import sweproject.graph.sprint5.Hashtags;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class HashtagAnalysis {
 
@@ -110,6 +107,8 @@ public class HashtagAnalysis {
                         if(s.equals(l)){
                             for(String sref : ref) {
                                 graph.addArc(h, s, sref);
+                                String gist = hashtagGist(sref);
+                                graph.addArc(h, s, gist);
                             }
                         }
                     }
@@ -131,7 +130,7 @@ public class HashtagAnalysis {
         int len = 0;
         int type = 2;
         while (len != rejecting.length) {
-            if (hashtag.contains(rejecting[len])) {
+            if (hashtag.toLowerCase(Locale.ROOT).contains(rejecting[len])) {
                 type = 0;
             }
             len++;
@@ -140,7 +139,7 @@ public class HashtagAnalysis {
         len = 0;
         if (type == 2) {
             while (len != accepting.length) {
-                if (hashtag.contains(accepting[len])) {
+                if (hashtag.toLowerCase(Locale.ROOT).contains(accepting[len])) {
                     type = 1;
                 }
                 len++;
@@ -158,7 +157,7 @@ public class HashtagAnalysis {
         int len = 0;
         int type = 0;
         while (len != personR.length) {
-            if (hashtag.contains(personR[len])) {
+            if (hashtag.toLowerCase(Locale.ROOT).contains(personR[len])) {
                 type = 1;
             }
             len++;
@@ -166,7 +165,7 @@ public class HashtagAnalysis {
 
         len = 0;
         while (len != personL.length) {
-            if (hashtag.contains(personL[len])) {
+            if (hashtag.toLowerCase(Locale.ROOT).contains(personL[len])) {
                 type = 2;
             }
             len++;
@@ -183,7 +182,7 @@ public class HashtagAnalysis {
         int len = 0;
         int type = 0;
         while (len != place.length) {
-            if (hashtag.contains(place[len])) {
+            if (hashtag.toLowerCase(Locale.ROOT).contains(place[len])) {
                 type = 1;
             }
             len++;
