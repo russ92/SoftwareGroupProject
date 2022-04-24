@@ -122,6 +122,8 @@ public class HashtagAnalysis {
 //        }
 //        System.out.println(count);
 
-        System.out.println(HashtagAnalysis.hashtagSplitAsGraph().getEdges().size());
+        //System.out.println(HashtagAnalysis.hashtagSplitAsGraph().getEdges().size());
+        System.out.println(HashtagAnalysis.Read_LexiconToHashmap().getEdges());
+        System.out.println("\n\n\n\n\n\n"+HashtagAnalysis.Read_LexiconToHashmap().invert());
     }
 }

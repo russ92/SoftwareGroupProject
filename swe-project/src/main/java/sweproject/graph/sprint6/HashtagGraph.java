@@ -39,6 +39,16 @@ public class HashtagGraph {
 
     public void addInvertedSourceNode(String source) { invertedList.computeIfAbsent(source, key -> new TreeSet<>());}
 
+    public void addReference(HashtagReference e) {
+       referenceList.get(e.hashtag).computeIfAbsent(e.split, key -> new TreeSet<>());
+       referenceList.get(e.hashtag).get(e.split).add(e.ref);
+    }
+
+    public void addInvertedReference(HashtagReference e) {
+        invertedReferenceList.get(e.split).computeIfAbsent(e.hashtag, key -> new TreeSet<>());
+        invertedReferenceList.get(e.split).get(e.hashtag).add(e.ref);
+    }
+
     public void addArc(String hashtag, String split, String ref) {
         if(referenceList.containsKey(hashtag)) {
             if(referenceList.get(hashtag).containsKey(split)) {
@@ -62,11 +72,11 @@ public class HashtagGraph {
 
     private void setReference(HashtagReference e) {
         referenceList.computeIfAbsent(e.hashtag, key -> new HashMap<>());
-        referenceList.get(e.hashtag).put(e.split, Collections.singleton(e.ref));
+        addReference(e);
 
         //inverted weighted map
         invertedReferenceList.computeIfAbsent(e.split, key -> new HashMap<>());
-        invertedReferenceList.get(e.split).put(e.hashtag, Collections.singleton(e.ref));
+        addInvertedReference(e);
     }
 
     public  Map<String, Map<String, Set<String>>> getEdges() {

@@ -9,16 +9,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="HashtagGraph class created.&#10;For the lexicon provided, the #hashtag for the graph is set to the string &quot;Given-Lexicon&quot; in Read_LexiconToHashmap().">
+    <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="Filter out hashtags that are fully uppercase.">
+      <change afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint6/WriteHashtagGraph.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/GetProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/GetProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint3/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint3/Reader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint6/HashtagAnalysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint6/HashtagAnalysis.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/GetProperties.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/GetProperties.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint3/Reader.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint3/Reader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint6/HashtagGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint6/HashtagGraph.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint6/HashtagAnalysis.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint6/HashtagAnalysis.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint6/HashtagGraph.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint6/HashtagGraph.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +91,7 @@
       <recent name="C:\Users\nickl\OneDrive\Desktop\SoftwareEngineering\git\swe-project\VaxData\Graphs" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.HashtagAnalysis">
+  <component name="RunManager" selected="Application.WriteHashtagGraph">
     <configuration name="HashStances" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="sweproject.graph.sprint5.HashStances" />
       <module name="swe" />
@@ -136,13 +133,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Stances" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="sweproject.graph.sprint4.Stances" />
+    <configuration name="WriteHashtagGraph" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="sweproject.graph.sprint6.WriteHashtagGraph" />
       <module name="swe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/swe-project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="sweproject.graph.sprint4.*" />
+          <option name="PATTERN" value="sweproject.graph.sprint6.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -167,18 +163,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.Hashtags" />
-      <item itemvalue="Application.Stances" />
       <item itemvalue="Application.WriteHashtags" />
       <item itemvalue="Application.HashStances" />
       <item itemvalue="Application.HashtagAnalysis" />
+      <item itemvalue="Application.WriteHashtagGraph" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.WriteHashtagGraph" />
         <item itemvalue="Application.HashtagAnalysis" />
         <item itemvalue="Application.WriteHashtags" />
         <item itemvalue="Application.Hashtags" />
         <item itemvalue="Application.HashStances" />
-        <item itemvalue="Application.Stances" />
       </list>
     </recent_temporary>
   </component>
@@ -190,13 +186,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1648254455717</updated>
-    </task>
-    <task id="LOCAL-00023" summary="Reader file updated.&#10;Works with the data we collected.">
-      <created>1649455200546</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1649455200546</updated>
     </task>
     <task id="LOCAL-00024" summary="Inverted Angels listed added.&#10;New method in TwitterGraph that creates a list of angels from the inverted graph.">
       <created>1649549505883</created>
@@ -534,7 +523,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650831267842</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="Filter out hashtags that are fully uppercase.">
+      <created>1650833874394</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1650833874394</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -550,7 +546,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Write hashMapStances." />
     <MESSAGE value="Cleaned folder." />
     <MESSAGE value="Jar added." />
     <MESSAGE value="Jar working?" />
@@ -575,7 +570,8 @@
     <MESSAGE value="Working Maven JAR.&#10;Sprint 5" />
     <MESSAGE value="HashtagGraph class created.&#10;Not working." />
     <MESSAGE value="HashtagGraph class created.&#10;For the lexicon provided, the #hashtag for the graph is set to the string &quot;Given-Lexicon&quot; in Read_LexiconToHashmap()." />
-    <option name="LAST_COMMIT_MESSAGE" value="HashtagGraph class created.&#10;For the lexicon provided, the #hashtag for the graph is set to the string &quot;Given-Lexicon&quot; in Read_LexiconToHashmap()." />
+    <MESSAGE value="Filter out hashtags that are fully uppercase." />
+    <option name="LAST_COMMIT_MESSAGE" value="Filter out hashtags that are fully uppercase." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
