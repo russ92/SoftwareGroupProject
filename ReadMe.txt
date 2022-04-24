@@ -11,6 +11,8 @@ java -jar swe-project/out/artifacts/swe.jar
 If that fails try running the maven JAR from the same directory;
 java -jar swe-project/target/swe-sprint6-jar-with-dependencies.jar
 
+Output should be stored in swe-project/VaxData/Sprint6 directory
+
 Note: The JARS will only work if you run them from outside the 'swe-project' directory/folder as the file paths
 in application.properties unfortunately aren't working corrcetly.
 
