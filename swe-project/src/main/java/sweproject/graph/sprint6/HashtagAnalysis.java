@@ -119,4 +119,118 @@ public class HashtagAnalysis {
         }
         return graph;
     }
+
+    public static int acceptingOrRejecting(String hashtag) {
+
+        String[] accepting = { "Hero", "Praise", "Love", "Thank You", "Awesome", "Heroes", "Thanks", "Saviour",
+                "King", "Get" };
+        String[] rejecting = { "Dont", "Fuck", "Hate", "Fire", "Fake", "Stupid", "Hell", "Dictatorship", "Dictator",
+                "Tyrant",
+                "Evil", "Idiot" };
+
+        int len = 0;
+        int type = 2;
+        while (len != rejecting.length) {
+            if (hashtag.contains(rejecting[len])) {
+                type = 0;
+            }
+            len++;
+        }
+
+        len = 0;
+        if (type == 2) {
+            while (len != accepting.length) {
+                if (hashtag.contains(accepting[len])) {
+                    type = 1;
+                }
+                len++;
+            }
+        }
+        return type;
+    }
+
+    public static int individual(String hashtag) {
+
+        String[] personR = { "Trump", "Cruz", "Carson", "Pence", "Paul", "Rubio", "Bush" };
+        String[] personL = { "Fauci", "Biden", "Pelosi", "Schumer", "Obama", "Bernie", "Clinton", "Harris", "Warren",
+                "Waters" };
+
+        int len = 0;
+        int type = 0;
+        while (len != personR.length) {
+            if (hashtag.contains(personR[len])) {
+                type = 1;
+            }
+            len++;
+        }
+
+        len = 0;
+        while (len != personL.length) {
+            if (hashtag.contains(personL[len])) {
+                type = 2;
+            }
+            len++;
+        }
+
+        return type;
+    }
+
+    public static int location(String hashtag) {
+
+        String[] place = { "USA", "America", "Europe", "Australia", "New Zealand", "Japan", "China", "Ireland",
+                "Britain", "France", "Germany", "Spain", "Poland", "Sweeden", "Norway", "Denmark", "Canada" };
+
+        int len = 0;
+        int type = 0;
+        while (len != place.length) {
+            if (hashtag.contains(place[len])) {
+                type = 1;
+            }
+            len++;
+        }
+
+        return type;
+    }
+
+    public static String hashtagGist(String hashtag) {
+        String tagTarget = "";
+        int acceptRejectNum = acceptingOrRejecting(hashtag);
+        int individualNum = individual(hashtag);
+        int locationNUm = location(hashtag);
+
+        // ACCEPTING OR REJECTING
+        if (acceptRejectNum == 0) {
+            tagTarget += "REJECTING ";
+        }
+        if (acceptRejectNum == 1) {
+            tagTarget += "ACCEPTING ";
+        }
+
+        // INDIVIDUAL
+        if (individualNum == 1 || individualNum == 2) {
+            tagTarget += "INDIVIDUAL ";
+        }
+
+        // GEOGRAPHICAL
+        if (locationNUm == 1) {
+            tagTarget += "LOCATION ";
+        }
+
+        // POLITICS
+        if (acceptRejectNum == 1 && individualNum == 1) {
+            tagTarget += "RIGHT-WING ";
+        }
+        if (acceptRejectNum == 0 && individualNum == 2) {
+            tagTarget += "RIGHT-WING ";
+        }
+
+        if (acceptRejectNum == 1 && individualNum == 2) {
+            tagTarget += "LEFT-WING ";
+        }
+        if (acceptRejectNum == 0 && individualNum == 1) {
+            tagTarget += "LEFT-WING ";
+        }
+
+        return tagTarget;
+    }
 }
