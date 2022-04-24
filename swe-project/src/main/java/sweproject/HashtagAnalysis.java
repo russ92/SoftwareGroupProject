@@ -54,6 +54,23 @@ public class HashtagAnalysis {
         return type;
     }
 
+    public static int location(String hashtag) {
+
+        String[] place = { "USA", "America", "Europe", "Australia", "New Zealand", "Japan", "China", "Ireland",
+                "Britain", "France" };
+
+        int len = 0;
+        int type = 0;
+        while (len != place.length) {
+            if (hashtag.contains(place[len])) {
+                type = 1;
+            }
+            len++;
+        }
+
+        return type;
+    }
+
     public static void main(String[] args) {
         String s = "#FauciIsAHero";
         String tag = HashtagAnalysis.splitCamelCaseHashtag(s);
