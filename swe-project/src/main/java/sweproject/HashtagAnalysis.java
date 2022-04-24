@@ -41,13 +41,22 @@ public class HashtagAnalysis {
 
     public static int individual(String hashtag) {
 
-        String[] person = { "Fauci", "Trump", "Biden", "Pelosi", "Schumer", "Cruz" };
+        String[] personR = { "Trump", "Cruz" };
+        String[] personL = { "Fauci", "Biden", "Pelosi", "Schumer" };
 
         int len = 0;
         int type = 0;
-        while (len != person.length) {
-            if (hashtag.contains(person[len])) {
+        while (len != personR.length) {
+            if (hashtag.contains(personR[len])) {
                 type = 1;
+            }
+            len++;
+        }
+
+        len = 0;
+        while (len != personL.length) {
+            if (hashtag.contains(personL[len])) {
+                type = 2;
             }
             len++;
         }
@@ -58,7 +67,7 @@ public class HashtagAnalysis {
     public static int location(String hashtag) {
 
         String[] place = { "USA", "America", "Europe", "Australia", "New Zealand", "Japan", "China", "Ireland",
-                "Britain", "France" };
+                "Britain", "France", "Germany" };
 
         int len = 0;
         int type = 0;
@@ -72,12 +81,13 @@ public class HashtagAnalysis {
         return type;
     }
 
-    public static String hashtagGist(String hashtag) {
+    public static String hashtagTarget(String hashtag) {
         String tagTarget = "";
         int acceptRejectNum = acceptingOrRejecting(hashtag);
         int individualNum = individual(hashtag);
         int locationNUm = location(hashtag);
 
+        // ACCEPTING OR REJECTING
         if (acceptRejectNum == 0) {
             tagTarget += "REJECTING ";
         }
@@ -85,12 +95,29 @@ public class HashtagAnalysis {
             tagTarget += "ACCEPTING ";
         }
 
-        if (individualNum == 1) {
-            tagTarget += "INDIVIDUAL";
+        // INDIVIDUAL
+        if (individualNum == 1 || individualNum == 2) {
+            tagTarget += "INDIVIDUAL ";
         }
 
+        // GEOGRAPHICAL
         if (locationNUm == 1) {
-            tagTarget += "LOCATION";
+            tagTarget += "LOCATION ";
+        }
+
+        // POLITICS
+        if (acceptRejectNum == 1 && individualNum == 1) {
+            tagTarget += "RIGHT-WING ";
+        }
+        if (acceptRejectNum == 0 && individualNum == 2) {
+            tagTarget += "RIGHT-WING ";
+        }
+
+        if (acceptRejectNum == 1 && individualNum == 2) {
+            tagTarget += "LEFT-WING ";
+        }
+        if (acceptRejectNum == 0 && individualNum == 1) {
+            tagTarget += "LEFT-WING ";
         }
 
         return tagTarget;
