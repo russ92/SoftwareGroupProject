@@ -22,7 +22,7 @@ public class HashtagAnalysis {
 
 
 
-    public HashtagGraph Read_LexiconToHashmap() {
+    public static HashtagGraph Read_LexiconToHashmap() {
         GetProperties prop = new GetProperties();
         HashtagGraph graph = new HashtagGraph();
 
@@ -40,7 +40,7 @@ public class HashtagAnalysis {
                         String word = lineIn[1];
                         for(int i = 2; i < lineIn.length; i++) {
                             String ref = lineIn[i].replace("[", "").replace(",", "").replace("]", "").trim();
-                            graph.addWord(word, ref);
+                            graph.addArc("Given-Lexicon",word, ref);
                         }
                     }
                 }
@@ -55,5 +55,6 @@ public class HashtagAnalysis {
     public static void main(String [] args){
         String s = "#FauciIsAHero";
         System.out.println(HashtagAnalysis.splitCamelCaseHashtag(s));
+        System.out.println(HashtagAnalysis.Read_LexiconToHashmap().invert());
     }
 }
