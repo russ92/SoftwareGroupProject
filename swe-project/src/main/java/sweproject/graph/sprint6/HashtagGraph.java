@@ -10,21 +10,6 @@ import java.io.FileReader;
 import java.util.*;
 
 public class HashtagGraph {
-//    private final Map<String, Set<String>> list = new HashMap<>();
-//
-//    public void addSourceWord(String word) {
-//        list.computeIfAbsent(word, key -> new TreeSet<>());
-//    }
-//    public void addWord(String word, String ref) {
-//        addToLexiconList(word, ref);
-//    }
-//    private void addToLexiconList(String word, String ref) {
-//        addSourceWord(word);
-//        list.get(word).add(ref);
-//    }
-//    public Map<String, Set<String>>  getLexicon(){
-//        return list;
-//    }
 
     private final Map<String, Set<String>> list = new HashMap<>();
     private final Map<String, Map<String, Set<String>>> referenceList = new HashMap<>();
@@ -36,14 +21,12 @@ public class HashtagGraph {
     public void addSourceNode(String source) {
         list.computeIfAbsent(source, key -> new TreeSet<>());
     }
-
     public void addInvertedSourceNode(String source) { invertedList.computeIfAbsent(source, key -> new TreeSet<>());}
 
     public void addReference(HashtagReference e) {
        referenceList.get(e.hashtag).computeIfAbsent(e.split, key -> new TreeSet<>());
        referenceList.get(e.hashtag).get(e.split).add(e.ref);
     }
-
     public void addInvertedReference(HashtagReference e) {
         invertedReferenceList.get(e.split).computeIfAbsent(e.hashtag, key -> new TreeSet<>());
         invertedReferenceList.get(e.split).get(e.hashtag).add(e.ref);

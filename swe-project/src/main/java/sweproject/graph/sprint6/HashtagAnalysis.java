@@ -8,6 +8,8 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 public class HashtagAnalysis {
 
@@ -96,34 +98,25 @@ public class HashtagAnalysis {
     public static HashtagGraph hashtagSplitAsGraph() {
         HashtagGraph graph = new HashtagGraph();
         List<String> hashtags = Read_HashtagsToList();
+        Map<String, Map<String, Set<String>>> lexiconMap = HashtagAnalysis.Read_LexiconToHashmap().getEdges();
 
         for(String h : hashtags){
 
             if(splitCamelCaseHashtag(h).length > 1 && !checkIfUppercase(h)){
                 String[] split = splitCamelCaseHashtag(h);
                 for(String s: split){
-                    graph.addArc(h, s, "");
+                    for(String l : lexiconMap.get("Given-Lexicon").keySet()) {
+                        Set<String> ref = lexiconMap.get("Given-Lexicon").get(l);
+                        if(s.equals(l)){
+                            for(String sref : ref) {
+                                graph.addArc(h, s, sref);
+                            }
+                        }
+                    }
                 }
             }
 
         }
         return graph;
-    }
-
-    public static void main(String [] args){
-        String s = "#FauciIsAHero";
-//        System.out.println(HashtagAnalysis.splitCamelCaseHashtag(s));
-//        List<String> hashtags = HashtagAnalysis.Read_HashtagsToList();
-//        int count = 0;
-//        for(String h: hashtags) {
-//            String split = HashtagAnalysis.splitCamelCaseHashtag(h);
-//            System.out.println(split);
-//            count++;
-//        }
-//        System.out.println(count);
-
-        //System.out.println(HashtagAnalysis.hashtagSplitAsGraph().getEdges().size());
-        System.out.println(HashtagAnalysis.Read_LexiconToHashmap().getEdges());
-        System.out.println("\n\n\n\n\n\n"+HashtagAnalysis.Read_LexiconToHashmap().invert());
     }
 }

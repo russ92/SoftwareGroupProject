@@ -9,8 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="Filter out hashtags that are fully uppercase.">
-      <change afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint6/WriteHashtagGraph.java" afterDir="false" />
+    <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="Write Hashtag Lexicon Graphs to file.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint6/HashtagAnalysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint6/HashtagAnalysis.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint6/HashtagGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint6/HashtagGraph.java" afterDir="false" />
@@ -186,13 +185,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1648254455717</updated>
-    </task>
-    <task id="LOCAL-00024" summary="Inverted Angels listed added.&#10;New method in TwitterGraph that creates a list of angels from the inverted graph.">
-      <created>1649549505883</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1649549505883</updated>
     </task>
     <task id="LOCAL-00025" summary="Inverted Angels listed added.&#10;New method in TwitterGraph that creates a list of angels from the inverted graph.">
       <created>1649549616939</created>
@@ -530,7 +522,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650833874394</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="Write Hashtag Lexicon Graphs to file.">
+      <created>1650836199728</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1650836199728</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -546,7 +545,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Cleaned folder." />
     <MESSAGE value="Jar added." />
     <MESSAGE value="Jar working?" />
     <MESSAGE value="Jar working2.0?" />
@@ -571,7 +569,8 @@
     <MESSAGE value="HashtagGraph class created.&#10;Not working." />
     <MESSAGE value="HashtagGraph class created.&#10;For the lexicon provided, the #hashtag for the graph is set to the string &quot;Given-Lexicon&quot; in Read_LexiconToHashmap()." />
     <MESSAGE value="Filter out hashtags that are fully uppercase." />
-    <option name="LAST_COMMIT_MESSAGE" value="Filter out hashtags that are fully uppercase." />
+    <MESSAGE value="Write Hashtag Lexicon Graphs to file." />
+    <option name="LAST_COMMIT_MESSAGE" value="Write Hashtag Lexicon Graphs to file." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
