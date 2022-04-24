@@ -150,7 +150,7 @@ public class Reader {
         Map<String, Integer> stances = new HashMap<>();
 
         try{
-            BufferedReader buf = new BufferedReader(new FileReader(prop.gethashtagFilepath()));
+            BufferedReader buf = new BufferedReader(new FileReader(prop.getHashtagFilepath()));
             String lineJustFetched = null;
 
             while(true){
