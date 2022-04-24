@@ -15,8 +15,11 @@ public class HashtagAnalysis {
 
     public static int acceptingOrRejecting(String hashtag) {
 
-        String[] accepting = { "Hero", "Praise", "Love" };
-        String[] rejecting = { "Fuck", "Hate", "Fire", "Fake" };
+        String[] accepting = { "Hero", "Praise", "Love", "Thank You", "Awesome", "Heroes", "Thanks", "Saviour",
+                "King", "Get" };
+        String[] rejecting = { "Dont", "Fuck", "Hate", "Fire", "Fake", "Stupid", "Hell", "Dictatorship", "Dictator",
+                "Tyrant",
+                "Evil", "Idiot" };
 
         int len = 0;
         int type = 2;
@@ -41,8 +44,9 @@ public class HashtagAnalysis {
 
     public static int individual(String hashtag) {
 
-        String[] personR = { "Trump", "Cruz" };
-        String[] personL = { "Fauci", "Biden", "Pelosi", "Schumer" };
+        String[] personR = { "Trump", "Cruz", "Carson", "Pence", "Paul", "Rubio", "Bush" };
+        String[] personL = { "Fauci", "Biden", "Pelosi", "Schumer", "Obama", "Bernie", "Clinton", "Harris", "Warren",
+                "Waters" };
 
         int len = 0;
         int type = 0;
@@ -67,7 +71,7 @@ public class HashtagAnalysis {
     public static int location(String hashtag) {
 
         String[] place = { "USA", "America", "Europe", "Australia", "New Zealand", "Japan", "China", "Ireland",
-                "Britain", "France", "Germany" };
+                "Britain", "France", "Germany", "Spain", "Poland", "Sweeden", "Norway", "Denmark", "Canada" };
 
         int len = 0;
         int type = 0;
@@ -127,12 +131,7 @@ public class HashtagAnalysis {
         String s = "#FauciIsAHero";
         String tag = HashtagAnalysis.splitCamelCaseHashtag(s);
         System.out.println(tag);
-
-        if (acceptingOrRejecting(tag) == 0) {
-            System.out.println("ACCEPTING");
-        } else {
-            System.out.println("REJECTING");
-        }
+        System.out.println(hashtagTarget(tag));
 
     }
 }
