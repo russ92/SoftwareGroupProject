@@ -17,5 +17,7 @@ public class RetweetGraph implements Graph {
     }
 
     @Override
-    public Map invert() {return null;}
+    public Map invert() {
+        return null;
+    }
 }
