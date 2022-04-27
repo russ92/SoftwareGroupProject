@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 public class WriteHashtags {
 
-    public static void WriteHashtags() throws FileNotFoundException {
+    public static void main(String[] args) throws FileNotFoundException {
         System.out.println("HASHTAGS");
         GetProperties prop = new GetProperties();
 

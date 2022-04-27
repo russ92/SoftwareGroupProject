@@ -3,7 +3,6 @@ package sweproject.graph.sprint3;
 import sweproject.graph.sprint4.Evangelists;
 
 import java.util.*;
-
 public class TwitterGraph implements Graph, Arc {
 
     private final Map<String, Set<String>> list = new HashMap<>();
@@ -17,17 +16,17 @@ public class TwitterGraph implements Graph, Arc {
         list.computeIfAbsent(source, key -> new TreeSet<>());
     }
 
-    public void addInvertedSourceNode(String source) {
-        invertedList.computeIfAbsent(source, key -> new TreeSet<>());
-    }
+    public void addInvertedSourceNode(String source) { invertedList.computeIfAbsent(source, key -> new TreeSet<>());}
 
     public void addArc(String source, String destination, int weight) {
-        if (weightedList.containsKey(source)) {
-            if (weightedList.get(source).containsKey(destination)) {
+        if(weightedList.containsKey(source)) {
+            if(weightedList.get(source).containsKey(destination)) {
                 int count = weightedList.get(source).get(destination) + weight;
                 addToRetweetList(new Edge(source, destination, count));
-            } else addToRetweetList(new Edge(source, destination, weight));
-        } else addToRetweetList(new Edge(source, destination, weight));
+            }
+            else addToRetweetList(new Edge(source, destination, weight));
+        }
+        else addToRetweetList(new Edge(source, destination, weight));
     }
 
     private void addToRetweetList(Edge e) {
@@ -51,11 +50,11 @@ public class TwitterGraph implements Graph, Arc {
     }
 
     @Override
-    public List<Evangelists> getEvangelists() {
+    public List<Evangelists> getEvangelists(){
         List<Evangelists> angels = new ArrayList<>();
-        for (String p : weightedList.keySet()) {
+        for (String p : weightedList.keySet() ) {
             int count = 0;
-            for (String c : weightedList.get(p).keySet()) {
+            for (String c : weightedList.get(p).keySet() ) {
                 count += weightedList.get(p).get(c);
             }
             angels.add(new Evangelists(p, count, 0));
@@ -70,7 +69,6 @@ public class TwitterGraph implements Graph, Arc {
     public Map<String, Map<String, Integer>> getEdges() {
         return weightedList;
     }
-
     //Inverted Method
     //Not sure how to simply invert the hashmap, so I just created 2 new maps instead
     @Override
@@ -78,11 +76,11 @@ public class TwitterGraph implements Graph, Arc {
         return invertedWeightedList;
     }
 
-    public List<Evangelists> getInvertedEvangelists() {
+    public List<Evangelists> getInvertedEvangelists(){
         List<Evangelists> angels = new ArrayList<>();
-        for (String p : invertedWeightedList.keySet()) {
+        for (String p : invertedWeightedList.keySet() ) {
             int count = 0;
-            for (String c : invertedWeightedList.get(p).keySet()) {
+            for (String c : invertedWeightedList.get(p).keySet() ) {
                 count += invertedWeightedList.get(p).get(c);
             }
             angels.add(new Evangelists(p, count, 0));
@@ -92,24 +90,17 @@ public class TwitterGraph implements Graph, Arc {
         return angels;
     }
 
-    public int getTotalRetweets(String user) {
+    public int getTotalRetweets(String user){
         int count = 0;
-<<<<<<< Updated upstream
         for(String u : weightedList.get(user).keySet()){
             count += weightedList.get(user).get(u);
-=======
-        if (weightedList.containsKey(user)) {
-            for (String u : weightedList.get(user).keySet()) {
-                count += weightedList.get(user).get(u);
-            }
->>>>>>> Stashed changes
         }
         return count;
     }
 
-    public int getTotalTimesRetweeted(String user) {
+    public int getTotalTimesRetweeted(String user){
         int count = 0;
-        for (String u : invertedWeightedList.get(user).keySet()) {
+        for(String u : invertedWeightedList.get(user).keySet()){
             count += invertedWeightedList.get(user).get(u);
         }
         return count;
@@ -117,28 +108,21 @@ public class TwitterGraph implements Graph, Arc {
 
     // 2b, 2c, 2d of Sprint 3
     @Override
-    public Set getVertex(String user) {
+    public Set getVertex(String user){
         return list.getOrDefault(user, null);
     }
 
     @Override
-    public Boolean doesArcExist(String user1, String user2) {
+    public Boolean doesArcExist(String user1, String user2){
         return list.get(user1).contains(user2);
     }
 
     @Override
-<<<<<<< Updated upstream
     public int getNumOfRetweets(String user1, String user2){
         if(list.get(user1).contains(user2)){
             return weightedList.get(user1).get(user2);
         }
         else return 0;
-=======
-    public int getNumOfRetweets(String user1, String user2) {
-        if (invertedList.get(user1).contains(user2)) {
-            return invertedWeightedList.get(user1).get(user2);
-        } else return 0;
->>>>>>> Stashed changes
     }
 
 }
