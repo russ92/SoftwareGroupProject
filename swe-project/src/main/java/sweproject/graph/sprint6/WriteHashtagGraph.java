@@ -11,7 +11,11 @@ import java.util.Set;
 
 public class WriteHashtagGraph {
 
+<<<<<<< HEAD
     public static void main(String[] args) throws FileNotFoundException {
+=======
+    public static void WriteHashtagGraph() throws FileNotFoundException {
+>>>>>>> parent of 7a66f5a (Revert "Non-Working Build!!!!!!!!!!")
         System.out.println("LEXICON");
 
         boolean incomplete = true;

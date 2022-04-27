@@ -9,9 +9,43 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="Write Hashtag Lexicon Graphs to file with gist.">
       <change beforePath="$PROJECT_DIR$/swe-project/VaxData/Sprint6/hashtagGist.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint6/HashtagAnalysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint6/HashtagAnalysis.java" afterDir="false" />
+=======
+<<<<<<< Updated upstream
+    <list default="true" id="a455ecf2-ba85-402b-ae44-f539c01d8e7f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint5/Hashtag.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint5/Hashtags.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint5/Hashtags.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/swe-project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/swe-project.iml" afterDir="false" />
+=======
+    <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="Read given Lexicon into a hashmap.&#10;Lexicon.getLexicon() reads the provided lexicon into a hashmap.">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_26_03_2022_15_52__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_26_03_2022_15_52__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_03_2022_23_48__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_03_2022_23_48__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/Tweet.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/Tweet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint2/StreamRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint2/StreamRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint3/Edge.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint3/Edge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint3/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint3/Graph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint3/GraphIO.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint3/GraphIO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint3/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint3/Reader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint3/RetweetGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint3/RetweetGraph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint3/TwitterGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint3/TwitterGraph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint4/Evangelists.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint4/Evangelists.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint4/Stances.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint4/Stances.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint5/Hashtags.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint5/Hashtags.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint5/WriteHashtags.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint5/WriteHashtags.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint6/HashtagAnalysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint6/HashtagAnalysis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint6/HashtagGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint6/HashtagGraph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint6/HashtagReference.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint6/HashtagReference.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint6/WriteHashtagGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint6/WriteHashtagGraph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/swe.iml" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/swe.iml" afterDir="false" />
+>>>>>>> Stashed changes
+>>>>>>> parent of 7a66f5a (Revert "Non-Working Build!!!!!!!!!!")
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,24 +90,29 @@
       </map>
     </option>
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="26tswACS7cHJdQFDlwywtVEGmJh" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/swe-project/out/artifacts" />
-    <property name="project.structure.last.edited" value="Artifacts" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/nickl/OneDrive/Desktop/SoftwareEngineering/project/swe-project/VaxData/provided",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "MavenSettings",
+    "spring.configuration.checksum": "2708c3704f3c6a7b3a9e685289b412aa"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\nickl\OneDrive\Desktop\SoftwareEngineering\project\swe-project\VaxData\provided" />
       <recent name="C:\Users\nickl\OneDrive\Desktop\SoftwareEngineering\project\swe-project\VaxData" />
       <recent name="C:\Users\nickl\OneDrive\Desktop\SoftwareEngineering\git\swe-project\VaxData\provided" />
       <recent name="C:\Users\nickl\OneDrive\Desktop\SoftwareEngineering\git\swe-project\VaxData\ProvidedData" />
@@ -87,6 +126,7 @@
       <recent name="C:\Users\nickl\OneDrive\Desktop\SoftwareEngineering\git\swe-project\VaxData\Graphs" />
     </key>
   </component>
+<<<<<<< HEAD
   <component name="RunManager" selected="Application.WriteHashtagGraph">
     <configuration name="HashStances" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="sweproject.graph.sprint5.HashStances" />
@@ -108,6 +148,25 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="sweproject.graph.sprint6.*" />
+=======
+<<<<<<< Updated upstream
+  <component name="RunManager" selected="Application.Configuration">
+    <configuration name="Configuration" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="sweproject.Configuration" />
+      <module name="swe-project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="sweproject.*" />
+=======
+  <component name="RunManager" selected="Application.HashtagAnalysis">
+    <configuration name="GraphIO" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="sweproject.graph.sprint3.GraphIO" />
+      <module name="swe" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="sweproject.graph.sprint3.*" />
+>>>>>>> Stashed changes
+>>>>>>> parent of 7a66f5a (Revert "Non-Working Build!!!!!!!!!!")
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -134,7 +193,30 @@
       <module name="swe" />
       <extension name="coverage">
         <pattern>
+<<<<<<< HEAD
           <option name="PATTERN" value="sweproject.graph.sprint6.*" />
+=======
+          <option name="PATTERN" value="sweproject.graph.sprint3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+<<<<<<< Updated upstream
+    <configuration name="Stances" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="sweproject.graph.sprint4.Stances" />
+      <module name="swe-project" />
+=======
+    <configuration name="Lexicon" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="sweproject.graph.sprint6.Lexicon" />
+      <module name="swe" />
+>>>>>>> Stashed changes
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="sweproject.graph.sprint4.*" />
+>>>>>>> parent of 7a66f5a (Revert "Non-Working Build!!!!!!!!!!")
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -157,6 +239,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+<<<<<<< HEAD
     <list>
       <item itemvalue="Application.Hashtags" />
       <item itemvalue="Application.WriteHashtags" />
@@ -164,13 +247,36 @@
       <item itemvalue="Application.HashtagAnalysis" />
       <item itemvalue="Application.WriteHashtagGraph" />
     </list>
+=======
+<<<<<<< Updated upstream
+>>>>>>> parent of 7a66f5a (Revert "Non-Working Build!!!!!!!!!!")
     <recent_temporary>
       <list>
         <item itemvalue="Application.WriteHashtagGraph" />
         <item itemvalue="Application.HashtagAnalysis" />
         <item itemvalue="Application.WriteHashtags" />
         <item itemvalue="Application.Hashtags" />
+<<<<<<< HEAD
         <item itemvalue="Application.HashStances" />
+=======
+        <item itemvalue="Application.Reader" />
+=======
+    <list>
+      <item itemvalue="Application.HashtagAnalysis" />
+      <item itemvalue="Application.Lexicon" />
+      <item itemvalue="Application.Hashtags" />
+      <item itemvalue="Application.WriteHashtags" />
+      <item itemvalue="Application.GraphIO" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.HashtagAnalysis" />
+        <item itemvalue="Application.Lexicon" />
+        <item itemvalue="Application.WriteHashtags" />
+        <item itemvalue="Application.Hashtags" />
+        <item itemvalue="Application.GraphIO" />
+>>>>>>> Stashed changes
+>>>>>>> parent of 7a66f5a (Revert "Non-Working Build!!!!!!!!!!")
       </list>
     </recent_temporary>
   </component>
@@ -182,6 +288,29 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1648254455717</updated>
+      <workItem from="1650824339506" duration="3592000" />
+      <workItem from="1651061388052" duration="4105000" />
+    </task>
+    <task id="LOCAL-00025" summary="Inverted Angels listed added.&#10;New method in TwitterGraph that creates a list of angels from the inverted graph.">
+      <created>1649549616939</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1649549616939</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Stance variable added.&#10;Stance added as an int to Evangelists and reads/writes to file with a default value of 0.">
+      <created>1649591961258</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1649591961258</updated>
+    </task>
+    <task id="LOCAL-00027" summary="First version of iterating through graph.&#10;Comparing initial list of angels to the graph and assigning stances to the users who retweet the angels. It returns a list of Evangelists.">
+      <created>1649616964213</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1649616964213</updated>
     </task>
     <task id="LOCAL-00028" summary="First version of iterating through graph.&#10;Comparing initial list of angels to the graph and assigning stances to the users who retweet the angels. It returns a list of Evangelists.">
       <created>1649616977666</created>
@@ -365,6 +494,12 @@
       <option name="project" value="LOCAL" />
       <updated>1650062315937</updated>
     </task>
+<<<<<<< HEAD
+=======
+<<<<<<< Updated upstream
+    <option name="localTasksCounter" value="54" />
+=======
+>>>>>>> parent of 7a66f5a (Revert "Non-Working Build!!!!!!!!!!")
     <task id="LOCAL-00054" summary="Tweets collected.">
       <created>1650114086294</created>
       <option name="number" value="00054" />
@@ -470,6 +605,7 @@
       <option name="project" value="LOCAL" />
       <updated>1650236829371</updated>
     </task>
+<<<<<<< HEAD
     <task id="LOCAL-00069" summary="HashtagGraph class created.&#10;Not working.">
       <created>1650830500622</created>
       <option name="number" value="00069" />
@@ -527,7 +663,49 @@
       <updated>1650837850510</updated>
     </task>
     <option name="localTasksCounter" value="77" />
+=======
+    <task id="LOCAL-00069" summary="Both JARs work from within swe-project directory.&#10;java -jar swe-project/out/artifacts/swe.jar&#10;OR&#10;java -jar swe-project/target/artifacts/swe-sprint5-jar-with-dependencies.jar">
+      <created>1650237054904</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1650237054904</updated>
+    </task>
+    <task id="LOCAL-00070" summary="Check that all hashtags are correct.">
+      <created>1650728349094</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1650728349095</updated>
+    </task>
+    <task id="LOCAL-00071" summary="Working checkHashtags.&#10;Checks that there are no addition characters attached to the hashtags.&#10;New files saved in VaxData/Sprint6/">
+      <created>1650750979472</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1650750979472</updated>
+    </task>
+    <task id="LOCAL-00072" summary="Working checkHashtags.&#10;Checks that there are no addition characters attached to the hashtags.&#10;New files saved in VaxData/Sprint6/">
+      <created>1650751010752</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1650751010752</updated>
+    </task>
+    <task id="LOCAL-00073" summary="Read given Lexicon into a hashmap.&#10;Lexicon.getLexicon() reads the provided lexicon into a hashmap.">
+      <created>1650753706515</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1650753706515</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
+>>>>>>> Stashed changes
+>>>>>>> parent of 7a66f5a (Revert "Non-Working Build!!!!!!!!!!")
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -542,6 +720,29 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+<<<<<<< HEAD
+=======
+<<<<<<< Updated upstream
+    <MESSAGE value="Print to text file working with provided vax tweets.txt file." />
+    <MESSAGE value="List of angels added.&#10;Method added to TwitterGraph that returns an ArrayList of all people who retweeted and the number of times they retweeted. Prints first 100 to a file in GraphIO class." />
+    <MESSAGE value="Stream logger deleted.&#10;Deleted the stream logger from TwitterListener and TwitterStreamRunner. Using a previous version of User and Tweet classes as well." />
+    <MESSAGE value="Streaming tweets working again." />
+    <MESSAGE value="New tweets and twitter users added from streaming." />
+    <MESSAGE value="New tweets and Twitter users added from streaming." />
+    <MESSAGE value="GraphIO scanner.&#10;Changed the if statements in the main method from nextLine() to nextInt()" />
+    <MESSAGE value="Reader file updated.&#10;Works with the data we collected." />
+    <MESSAGE value="Inverted Angels listed added.&#10;New method in TwitterGraph that creates a list of angels from the inverted graph." />
+    <MESSAGE value="Stance variable added.&#10;Stance added as an int to Evangelists and reads/writes to file with a default value of 0." />
+    <MESSAGE value="First version of iterating through graph.&#10;Comparing initial list of angels to the graph and assigning stances to the users who retweet the angels. It returns a list of Evangelists." />
+    <MESSAGE value="Error checking adjusted." />
+    <MESSAGE value="Write stances to file." />
+    <MESSAGE value="Write stances to file 30,000 users." />
+    <MESSAGE value="Write hashMapStances." />
+    <MESSAGE value="Cleaned folder." />
+=======
+>>>>>>> Stashed changes
+    <MESSAGE value="Jar added." />
+>>>>>>> parent of 7a66f5a (Revert "Non-Working Build!!!!!!!!!!")
     <MESSAGE value="Jar working?" />
     <MESSAGE value="Jar working2.0?" />
     <MESSAGE value="Official working JAR?&#10;Run from outside the /swe-project folder i.e. &gt; java -jar swe-project/out/artifacts/swe-project.jar" />
@@ -550,6 +751,12 @@
     <MESSAGE value="Bug fixed.&#10;Scanner scans next integer, instead of having to enter choice multiple times." />
     <MESSAGE value="Hashtags Graph working.&#10;By splitting the tweet text into a string array, the graph is able to read all the hashtags separately.&#10;Prints the graph through the WriteHashtags class." />
     <MESSAGE value="Rearranged folders by sprint/week" />
+<<<<<<< HEAD
+=======
+<<<<<<< Updated upstream
+    <option name="LAST_COMMIT_MESSAGE" value="Rearranged folders by sprint/week" />
+=======
+>>>>>>> parent of 7a66f5a (Revert "Non-Working Build!!!!!!!!!!")
     <MESSAGE value="Tweets collected." />
     <MESSAGE value="More tweets collected." />
     <MESSAGE value="Assign stances to hashtags.&#10;Working however, not sure if the math behind the way the stances are assigned is correct i.e. the stance of every user that uses that hashtag is summed and then divided by the number of times the hashtag is used." />
@@ -562,12 +769,21 @@
     <MESSAGE value="Write to file.&#10;Sprint 5." />
     <MESSAGE value="JARs added.&#10;Sprint 5" />
     <MESSAGE value="Working Maven JAR.&#10;Sprint 5" />
+<<<<<<< HEAD
     <MESSAGE value="HashtagGraph class created.&#10;Not working." />
     <MESSAGE value="HashtagGraph class created.&#10;For the lexicon provided, the #hashtag for the graph is set to the string &quot;Given-Lexicon&quot; in Read_LexiconToHashmap()." />
     <MESSAGE value="Filter out hashtags that are fully uppercase." />
     <MESSAGE value="Write Hashtag Lexicon Graphs to file." />
     <MESSAGE value="Write Hashtag Lexicon Graphs to file with gist." />
     <option name="LAST_COMMIT_MESSAGE" value="Write Hashtag Lexicon Graphs to file with gist." />
+=======
+    <MESSAGE value="Both JARs work from within swe-project directory.&#10;java -jar swe-project/out/artifacts/swe.jar&#10;OR&#10;java -jar swe-project/target/artifacts/swe-sprint5-jar-with-dependencies.jar" />
+    <MESSAGE value="Check that all hashtags are correct." />
+    <MESSAGE value="Working checkHashtags.&#10;Checks that there are no addition characters attached to the hashtags.&#10;New files saved in VaxData/Sprint6/" />
+    <MESSAGE value="Read given Lexicon into a hashmap.&#10;Lexicon.getLexicon() reads the provided lexicon into a hashmap." />
+    <option name="LAST_COMMIT_MESSAGE" value="Read given Lexicon into a hashmap.&#10;Lexicon.getLexicon() reads the provided lexicon into a hashmap." />
+>>>>>>> Stashed changes
+>>>>>>> parent of 7a66f5a (Revert "Non-Working Build!!!!!!!!!!")
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

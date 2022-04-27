@@ -9,19 +9,19 @@ import java.util.*;
 
 public class Reader {
 
-    public static TwitterGraph Read_Tweets(){
+    public static TwitterGraph Read_Tweets() {
         GetProperties prop = new GetProperties();
 
         TwitterGraph tweetsGraph = new TwitterGraph();
-        try{
+        try {
             BufferedReader buf = new BufferedReader(new FileReader(prop.getGraphFilepath()));
             String lineJustFetched;
 
-            while(true){
+            while (true) {
                 lineJustFetched = buf.readLine();
-                if(lineJustFetched == null){
+                if (lineJustFetched == null) {
                     break;
-                }else{
+                } else {
                     String[] lineIn = lineJustFetched.split("\t");
 
                     // Check to see if the tweet is a Retweet
@@ -42,26 +42,26 @@ public class Reader {
 
             buf.close();
 
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
         return tweetsGraph;
     }
 
-    public static List<Evangelists> Read_Angels(){
+    public static List<Evangelists> Read_Angels() {
         GetProperties prop = new GetProperties();
         List<Evangelists> angels = new ArrayList<>();
 
-        try{
+        try {
             BufferedReader buf = new BufferedReader(new FileReader(prop.getAngelFilepath()));
             String lineJustFetched;
-            
-            while(true){
+
+            while (true) {
                 lineJustFetched = buf.readLine();
-                if(lineJustFetched == null){
+                if (lineJustFetched == null) {
                     break;
-                }else{
+                } else {
                     String[] lineIn = lineJustFetched.split("\t");
 
                     if (lineIn.length == 3 && lineIn[0].startsWith("@")) {
@@ -74,7 +74,7 @@ public class Reader {
             }
 
             buf.close();
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return angels;
@@ -84,19 +84,19 @@ public class Reader {
         GetProperties prop = new GetProperties();
         TwitterGraph graph = new TwitterGraph();
 
-        try{
+        try {
             BufferedReader buf = new BufferedReader(new FileReader(prop.getHashMapFilepath()));
             String lineJustFetched = null;
 
-            while(true){
+            while (true) {
                 lineJustFetched = buf.readLine();
-                if(lineJustFetched == null){
+                if (lineJustFetched == null) {
                     break;
-                }else{
+                } else {
                     String[] lineIn = lineJustFetched.split("\t");
                     String source = lineIn[0];
 
-                    for(int i = 1; i<lineIn.length; i++ ){
+                    for (int i = 1; i < lineIn.length; i++) {
                         String[] retweet = lineIn[i].split(":");
                         int numRetweets = Integer.parseInt(retweet[1]);
                         String destination = retweet[0];
@@ -109,17 +109,23 @@ public class Reader {
 
             buf.close();
 
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return graph;
     }
+<<<<<<< HEAD
+=======
+<<<<<<< Updated upstream
+=======
+>>>>>>> parent of 7a66f5a (Revert "Non-Working Build!!!!!!!!!!")
 
 
     public static Map<String, Integer> Read_Stances() {
         GetProperties prop = new GetProperties();
         Map<String, Integer> stances = new HashMap<>();
 
+<<<<<<< HEAD
         try{
             BufferedReader buf = new BufferedReader(new FileReader(prop.getStancesFilepath()));
             String lineJustFetched = null;
@@ -131,6 +137,19 @@ public class Reader {
                 }else{
                     String[] lineIn = lineJustFetched.split("\t");
                     if(lineIn.length == 3) {
+=======
+        try {
+            BufferedReader buf = new BufferedReader(new FileReader(prop.getStancesFilepath()));
+            String lineJustFetched = null;
+
+            while (true) {
+                lineJustFetched = buf.readLine();
+                if (lineJustFetched == null) {
+                    break;
+                } else {
+                    String[] lineIn = lineJustFetched.split("\t");
+                    if (lineIn.length == 3) {
+>>>>>>> parent of 7a66f5a (Revert "Non-Working Build!!!!!!!!!!")
                         String user = lineIn[0];
                         int stance = Integer.parseInt(lineIn[2]);
                         stances.put(user, stance);
@@ -140,15 +159,24 @@ public class Reader {
 
             buf.close();
 
+<<<<<<< HEAD
         }catch(Exception e){
+=======
+        } catch (Exception e) {
+>>>>>>> parent of 7a66f5a (Revert "Non-Working Build!!!!!!!!!!")
             e.printStackTrace();
         }
         return stances;
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> parent of 7a66f5a (Revert "Non-Working Build!!!!!!!!!!")
     public static Map<String, Integer> Read_StancesHashtags() {
         GetProperties prop = new GetProperties();
         Map<String, Integer> stances = new HashMap<>();
 
+<<<<<<< HEAD
         try{
             BufferedReader buf = new BufferedReader(new FileReader(prop.getHashtagFilepath()));
             String lineJustFetched = null;
@@ -160,6 +188,19 @@ public class Reader {
                 }else{
                     String[] lineIn = lineJustFetched.split("\t");
                     if(lineIn.length == 2) {
+=======
+        try {
+            BufferedReader buf = new BufferedReader(new FileReader(prop.getHashtagFilepath()));
+            String lineJustFetched = null;
+
+            while (true) {
+                lineJustFetched = buf.readLine();
+                if (lineJustFetched == null) {
+                    break;
+                } else {
+                    String[] lineIn = lineJustFetched.split("\t");
+                    if (lineIn.length == 2) {
+>>>>>>> parent of 7a66f5a (Revert "Non-Working Build!!!!!!!!!!")
                         String hashtag = lineIn[0];
                         int stance = Integer.parseInt(lineIn[1]);
                         stances.put(hashtag, stance);
@@ -169,9 +210,17 @@ public class Reader {
 
             buf.close();
 
+<<<<<<< HEAD
         }catch(Exception e){
+=======
+        } catch (Exception e) {
+>>>>>>> parent of 7a66f5a (Revert "Non-Working Build!!!!!!!!!!")
             e.printStackTrace();
         }
         return stances;
     }
+<<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
+>>>>>>> parent of 7a66f5a (Revert "Non-Working Build!!!!!!!!!!")
 }
