@@ -1,20 +1,21 @@
-We were able to establish that we have a bias in our algorithm, favouring anti-vax 7960 to pro-vax 2270.
-We had a 96% accuracy based on a small dataset, 24/25.
+Sprint 6
+Team: Hash Flag
+Russell Ward
+Owen Corrigan
+Nicholas Hammm
 
-Nicholas - did a huge amount of coding and development on this sprint
-Russell - assigned stances and checked the accuracy
-Owen - did some coding and problem-solving
+To Run:
+To run the JAR compiled by Intellij, enter the directory where the swe-project folder is located.
+Then run;
+java -jar swe-project/out/artifacts/swe.jar
+If that fails try running the maven JAR from the same directory;
+java -jar swe-project/target/swe-sprint6-jar-with-dependencies.jar
 
-Command for the jar
-java -jar swe-project/out/artifacts/swe-project.jar
+Output should be stored in swe-project/VaxData/Sprint6 directory
 
-Output
-File should be written to the folder swe-project/VaxData/Graphs
+Note: The JARS will only work if you run them from outside the 'swe-project' directory/folder as the file paths
+in application.properties unfortunately aren't working correctly.
 
-If the jar doesn't work, this sprint can be tested by compiling and running from the graphIO main.
-To select a function, enter it n times. So for option 5, this sprint it will look like this.
-5
-5
-5
-5
-5
+Nicholas managed to get most of the code up and running. This represented the lions share of the work.
+Owen got elements surrounding the reading of hashtags to assigning their 'gists'.
+Russell worked on reading hashtags into hashmaps.ags into hashmaps.

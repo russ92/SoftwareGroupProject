@@ -20,23 +20,27 @@ public class Stances {
         for (Evangelists n : angels) {
             angelMap.put(n.getAngel(), n.getStance());
         }
-
+        System.out.println(angelMap.size());
         int iterations = 0;
 
         while (iterations < 15) {
             System.out.println("Iteration " + (iterations+1));
 
             for (String a : angelMap.keySet()){
-                if (map.containsKey(a)){
-                    for (String g : map.get(a).keySet()) {
+                if(map.containsKey(a)) {
+                    for (String u : map.get(a).keySet()) {
                         int stance = angelMap.get(a);
-                        angelMap.put(g, stance);
+                        if (angelMap.containsKey(u)) {
+                            angelMap.put(u, (angelMap.get(u) + stance)/2);
+                        } else {
+                            angelMap.put(u, stance);
+                        }
                     }
-
                 }
             }
             iterations++;
         }
+        angelMap.replaceAll((a, v) -> v / (graph.getTotalTimesRetweeted(a)));
 
         return angelMap;
     }
@@ -57,4 +61,25 @@ public class Stances {
 
         System.out.println("Anti stances: " + countAnti + "\nPro stances: " + countPro);
     }
+
+//    public static void main(String [] args){
+//        Map<String, Integer> n = Stances.assignStances();
+//        System.out.println(n + "\n" + n.size() + " size" );
+//        int max = 0;
+//        int count = 0;
+//        int avg = 0;
+//        for(String u: n.keySet()){
+//            if(n.get(u) > max){
+//                max = n.get(u);
+//            }
+//            if(n.get(u) != 0){
+//                count++;
+//            }
+//            avg += n.get(u);
+//        }
+//        System.out.println("Max = " + max);
+//        System.out.println("Avg = " + avg/n.size());
+//        System.out.println("Count '0' = " + count);
+//        System.out.println("Size: " + n.size());
+//    }
 }

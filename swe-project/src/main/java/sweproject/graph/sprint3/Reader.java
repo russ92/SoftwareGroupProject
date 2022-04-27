@@ -114,4 +114,64 @@ public class Reader {
         }
         return graph;
     }
+
+
+    public static Map<String, Integer> Read_Stances() {
+        GetProperties prop = new GetProperties();
+        Map<String, Integer> stances = new HashMap<>();
+
+        try{
+            BufferedReader buf = new BufferedReader(new FileReader(prop.getStancesFilepath()));
+            String lineJustFetched = null;
+
+            while(true){
+                lineJustFetched = buf.readLine();
+                if(lineJustFetched == null){
+                    break;
+                }else{
+                    String[] lineIn = lineJustFetched.split("\t");
+                    if(lineIn.length == 3) {
+                        String user = lineIn[0];
+                        int stance = Integer.parseInt(lineIn[2]);
+                        stances.put(user, stance);
+                    }
+                }
+            }
+
+            buf.close();
+
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        return stances;
+    }
+    public static Map<String, Integer> Read_StancesHashtags() {
+        GetProperties prop = new GetProperties();
+        Map<String, Integer> stances = new HashMap<>();
+
+        try{
+            BufferedReader buf = new BufferedReader(new FileReader(prop.getHashtagFilepath()));
+            String lineJustFetched = null;
+
+            while(true){
+                lineJustFetched = buf.readLine();
+                if(lineJustFetched == null){
+                    break;
+                }else{
+                    String[] lineIn = lineJustFetched.split("\t");
+                    if(lineIn.length == 2) {
+                        String hashtag = lineIn[0];
+                        int stance = Integer.parseInt(lineIn[1]);
+                        stances.put(hashtag, stance);
+                    }
+                }
+            }
+
+            buf.close();
+
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        return stances;
+    }
 }

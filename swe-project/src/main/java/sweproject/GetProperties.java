@@ -41,6 +41,10 @@ public class GetProperties {
         return myProperties.getProperty("hashmap");
     }
 
+    public String getStancesFilepath() {
+        return myProperties.getProperty("stances");
+    }
+
     public String getUserToHashtagFilepath() {
         return myProperties.getProperty("hashtagToUser");
     }
@@ -49,8 +53,14 @@ public class GetProperties {
         return myProperties.getProperty("userToHashtag");
     }
 
+    public String getSprintFolderFilepath() {
+        return myProperties.getProperty("sprint");
+    }
+
     public String getPrintToFilepath() {
         return myProperties.getProperty("print");
     }
 
+    public String getLexiconFilepath() { return myProperties.getProperty("lexicon"); }
+    public String getHashtagFilepath() { return myProperties.getProperty("hashtag"); }
 }

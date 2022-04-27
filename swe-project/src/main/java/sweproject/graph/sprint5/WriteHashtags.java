@@ -23,7 +23,9 @@ public class WriteHashtags {
             Scanner scn = new Scanner(System.in);
             System.out.println("1 to write the userToHashtag graph to a text file \n" +
                     "OR 2 to write a hashtagToUser graph to text file \n" +
-                    "OR 3 to write the 100 most popular hashtags to text file: ");
+                    "OR 3 to write the 100 most popular hashtags to text file \n" +
+                    "OR 4 to write the hashtags with stances to text file: \n" +
+                    "OR 5 to write the user stances from hashtags stances they use to text file:");
 
             int choice = scn.nextInt();
 
@@ -45,8 +47,18 @@ public class WriteHashtags {
                 System.out.println("Writing hashtags...");
                 writeHashtagsToFile(hashtags);
                 incomplete = false;
-            } else {
-                System.out.println("PLEASE ENTER 1 OR 2 OR 3");
+            } else if (choice == 4) {
+                Map<String, Integer> hashtags = Hashtags.assignHashtagStances();
+                System.out.println("Writing hashtags...");
+                writeHashtagStancesToFile(hashtags);
+                incomplete = false;
+            } else if (choice == 5) {
+                Map<String, Integer> hashtags = Hashtags.assignUserStancesFromHashtags();
+                System.out.println("Writing users...");
+                writeHashtagStancesToFile(hashtags);
+                incomplete = false;
+            }else {
+                System.out.println("PLEASE ENTER 1 OR 2 OR 3 OR 4 OR 5");
             }
         }
     }
@@ -63,6 +75,32 @@ public class WriteHashtags {
             for (int i = 0; i < 100; i++){
                 toFile.append("\n").append(angels.get(i));
             }
+            bf.write(toFile.toString().trim());
+            bf.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                assert bf != null;
+                bf.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public static void writeHashtagStancesToFile(Map<String, Integer> map) {
+        String path = fileName(1);
+        File graph = new File(path);
+        BufferedWriter bf = null;
+        try {
+            System.out.println("try");
+            bf = new BufferedWriter(new FileWriter(graph));
+            // String to be written to file.
+            StringBuilder toFile = new StringBuilder();
+            map.forEach((K, V)->{
+                toFile.append("\n").append(K).append("\t").append(V);
+                });
             bf.write(toFile.toString().trim());
             bf.flush();
         } catch (IOException e) {
@@ -110,7 +148,7 @@ public class WriteHashtags {
     // file and loading a file
     public static String fileName(int rW) {
         GetProperties prop = new GetProperties();
-        String name = prop.getPrintToFilepath(); // CHANGE THIS PATH IN application.properties
+        String name = prop.getSprintFolderFilepath(); // CHANGE THIS PATH IN application.properties (sprint)
         if (rW == 1) {
             boolean exists = true;
             while (exists) {
