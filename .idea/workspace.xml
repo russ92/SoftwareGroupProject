@@ -2,16 +2,17 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="swe-5:jar" />
+      <artifact name="swe-6:jar" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="Write Hashtag Lexicon Graphs to file with gist.">
-      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/Sprint6/hashtagGist.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint6/HashtagAnalysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint6/HashtagAnalysis.java" afterDir="false" />
+    <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="Maven JAR added.&#10;End of sprint 6.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/vax tweets users.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/vax tweets users.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/vax tweets.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/vax tweets.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,14 +88,13 @@
       <recent name="C:\Users\nickl\OneDrive\Desktop\SoftwareEngineering\git\swe-project\VaxData\Graphs" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.WriteHashtagGraph">
-    <configuration name="HashStances" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="sweproject.graph.sprint5.HashStances" />
+  <component name="RunManager" selected="Application.Configuration">
+    <configuration name="Configuration" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="sweproject.Configuration" />
       <module name="swe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/swe-project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="sweproject.graph.sprint5.*" />
+          <option name="PATTERN" value="sweproject.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -160,17 +160,17 @@
     <list>
       <item itemvalue="Application.Hashtags" />
       <item itemvalue="Application.WriteHashtags" />
-      <item itemvalue="Application.HashStances" />
       <item itemvalue="Application.HashtagAnalysis" />
       <item itemvalue="Application.WriteHashtagGraph" />
+      <item itemvalue="Application.Configuration" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Configuration" />
         <item itemvalue="Application.WriteHashtagGraph" />
         <item itemvalue="Application.HashtagAnalysis" />
         <item itemvalue="Application.WriteHashtags" />
         <item itemvalue="Application.Hashtags" />
-        <item itemvalue="Application.HashStances" />
       </list>
     </recent_temporary>
   </component>
@@ -182,34 +182,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1648254455717</updated>
-    </task>
-    <task id="LOCAL-00028" summary="First version of iterating through graph.&#10;Comparing initial list of angels to the graph and assigning stances to the users who retweet the angels. It returns a list of Evangelists.">
-      <created>1649616977666</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1649616977666</updated>
-    </task>
-    <task id="LOCAL-00029" summary="Error checking adjusted.">
-      <created>1649621007058</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1649621007058</updated>
-    </task>
-    <task id="LOCAL-00030" summary="Error checking adjusted.">
-      <created>1649621715427</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1649621715427</updated>
-    </task>
-    <task id="LOCAL-00031" summary="Error checking adjusted.">
-      <created>1649622473713</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1649622473713</updated>
     </task>
     <task id="LOCAL-00032" summary="Write stances to file.">
       <created>1649624164949</created>
@@ -526,7 +498,35 @@
       <option name="project" value="LOCAL" />
       <updated>1650837850510</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="Write Hashtag Lexicon Graphs to file with gist.">
+      <created>1650838126695</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1650838126695</updated>
+    </task>
+    <task id="LOCAL-00078" summary="Maven JAR added.&#10;End of sprint 6.">
+      <created>1650839184030</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1650839184030</updated>
+    </task>
+    <task id="LOCAL-00079" summary="Maven JAR added.&#10;End of sprint 6.">
+      <created>1650839320594</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1650839320594</updated>
+    </task>
+    <task id="LOCAL-00080" summary="Maven JAR added.&#10;End of sprint 6.">
+      <created>1650840068791</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1650840068791</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -542,7 +542,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Jar working?" />
     <MESSAGE value="Jar working2.0?" />
     <MESSAGE value="Official working JAR?&#10;Run from outside the /swe-project folder i.e. &gt; java -jar swe-project/out/artifacts/swe-project.jar" />
     <MESSAGE value="Cleaned up folder, end of sprint 4." />
@@ -567,7 +566,8 @@
     <MESSAGE value="Filter out hashtags that are fully uppercase." />
     <MESSAGE value="Write Hashtag Lexicon Graphs to file." />
     <MESSAGE value="Write Hashtag Lexicon Graphs to file with gist." />
-    <option name="LAST_COMMIT_MESSAGE" value="Write Hashtag Lexicon Graphs to file with gist." />
+    <MESSAGE value="Maven JAR added.&#10;End of sprint 6." />
+    <option name="LAST_COMMIT_MESSAGE" value="Maven JAR added.&#10;End of sprint 6." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
