@@ -21,7 +21,8 @@ public class WriteAnalysis {
             Scanner scn = new Scanner(System.in);
             System.out.println(
                     "1 to write the user hashtags references as a graph to a text file: (userHashtagReferenceGraph) \n" +
-                            "OR 2 to write the user hashtags references as a graph to a text file: (userHashtagReferenceGraph) \n"
+                            "OR 2 to write the graph that maps each user onto an aggregate representation of their " +
+                            "qualities to a text file: (graphSprint7): "
             );
 
             int choice = scn.nextInt();
@@ -32,8 +33,14 @@ public class WriteAnalysis {
                 System.out.println("Writing graph...");
                 writeToFile(map);
                 incomplete = false;
+            } else if (choice == 2) {
+                System.out.println("Creating graph...");
+                Map<String, Map<String, Set<String>>> map = ReferenceAnalysis.graphSprint7().getEdges();
+                System.out.println("Writing graph...");
+                writeToFile(map);
+                incomplete = false;
             } else {
-                System.out.println("PLEASE ENTER 1 ");
+                System.out.println("PLEASE ENTER 1 OR 2");
             }
         }
     }

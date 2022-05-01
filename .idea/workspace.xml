@@ -9,8 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="Graph for user hashtag analysis added.&#10;Graph model of users, that maps each user to every hashtag they use as well as the hashtags qualities.">
+    <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="Graph for Sprint 7.&#10;Graph now in the right form e.g. (-ref:fauci, +ref:trump, -ref:china, rejecting &gt; accepting, solution&gt;problem, rights&gt;responsibilities).">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/Sprint7/sprint7Graph.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/Sprint7/graphSprint7.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint7/ReferenceAnalysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint7/ReferenceAnalysis.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint7/WriteAnalysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint7/WriteAnalysis.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint7/ReferenceAnalysis.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint7/ReferenceAnalysis.class" afterDir="false" />
@@ -157,11 +158,11 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.HashtagAnalysis" />
-      <item itemvalue="Application.WriteHashtagGraph" />
       <item itemvalue="Application.Configuration" />
+      <item itemvalue="Application.HashtagAnalysis" />
       <item itemvalue="Application.ReferenceAnalysis" />
       <item itemvalue="Application.WriteAnalysis" />
+      <item itemvalue="Application.WriteHashtagGraph" />
     </list>
     <recent_temporary>
       <list>
@@ -181,13 +182,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1648254455717</updated>
-    </task>
-    <task id="LOCAL-00036" summary="Cleaned folder.">
-      <created>1649630721630</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1649630721630</updated>
     </task>
     <task id="LOCAL-00037" summary="Jar added.">
       <created>1649631009443</created>
@@ -525,7 +519,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651426551362</updated>
     </task>
-    <option name="localTasksCounter" value="85" />
+    <task id="LOCAL-00085" summary="Graph for Sprint 7.&#10;Graph now in the right form e.g. (-ref:fauci, +ref:trump, -ref:china, rejecting &gt; accepting, solution&gt;problem, rights&gt;responsibilities).">
+      <created>1651439587761</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1651439587761</updated>
+    </task>
+    <option name="localTasksCounter" value="86" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -541,7 +542,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Initial implementation of Hashtag Graph.&#10;Not working overall. Main error, extracting only the hashtags.&#10;Also, errors when creating the inverted graph -NullPointException" />
     <MESSAGE value="Bug fixed.&#10;Scanner scans next integer, instead of having to enter choice multiple times." />
     <MESSAGE value="Hashtags Graph working.&#10;By splitting the tweet text into a string array, the graph is able to read all the hashtags separately.&#10;Prints the graph through the WriteHashtags class." />
     <MESSAGE value="Rearranged folders by sprint/week" />
@@ -566,7 +566,8 @@
     <MESSAGE value="Streams full RT instead of '...'&#10;Streaming tweets only collected 140 characters before the addition of the if statement in TwitterListener class." />
     <MESSAGE value="More tweets collected (74,336)" />
     <MESSAGE value="Graph for user hashtag analysis added.&#10;Graph model of users, that maps each user to every hashtag they use as well as the hashtags qualities." />
-    <option name="LAST_COMMIT_MESSAGE" value="Graph for user hashtag analysis added.&#10;Graph model of users, that maps each user to every hashtag they use as well as the hashtags qualities." />
+    <MESSAGE value="Graph for Sprint 7.&#10;Graph now in the right form e.g. (-ref:fauci, +ref:trump, -ref:china, rejecting &gt; accepting, solution&gt;problem, rights&gt;responsibilities)." />
+    <option name="LAST_COMMIT_MESSAGE" value="Graph for Sprint 7.&#10;Graph now in the right form e.g. (-ref:fauci, +ref:trump, -ref:china, rejecting &gt; accepting, solution&gt;problem, rights&gt;responsibilities)." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
