@@ -9,19 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="More tweets collected (74,336)">
-      <change afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint7/ReferenceAnalysis.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint7/WriteAnalysis.java" afterDir="false" />
+    <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="Graph for user hashtag analysis added.&#10;Graph model of users, that maps each user to every hashtag they use as well as the hashtags qualities.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReadMe.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ReadMe.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint6/HashtagAnalysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint6/HashtagAnalysis.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint6/WriteHashtagGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint6/WriteHashtagGraph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint2/TwitterListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint2/TwitterListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint6/HashtagAnalysis.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint6/HashtagAnalysis.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint6/WriteHashtagGraph.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint6/WriteHashtagGraph.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint7/ReferenceAnalysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint7/ReferenceAnalysis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint7/WriteAnalysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint7/WriteAnalysis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint7/ReferenceAnalysis.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint7/ReferenceAnalysis.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint7/WriteAnalysis.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint7/WriteAnalysis.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,13 +181,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1648254455717</updated>
-    </task>
-    <task id="LOCAL-00035" summary="Write hashMapStances.">
-      <created>1649630508416</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1649630508416</updated>
     </task>
     <task id="LOCAL-00036" summary="Cleaned folder.">
       <created>1649630721630</created>
@@ -532,7 +518,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651403811649</updated>
     </task>
-    <option name="localTasksCounter" value="84" />
+    <task id="LOCAL-00084" summary="Graph for user hashtag analysis added.&#10;Graph model of users, that maps each user to every hashtag they use as well as the hashtags qualities.">
+      <created>1651426551362</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1651426551362</updated>
+    </task>
+    <option name="localTasksCounter" value="85" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -548,7 +541,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Cleaned up folder, end of sprint 4." />
     <MESSAGE value="Initial implementation of Hashtag Graph.&#10;Not working overall. Main error, extracting only the hashtags.&#10;Also, errors when creating the inverted graph -NullPointException" />
     <MESSAGE value="Bug fixed.&#10;Scanner scans next integer, instead of having to enter choice multiple times." />
     <MESSAGE value="Hashtags Graph working.&#10;By splitting the tweet text into a string array, the graph is able to read all the hashtags separately.&#10;Prints the graph through the WriteHashtags class." />
@@ -573,7 +565,8 @@
     <MESSAGE value="Tweets collected." />
     <MESSAGE value="Streams full RT instead of '...'&#10;Streaming tweets only collected 140 characters before the addition of the if statement in TwitterListener class." />
     <MESSAGE value="More tweets collected (74,336)" />
-    <option name="LAST_COMMIT_MESSAGE" value="More tweets collected (74,336)" />
+    <MESSAGE value="Graph for user hashtag analysis added.&#10;Graph model of users, that maps each user to every hashtag they use as well as the hashtags qualities." />
+    <option name="LAST_COMMIT_MESSAGE" value="Graph for user hashtag analysis added.&#10;Graph model of users, that maps each user to every hashtag they use as well as the hashtags qualities." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -9,7 +9,7 @@ import java.util.Set;
 public class WriteAnalysis {
 
     public static void main(String[] args) throws FileNotFoundException {
-        System.out.println("HASHTAGS");
+        System.out.println("REFERENCES");
         GetProperties prop = new GetProperties();
 
         // File to be written as a graph
@@ -20,7 +20,8 @@ public class WriteAnalysis {
         while (incomplete) {
             Scanner scn = new Scanner(System.in);
             System.out.println(
-                    "1 to write the user hashtags references as a graph to a text file: (userHashtagReferenceGraph) \n"
+                    "1 to write the user hashtags references as a graph to a text file: (userHashtagReferenceGraph) \n" +
+                            "OR 2 to write the user hashtags references as a graph to a text file: (userHashtagReferenceGraph) \n"
             );
 
             int choice = scn.nextInt();
