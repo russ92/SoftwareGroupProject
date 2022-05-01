@@ -25,7 +25,7 @@ public class WriteHashtagGraph {
 
             if (choice == 1) {
                 System.out.println("Creating graph...");
-                Map<String, Map<String, Set<String>>> map = HashtagAnalysis.Read_LexiconToHashmap().getEdges();
+                Map<String, Map<String, Set<String>>> map = HashtagAnalysis.readLexiconToHashmap().getEdges();
                 System.out.println("Writing graph...");
                 writeToFile(map);
                 incomplete = false;

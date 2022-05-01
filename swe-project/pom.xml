@@ -5,7 +5,7 @@
 
     <groupId>com.example</groupId>
     <artifactId>swe</artifactId>
-    <version>sprint6</version>
+    <version>sprint7</version>
 
     <name>swe-project</name>
     <description>Software Engineering Project 2022</description>
@@ -51,7 +51,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>sweproject.graph.sprint6.WriteHashtagGraph</mainClass>
+                            <mainClass>sweproject.graph.sprint7.WriteHashtagGraph</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>

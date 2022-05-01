@@ -1,4 +1,4 @@
-Sprint 6
+Sprint 7
 Team: Hash Flag
 Russell Ward
 Owen Corrigan
@@ -9,7 +9,7 @@ To run the JAR compiled by Intellij, enter the directory where the swe-project f
 Then run;
 java -jar swe-project/out/artifacts/swe.jar
 If that fails try running the maven JAR from the same directory;
-java -jar swe-project/target/swe-sprint6-jar-with-dependencies.jar
+java -jar swe-project/target/swe-sprint7-jar-with-dependencies.jar
 
 Output should be stored in swe-project/VaxData/Sprint6 directory
 

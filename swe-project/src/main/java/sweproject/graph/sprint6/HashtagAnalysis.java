@@ -1,8 +1,6 @@
 package sweproject.graph.sprint6;
 
 import sweproject.GetProperties;
-import sweproject.graph.sprint4.Evangelists;
-import sweproject.graph.sprint5.Hashtags;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -33,7 +31,7 @@ public class HashtagAnalysis {
         return count == hashtag.length()-1;
     }
 
-    public static List<String> Read_HashtagsToList(){
+    public static List<String> readHashtagsToList(){
         GetProperties prop = new GetProperties();
         List<String> hashtags = new ArrayList<>();
 
@@ -62,7 +60,7 @@ public class HashtagAnalysis {
         return hashtags;
     }
 
-    public static HashtagGraph Read_LexiconToHashmap() {
+    public static HashtagGraph readLexiconToHashmap() {
         GetProperties prop = new GetProperties();
         HashtagGraph graph = new HashtagGraph();
 
@@ -94,8 +92,8 @@ public class HashtagAnalysis {
 
     public static HashtagGraph hashtagSplitAsGraph() {
         HashtagGraph graph = new HashtagGraph();
-        List<String> hashtags = Read_HashtagsToList();
-        Map<String, Map<String, Set<String>>> lexiconMap = HashtagAnalysis.Read_LexiconToHashmap().getEdges();
+        List<String> hashtags = readHashtagsToList();
+        Map<String, Map<String, Set<String>>> lexiconMap = HashtagAnalysis.readLexiconToHashmap().getEdges();
 
         for(String h : hashtags){
 
