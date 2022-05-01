@@ -19,7 +19,8 @@ public class Configuration {
                 .setOAuthConsumerKey("oauth.consumerKey")
                 .setOAuthConsumerSecret("oauth.consumerSecret")
                 .setOAuthAccessToken("oauth.accessToken")
-                .setOAuthAccessTokenSecret("oauth.accessTokenSecret");
+                .setOAuthAccessTokenSecret("oauth.accessTokenSecret")
+                .setTweetModeExtended(true);
 
         return cb;
     }
@@ -29,6 +30,7 @@ public class Configuration {
         GetProperties prop = new GetProperties();
 
         ConfigurationBuilder cb = new ConfigurationBuilder();
+        cb.setTweetModeExtended(true);
         TwitterFactory tf = new TwitterFactory(cb.build());
 
 //         This way of configuring TwitterFactory not working...

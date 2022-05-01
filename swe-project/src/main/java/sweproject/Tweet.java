@@ -47,7 +47,7 @@ public class Tweet{
     }
 
     public void setText(String text) {
-        this.text = text;
+        this.text = text.replace("\n", "").replace("\r", "");;
     }
 
     public String getUserhandle() {
@@ -55,7 +55,7 @@ public class Tweet{
     }
 
     public void setUserhandle(String userhandle) {
-        this.userhandle = userhandle;
+        this.userhandle = userhandle.replace("\n", "").replace("\r", "");;
     }
 
     @Override
@@ -66,10 +66,5 @@ public class Tweet{
                 + num_retweets + "\t"
                 + timestamp + "\n";
     }
-
-//    public boolean occurs(Tweet tweet) {
-//        if (status_id == tweet.getStatus_id()){ return true; }
-//        return false;
-//    }
 
 }
