@@ -51,7 +51,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>sweproject.graph.sprint7.WriteHashtagGraph</mainClass>
+                            <mainClass>sweproject.graph.sprint7.WriteAnalysis</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>

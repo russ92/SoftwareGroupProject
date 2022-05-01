@@ -174,4 +174,34 @@ public class Reader {
         }
         return stances;
     }
+
+    public static List<Integer> Read_UserStances(){
+        GetProperties prop = new GetProperties();
+        List<Integer> stances = new ArrayList<>();
+
+        try{
+            BufferedReader buf = new BufferedReader(new FileReader(prop.getUserStancesFilepath()));
+            String lineJustFetched;
+
+            while(true){
+                lineJustFetched = buf.readLine();
+                if(lineJustFetched == null){
+                    break;
+                }else{
+                    String[] lineIn = lineJustFetched.split("\t");
+
+                    if (lineIn.length == 2 && lineIn[0].startsWith("@")) {
+                        String source = lineIn[0];
+                        int stance = Integer.parseInt(lineIn[1]);
+                        stances.add(stance);
+                    }
+                }
+            }
+
+            buf.close();
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        return stances;
+    }
 }

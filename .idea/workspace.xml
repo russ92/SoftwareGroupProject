@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="swe-6:jar" />
+      <artifact name="swe:jar" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
@@ -10,12 +10,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="Graph for Sprint 7.&#10;Graph now in the right form e.g. (-ref:fauci, +ref:trump, -ref:china, rejecting &gt; accepting, solution&gt;problem, rights&gt;responsibilities).">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/swe_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swe-project/out/artifacts/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint7/DatasetProbabilities.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/Sprint7/sprint7Graph.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/Sprint7/graphSprint7.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint7/ReferenceAnalysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint7/ReferenceAnalysis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReadMe.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ReadMe.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/out/artifacts/swe.jar" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/out/artifacts/swe.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/GetProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/GetProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint3/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint3/Reader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint7/WriteAnalysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint7/WriteAnalysis.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint7/ReferenceAnalysis.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint7/ReferenceAnalysis.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/resources/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/resources/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/GetProperties.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/GetProperties.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint3/Reader.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint3/Reader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint6/HashtagAnalysis.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint6/HashtagAnalysis.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint7/WriteAnalysis.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint7/WriteAnalysis.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/target/swe-sprint6-jar-with-dependencies.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/target/test-classes/sweproject/TwitterGraphTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/target/test-classes/sweproject/UserTests.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,12 +119,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HashtagAnalysis" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="sweproject.graph.sprint6.HashtagAnalysis" />
+    <configuration name="DatasetProbabilities" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="sweproject.graph.sprint7.DatasetProbabilities" />
       <module name="swe" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="sweproject.graph.sprint6.*" />
+          <option name="PATTERN" value="sweproject.graph.sprint7.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -158,19 +172,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.WriteHashtagGraph" />
       <item itemvalue="Application.Configuration" />
-      <item itemvalue="Application.HashtagAnalysis" />
       <item itemvalue="Application.ReferenceAnalysis" />
       <item itemvalue="Application.WriteAnalysis" />
-      <item itemvalue="Application.WriteHashtagGraph" />
+      <item itemvalue="Application.DatasetProbabilities" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.WriteAnalysis" />
+        <item itemvalue="Application.DatasetProbabilities" />
         <item itemvalue="Application.ReferenceAnalysis" />
         <item itemvalue="Application.Configuration" />
         <item itemvalue="Application.WriteHashtagGraph" />
-        <item itemvalue="Application.HashtagAnalysis" />
       </list>
     </recent_temporary>
   </component>
@@ -182,13 +196,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1648254455717</updated>
-    </task>
-    <task id="LOCAL-00037" summary="Jar added.">
-      <created>1649631009443</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1649631009443</updated>
     </task>
     <task id="LOCAL-00038" summary="Jar working?">
       <created>1649631566826</created>
@@ -526,7 +533,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651439587761</updated>
     </task>
-    <option name="localTasksCounter" value="86" />
+    <task id="LOCAL-00086" summary="Graph for Sprint 7.&#10;Graph now in the right form e.g. (-ref:fauci, +ref:trump, -ref:china, rejecting &gt; accepting, solution&gt;problem, rights&gt;responsibilities).">
+      <created>1651441260448</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1651441260448</updated>
+    </task>
+    <option name="localTasksCounter" value="87" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

@@ -22,7 +22,8 @@ public class WriteAnalysis {
             System.out.println(
                     "1 to write the user hashtags references as a graph to a text file: (userHashtagReferenceGraph) \n" +
                             "OR 2 to write the graph that maps each user onto an aggregate representation of their " +
-                            "qualities to a text file: (graphSprint7): "
+                            "qualities to a text file: (graphSprint7) \n" +
+                            "OR 3 for dataset probability analysis: "
             );
 
             int choice = scn.nextInt();
@@ -38,6 +39,11 @@ public class WriteAnalysis {
                 Map<String, Map<String, Set<String>>> map = ReferenceAnalysis.graphSprint7().getEdges();
                 System.out.println("Writing graph...");
                 writeToFile(map);
+                incomplete = false;
+            } else if (choice == 3) {
+                System.out.println("Dataset Analysis");
+                DatasetProbabilities.probabilitiesDriver();
+                System.out.println("Ending...");
                 incomplete = false;
             } else {
                 System.out.println("PLEASE ENTER 1 OR 2");
