@@ -1,41 +1,252 @@
 package sweproject.graph.sprint6;
 
+import sweproject.GetProperties;
+import sweproject.graph.sprint4.Evangelists;
+import sweproject.graph.sprint5.Hashtags;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.util.*;
+
 public class HashtagAnalysis {
 
-    public static String splitCamelCaseHashtag(String hashtag){
+    public static String[] splitCamelCaseHashtag(String hashtag) {
         StringBuilder hashtagSplit = new StringBuilder();
-        for(int i = 0; i < hashtag.length(); i++) {
+        for (int i = 0; i < hashtag.length(); i++) {
             Character ch = hashtag.charAt(i);
-            if(Character.isUpperCase(ch))
+            if (Character.isUpperCase(ch))
                 hashtagSplit.append(" ").append(Character.toLowerCase(ch));
-            else if(ch != '#')
+            else if (ch != '#')
                 hashtagSplit.append(ch);
         }
-        return hashtagSplit.substring(1);
+        String h = hashtagSplit.toString().trim();
+        return h.split(" ");
     }
 
-    public static Int acceptingOrRejecting(String hashtag){
+    public static Boolean checkIfUppercase(String hashtag) {
+        int count = 0;
+        for (int i = 0; i < hashtag.length(); i++) {
+            char ch = hashtag.charAt(i);
+            if (Character.isUpperCase(ch) || (ch >= '0' && ch <= '9'))
+                count++;
+        }
+        return count == hashtag.length() - 1;
+    }
 
-        String[] accepting = {"Praise", "Love",}
-        String[] rejecting = {"Fuck", "Hate", "Fire", "Fake"}
+    public static List<String> Read_HashtagsToList() {
+        GetProperties prop = new GetProperties();
+        List<String> hashtags = new ArrayList<>();
+
+        try {
+            BufferedReader buf = new BufferedReader(new FileReader(prop.getHashtagFilepath()));
+            String lineJustFetched;
+
+            while (true) {
+                lineJustFetched = buf.readLine();
+                if (lineJustFetched == null) {
+                    break;
+                } else {
+                    String[] lineIn = lineJustFetched.split("\t");
+
+                    if (lineIn.length == 2 && lineIn[0].startsWith("#")) {
+                        String hashtag = lineIn[0];
+                        hashtags.add(hashtag);
+                    }
+                }
+            }
+
+            buf.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return hashtags;
+    }
+
+    public static HashtagGraph Read_LexiconToHashmap() {
+        GetProperties prop = new GetProperties();
+        HashtagGraph graph = new HashtagGraph();
+
+        try {
+            BufferedReader buf = new BufferedReader(new FileReader(prop.getLexiconFilepath()));
+            String lineJustFetched = null;
+
+            while (true) {
+                lineJustFetched = buf.readLine();
+                if (lineJustFetched == null) {
+                    break;
+                } else {
+                    String[] lineIn = lineJustFetched.split(" ");
+                    if (lineIn.length > 1) {
+                        String word = lineIn[1];
+                        for (int i = 2; i < lineIn.length; i++) {
+                            String ref = lineIn[i].replace("[", "").replace(",", "").replace("]", "").trim();
+                            graph.addArc("Given-Lexicon", word, ref);
+                        }
+                    }
+                }
+            }
+            buf.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return graph;
+    }
+
+    public static HashtagGraph hashtagSplitAsGraph() {
+        HashtagGraph graph = new HashtagGraph();
+        List<String> hashtags = Read_HashtagsToList();
+        Map<String, Map<String, Set<String>>> lexiconMap = HashtagAnalysis.Read_LexiconToHashmap().getEdges();
+
+        for (String h : hashtags) {
+
+            if (splitCamelCaseHashtag(h).length > 1 && !checkIfUppercase(h)) {
+                String[] split = splitCamelCaseHashtag(h);
+                for (String s : split) {
+                    for (String l : lexiconMap.get("Given-Lexicon").keySet()) {
+                        Set<String> ref = lexiconMap.get("Given-Lexicon").get(l);
+                        if (s.equals(l)) {
+                            for (String sref : ref) {
+                                graph.addArc(h, s, sref);
+                                String gist = hashtagGist(sref);
+                                if (!Objects.equals(gist, "")) {
+                                    graph.addArc(h, s, gist.toLowerCase(Locale.ROOT));
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+        return graph;
+    }
+
+    public static int acceptingOrRejecting(String hashtag) {
+
+        String[] accepting = { "Hero", "Praise", "Love", "Thank You", "Awesome", "Heroes", "Thanks", "Saviour",
+                "King", "Get" };
+        String[] rejecting = { "Dont", "Fuck", "Hate", "Fire", "Fake", "Stupid", "Hell", "Dictatorship", "Dictator",
+                "Tyrant",
+                "Evil", "Idiot" };
 
         int len = 0;
-        while (len != accepting.length()) {
-            if (hasthtag.contains(accepting[len])) {
-                return 0;
+        int type = 2;
+        while (len != rejecting.length) {
+            if (hashtag.toLowerCase(Locale.ROOT).contains(rejecting[len])) {
+                type = 0;
             }
+            len++;
         }
 
-        while (len != rejecting.length()) {
-            if (hasthtag.contains(accepting[len])) {
-                return 1;
+        len = 0;
+        if (type == 2) {
+            while (len != accepting.length) {
+                if (hashtag.toLowerCase(Locale.ROOT).contains(accepting[len])) {
+                    type = 1;
+                }
+                len++;
             }
         }
+        return type;
     }
 
-    public static void main(String [] args){
-        String s = "#FauciIsAHero";
-        System.out.println(HashtagAnalysis.splitCamelCaseHashtag(s));
-        acceptingOrRejecting(splitCamelCaseHashtag(s))
+    public static String individual(String hashtag) {
+
+        String[] person = { "Trump", "Cruz", "Carson", "Pence", "Paul", "Rubio", "Bush", "Fauci", "Biden", "Pelosi",
+                "Schumer", "Obama", "Bernie", "Clinton", "Harris", "Warren",
+                "Waters" };
+
+        int len = 0;
+        String p = "";
+        while (len != person.length) {
+            if (hashtag.toLowerCase(Locale.ROOT).contains(person[len])) {
+                p = person[len];
+            }
+            len++;
+        }
+
+        return p;
+    }
+
+    public static int individualPol(String person) {
+
+        String[] personR = { "Trump", "Cruz", "Carson", "Pence", "Paul", "Rubio", "Bush" };
+        String[] personL = { "Fauci", "Biden", "Pelosi", "Schumer", "Obama", "Bernie", "Clinton", "Harris", "Warren",
+                "Waters" };
+        int type = 0;
+
+        for (int i = 0; i < personR.length; i++) {
+            if (person.equals(personR[i])) {
+                type = 1;
+            }
+        }
+
+        for (int i = 0; i < personL.length; i++) {
+            if (person.equals(personR[i])) {
+                type = 2;
+            }
+        }
+
+        return type;
+    }
+
+    public static String location(String hashtag) {
+
+        String[] place = { "USA", "America", "Europe", "Australia", "New Zealand", "Japan", "China", "Ireland",
+                "Britain", "France", "Germany", "Spain", "Poland", "Sweeden", "Norway", "Denmark", "Canada" };
+
+        int len = 0;
+        string location = "";
+        while (len != place.length) {
+            if (hashtag.toLowerCase(Locale.ROOT).contains(place[len])) {
+                location = place[len];
+            }
+            len++;
+        }
+
+        return location;
+    }
+
+    public static String hashtagGist(String hashtag) {
+        String tagTarget = "";
+        int acceptRejectNum = acceptingOrRejecting(hashtag);
+        String person = individual(hashtag);
+        int personType = individualPol(person);
+        String location = location(hashtag);
+
+        // ACCEPTING OR REJECTING
+        if (acceptRejectNum == 0) {
+            tagTarget += "-ref:";
+        }
+        if (acceptRejectNum == 1) {
+            tagTarget += "+ref:";
+        }
+
+        // INDIVIDUAL
+        if (personType == 1 || personType == 2) {
+            tagTarget += person + " ";
+        }
+
+        // GEOGRAPHICAL
+        if (!location.isEmpty()) {
+            tagTarget += location;
+        }
+
+        // POLITICS
+        if (acceptRejectNum == 1 && personType == 1) {
+            tagTarget += "RIGHT-WING ";
+        }
+        if (acceptRejectNum == 0 && personType == 2) {
+            tagTarget += "RIGHT-WING ";
+        }
+
+        if (acceptRejectNum == 1 && personType == 2) {
+            tagTarget += "LEFT-WING ";
+        }
+        if (acceptRejectNum == 0 && personType == 1) {
+            tagTarget += "LEFT-WING ";
+        }
+
+        return tagTarget;
     }
 }
