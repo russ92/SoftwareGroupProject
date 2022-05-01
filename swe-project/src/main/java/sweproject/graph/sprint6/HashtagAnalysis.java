@@ -215,13 +215,10 @@ public class HashtagAnalysis {
 
         // ACCEPTING OR REJECTING
         if (acceptRejectNum == 0) {
-            tagTarget += "-ref:";
+            tagTarget += "REJECTING ";
         }
         if (acceptRejectNum == 1) {
-            tagTarget += "+ref:";
-        }
-        if (acceptRejectNum == 2) {
-            tagTarget += "ref:";
+            tagTarget += "ACCEPTING ";
         }
 
         // INDIVIDUAL
