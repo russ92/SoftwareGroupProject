@@ -9,16 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="Tweets collected.">
+    <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="Streams full RT instead of '...'&#10;Streaming tweets only collected 140 characters before the addition of the if statement in TwitterListener class.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swe-project/VaxData/vax tweets users.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/vax tweets users.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swe-project/VaxData/vax tweets.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/vax tweets.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/Configuration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/Tweet.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/Tweet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint2/TwitterListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint2/TwitterListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/Configuration.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/Configuration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,13 +183,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1648254455717</updated>
-    </task>
-    <task id="LOCAL-00033" summary="Write stances to file.">
-      <created>1649625991087</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1649625991092</updated>
     </task>
     <task id="LOCAL-00034" summary="Write stances to file 30,000 users.">
       <created>1649627227429</created>
@@ -532,7 +520,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651353650162</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="Streams full RT instead of '...'&#10;Streaming tweets only collected 140 characters before the addition of the if statement in TwitterListener class.">
+      <created>1651368061960</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1651368061960</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -548,7 +543,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Jar working2.0?" />
     <MESSAGE value="Official working JAR?&#10;Run from outside the /swe-project folder i.e. &gt; java -jar swe-project/out/artifacts/swe-project.jar" />
     <MESSAGE value="Cleaned up folder, end of sprint 4." />
     <MESSAGE value="Initial implementation of Hashtag Graph.&#10;Not working overall. Main error, extracting only the hashtags.&#10;Also, errors when creating the inverted graph -NullPointException" />
@@ -573,7 +567,8 @@
     <MESSAGE value="Write Hashtag Lexicon Graphs to file with gist." />
     <MESSAGE value="Maven JAR added.&#10;End of sprint 6." />
     <MESSAGE value="Tweets collected." />
-    <option name="LAST_COMMIT_MESSAGE" value="Tweets collected." />
+    <MESSAGE value="Streams full RT instead of '...'&#10;Streaming tweets only collected 140 characters before the addition of the if statement in TwitterListener class." />
+    <option name="LAST_COMMIT_MESSAGE" value="Streams full RT instead of '...'&#10;Streaming tweets only collected 140 characters before the addition of the if statement in TwitterListener class." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
