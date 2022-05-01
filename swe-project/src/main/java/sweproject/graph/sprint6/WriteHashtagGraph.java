@@ -11,7 +11,7 @@ import java.util.Set;
 
 public class WriteHashtagGraph {
 
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void writeHashtagGraph() throws FileNotFoundException {
         System.out.println("LEXICON");
 
         boolean incomplete = true;

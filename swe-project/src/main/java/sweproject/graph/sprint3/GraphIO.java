@@ -11,7 +11,7 @@ import java.util.Scanner;
 
 public class GraphIO {
 
-        public static void main(String[] args) throws FileNotFoundException {
+        public static void graphIO() throws FileNotFoundException {
             System.out.println("GIT");
 
             boolean incomplete = true;

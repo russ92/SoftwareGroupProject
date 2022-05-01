@@ -25,7 +25,7 @@ public class Configuration {
         return cb;
     }
 
-    public static void main(String[] args) throws TwitterException, IOException {
+    public static void configuration() throws TwitterException, IOException {
 
         GetProperties prop = new GetProperties();
 
