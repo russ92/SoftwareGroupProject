@@ -21,7 +21,7 @@ public class Main {
                     "OR 3 to access sprint 3 \n" +
                     "OR 4 to access sprint 4&5 \n" +
                     "OR 6 to access sprint 6 \n" +
-                    "OR 7 to access sprint 7 \n");
+                    "OR 7 to access sprint 7:");
 
             int choice = scn.nextInt();
 

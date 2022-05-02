@@ -9,9 +9,9 @@ public class User {
     private int num_followers;
 
     public User( String userhandle, String location, String bio, int num_followers) {
-        this.userhandle = "@" + userhandle.replace("\n", "").replace("\r", "");
-        this.location = location.replace("\n", "").replace("\r", "");
-        this.bio = bio.replace("\n", "").replace("\r", "");
+        this.userhandle = "@" + userhandle.replace("\n", "").replace("\r", "").replace("\t", "");
+        this.location = location.replace("\n", "").replace("\r", "").replace("\t", "");
+        this.bio = bio.replace("\n", "").replace("\r", "").replace("\t", "");
         this.num_followers = num_followers;
     }
 

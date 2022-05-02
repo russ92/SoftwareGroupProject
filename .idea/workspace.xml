@@ -9,10 +9,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="Sprint 7.">
+    <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="More tweets collected.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swe-project/VaxData/vax tweets users.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/vax tweets users.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swe-project/VaxData/vax tweets.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/vax tweets.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/Tweet.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/Tweet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/Configuration.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/Configuration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/Tweet.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/Tweet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint3/GraphIO.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint3/GraphIO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint5/WriteHashtags.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint5/WriteHashtags.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint6/WriteHashtagGraph.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint6/WriteHashtagGraph.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +97,7 @@
       <recent name="C:\Users\nickl\OneDrive\Desktop\SoftwareEngineering\git\swe-project\VaxData\Graphs" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Configuration">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Configuration" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="sweproject.Configuration" />
       <module name="swe" />
@@ -108,6 +117,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="sweproject.graph.sprint7.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="sweproject.Main" />
+      <module name="swe" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="sweproject.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -141,33 +163,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WriteHashtagGraph" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="sweproject.graph.sprint6.WriteHashtagGraph" />
-      <module name="swe" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="sweproject.graph.sprint6.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
-      <item itemvalue="Application.WriteHashtagGraph" />
       <item itemvalue="Application.Configuration" />
       <item itemvalue="Application.ReferenceAnalysis" />
       <item itemvalue="Application.WriteAnalysis" />
       <item itemvalue="Application.DatasetProbabilities" />
+      <item itemvalue="Application.Main" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Configuration" />
         <item itemvalue="Application.WriteAnalysis" />
         <item itemvalue="Application.DatasetProbabilities" />
         <item itemvalue="Application.ReferenceAnalysis" />
-        <item itemvalue="Application.WriteHashtagGraph" />
       </list>
     </recent_temporary>
   </component>
@@ -179,13 +188,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1648254455717</updated>
-    </task>
-    <task id="LOCAL-00039" summary="Jar working?">
-      <created>1649631595407</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1649631595407</updated>
     </task>
     <task id="LOCAL-00040" summary="Jar working2.0?">
       <created>1649631758893</created>
@@ -523,7 +525,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651445918505</updated>
     </task>
-    <option name="localTasksCounter" value="88" />
+    <task id="LOCAL-00088" summary="More tweets collected.">
+      <created>1651498484925</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1651498484925</updated>
+    </task>
+    <option name="localTasksCounter" value="89" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -541,7 +550,6 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Hashtags Graph working.&#10;By splitting the tweet text into a string array, the graph is able to read all the hashtags separately.&#10;Prints the graph through the WriteHashtags class." />
     <MESSAGE value="Rearranged folders by sprint/week" />
-    <MESSAGE value="More tweets collected." />
     <MESSAGE value="Assign stances to hashtags.&#10;Working however, not sure if the math behind the way the stances are assigned is correct i.e. the stance of every user that uses that hashtag is summed and then divided by the number of times the hashtag is used." />
     <MESSAGE value="User assignStances updated to Sprint4 requirements&#10;I think this is correct." />
     <MESSAGE value="Hashtag stances written to file.&#10;Option 4 in the WriteHashtags file writes the all hashtags and their associated stance to a file. &#10;hashtagStances saved with the output." />
@@ -564,7 +572,8 @@
     <MESSAGE value="Graph for user hashtag analysis added.&#10;Graph model of users, that maps each user to every hashtag they use as well as the hashtags qualities." />
     <MESSAGE value="Graph for Sprint 7.&#10;Graph now in the right form e.g. (-ref:fauci, +ref:trump, -ref:china, rejecting &gt; accepting, solution&gt;problem, rights&gt;responsibilities)." />
     <MESSAGE value="Sprint 7." />
-    <option name="LAST_COMMIT_MESSAGE" value="Sprint 7." />
+    <MESSAGE value="More tweets collected." />
+    <option name="LAST_COMMIT_MESSAGE" value="More tweets collected." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

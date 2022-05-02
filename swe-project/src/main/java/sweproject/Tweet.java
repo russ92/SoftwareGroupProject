@@ -12,8 +12,8 @@ public class Tweet{
 
     public Tweet(long status_id, String userhandle, String text, int num_retweets, Date timestamp) {
         this.status_id = status_id;
-        this.userhandle = "@" + userhandle.replace("\n", "").replace("\r", "");
-        this.text = text.replace("\n", "").replace("\r", "");
+        this.userhandle = "@" + userhandle.replace("\n", "").replace("\r", "").replace("\t", "");;
+        this.text = text.replace("\n", "").replace("\r", "").replace("\t", "");
         this.num_retweets = num_retweets;
         this.timestamp = timestamp;
     }
@@ -47,7 +47,7 @@ public class Tweet{
     }
 
     public void setText(String text) {
-        this.text = text.replace("\n", "").replace("\r", "");;
+        this.text = text.replace("\n", "").replace("\r", "").replace("\t", "");;
     }
 
     public String getUserhandle() {
@@ -55,7 +55,7 @@ public class Tweet{
     }
 
     public void setUserhandle(String userhandle) {
-        this.userhandle = userhandle.replace("\n", "").replace("\r", "");;
+        this.userhandle = userhandle.replace("\n", "").replace("\r", "").replace("\t", "");;
     }
 
     @Override
