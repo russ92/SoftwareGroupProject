@@ -11,31 +11,37 @@ import java.util.*;
 
 public class Configuration {
 
-    public static ConfigurationBuilder getConfigurationBuilder() throws IOException {
-
+    public static void configureStream() throws TwitterException, IOException {
         ConfigurationBuilder cb = new ConfigurationBuilder();
+        cb.setTweetModeExtended(true);
 
-        cb.setDebugEnabled(true)
-                .setOAuthConsumerKey("oauth.consumerKey")
-                .setOAuthConsumerSecret("oauth.consumerSecret")
-                .setOAuthAccessToken("oauth.accessToken")
-                .setOAuthAccessTokenSecret("oauth.accessTokenSecret")
-                .setTweetModeExtended(true);
+        //Stream tweets
+        TwitterListener tl = new TwitterListener();
+        TwitterStreamRunner tsr = new TwitterStreamRunner(cb, tl);
 
-        return cb;
+        streamTweets(tsr);
     }
 
-    public static void configuration() throws TwitterException, IOException {
+    //Todo: Find a way to stop streaming tweets without closing the whole application/JAR
+    public static void streamTweets(TwitterStreamRunner tsr) throws TwitterException, IOException {
+        try {
+            tsr.start();
+        } catch (Exception e) {
+            stopStreamTweets(tsr);
+        }
+    }
+    public static void stopStreamTweets(TwitterStreamRunner tsr) {
+        System.out.println("Stopping tweet streaming... ");
+        tsr.shutdown();
+    }
+
+    //Todo: Collecting old tweets doesn't work
+    public static void collectTweets() throws TwitterException, IOException {
 
         GetProperties prop = new GetProperties();
 
         ConfigurationBuilder cb = new ConfigurationBuilder();
         cb.setTweetModeExtended(true);
-        TwitterFactory tf = new TwitterFactory(cb.build());
-
-//         This way of configuring TwitterFactory not working...
-//         TwitterFactory tf = new TwitterFactory(Configuration.getConfigurationBuilder().build());
-//         twitter4j.Twitter twitter = tf.getInstance();
 
         //Build Twitter instance
         Twitter twitter = TwitterFactory.getSingleton();
@@ -43,22 +49,13 @@ public class Configuration {
         QueryResult result = twitter.search(query);
 
         //Search for old tweets
-//        List<Status> status = result.getTweets();
-//        for (Status s : status) {
-//            sweproject.Tweet tweet = new sweproject.Tweet(s.getId(), s.getUser().getScreenName(), s.getText(), s.getRetweetCount(),
-//                    s.getCreatedAt());
-//            writer(tweet);
-//        }
-
-
-        //Stream tweets
-        TwitterListener tl = new TwitterListener();
-        TwitterStreamRunner tsr = new TwitterStreamRunner(cb, tl);
-        try {
-            tsr.start();
-        } catch (Exception e) {
-            tsr.shutdown();
+        List<Status> status = result.getTweets();
+        for (Status s : status) {
+            sweproject.Tweet tweet = new sweproject.Tweet(s.getId(), s.getUser().getScreenName(), s.getText(), s.getRetweetCount(),
+                    s.getCreatedAt());
+            writer(tweet);
         }
+
     }
 
     public static void writer(sweproject.Tweet tweet){

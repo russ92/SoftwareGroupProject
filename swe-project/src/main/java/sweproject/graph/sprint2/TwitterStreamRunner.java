@@ -32,6 +32,8 @@ public class TwitterStreamRunner implements StreamRunner {
     public void start() throws TwitterException {
         GetProperties prop = new GetProperties();
 
+        TwitterListener.setStoredUsers(TwitterListener.readStoredUsers());
+
         twitterStream = new TwitterStreamFactory().getInstance();
         twitterStream.addListener(twitterListener);
 

@@ -51,6 +51,49 @@ public class WriteAnalysis {
         }
     }
 
+    public static void psychologicalProfiles() throws FileNotFoundException {
+        System.out.println("REFERENCES");
+        GetProperties prop = new GetProperties();
+
+        // File to be written as a graph
+        String file = prop.getGraphFilepath();
+
+        boolean incomplete = true;
+
+        while (incomplete) {
+            Scanner scn = new Scanner(System.in);
+            System.out.println(
+                    "1 to write the user hashtags references as a graph to a text file: (userHashtagReferenceGraph) \n" +
+                            "OR 2 to write the graph that maps each user onto an aggregate representation of their " +
+                            "qualities to a text file: (graphSprint7) \n" +
+                            "OR 3 for dataset probability analysis: "
+            );
+
+            int choice = scn.nextInt();
+
+            if (choice == 1) {
+                System.out.println("Creating graph...");
+                Map<String, Map<String, Set<String>>> map = ReferenceAnalysis.userHashtagReferenceGraph().getEdges();
+                System.out.println("Writing graph...");
+                writeToFile(map);
+                incomplete = false;
+            } else if (choice == 2) {
+                System.out.println("Creating graph...");
+                Map<String, Map<String, Set<String>>> map = ReferenceAnalysis.graphSprint7().getEdges();
+                System.out.println("Writing graph...");
+                writeToFile(map);
+                incomplete = false;
+            } else if (choice == 3) {
+                System.out.println("Dataset Analysis");
+                DatasetProbabilities.probabilitiesDriver();
+                System.out.println("Ending...");
+                incomplete = false;
+            } else {
+                System.out.println("PLEASE ENTER 1 OR 2");
+            }
+        }
+    }
+
     public static void writeToFile(Map<String, Map<String, Set<String>>> map) {
         String path = fileName(1);
         File graph = new File(path);

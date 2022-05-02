@@ -9,7 +9,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="More tweets collected." />
+    <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="More tweets collected (107,677 users).">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/vax tweets users.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/vax tweets users.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/vax tweets.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/vax tweets.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/Configuration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint2/TwitterListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint2/TwitterListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint2/TwitterStreamRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint2/TwitterStreamRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint7/WriteAnalysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint7/WriteAnalysis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/Configuration.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/Configuration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint2/TwitterListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint2/TwitterListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint7/WriteAnalysis.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint7/WriteAnalysis.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -124,12 +137,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReferenceAnalysis" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="sweproject.graph.sprint7.ReferenceAnalysis" />
+    <configuration name="TwitterListener" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="sweproject.graph.sprint2.TwitterListener" />
       <module name="swe" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="sweproject.graph.sprint7.*" />
+          <option name="PATTERN" value="sweproject.graph.sprint2.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -152,18 +165,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.Configuration" />
-      <item itemvalue="Application.ReferenceAnalysis" />
       <item itemvalue="Application.WriteAnalysis" />
       <item itemvalue="Application.DatasetProbabilities" />
       <item itemvalue="Application.Main" />
+      <item itemvalue="Application.TwitterListener" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.TwitterListener" />
         <item itemvalue="Application.Configuration" />
         <item itemvalue="Application.WriteAnalysis" />
         <item itemvalue="Application.DatasetProbabilities" />
-        <item itemvalue="Application.ReferenceAnalysis" />
       </list>
     </recent_temporary>
   </component>
@@ -175,13 +188,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1648254455717</updated>
-    </task>
-    <task id="LOCAL-00041" summary="Official working JAR?&#10;Run from outside the /swe-project folder i.e. &gt; java -jar swe-project/out/artifacts/swe-project.jar">
-      <created>1649632738187</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1649632738187</updated>
     </task>
     <task id="LOCAL-00042" summary="Official working JAR?&#10;Run from outside the /swe-project folder i.e. &gt; java -jar swe-project/out/artifacts/swe-project.jar">
       <created>1649632813433</created>
@@ -519,7 +525,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651511523920</updated>
     </task>
-    <option name="localTasksCounter" value="90" />
+    <task id="LOCAL-00090" summary="More tweets collected (107,677 users).">
+      <created>1651523007771</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1651523007771</updated>
+    </task>
+    <option name="localTasksCounter" value="91" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -535,7 +548,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Hashtags Graph working.&#10;By splitting the tweet text into a string array, the graph is able to read all the hashtags separately.&#10;Prints the graph through the WriteHashtags class." />
     <MESSAGE value="Rearranged folders by sprint/week" />
     <MESSAGE value="Assign stances to hashtags.&#10;Working however, not sure if the math behind the way the stances are assigned is correct i.e. the stance of every user that uses that hashtag is summed and then divided by the number of times the hashtag is used." />
     <MESSAGE value="User assignStances updated to Sprint4 requirements&#10;I think this is correct." />
@@ -560,7 +572,8 @@
     <MESSAGE value="Graph for Sprint 7.&#10;Graph now in the right form e.g. (-ref:fauci, +ref:trump, -ref:china, rejecting &gt; accepting, solution&gt;problem, rights&gt;responsibilities)." />
     <MESSAGE value="Sprint 7." />
     <MESSAGE value="More tweets collected." />
-    <option name="LAST_COMMIT_MESSAGE" value="More tweets collected." />
+    <MESSAGE value="More tweets collected (107,677 users)." />
+    <option name="LAST_COMMIT_MESSAGE" value="More tweets collected (107,677 users)." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
