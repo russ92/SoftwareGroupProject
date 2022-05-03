@@ -97,4 +97,9 @@ public class TwitterListener extends StatusAdapter {
 
         return users;
     }
+
+//    public static void main(String[] args){
+//        Hashtable<String, Integer> t = readStoredUsers();
+//        System.out.println(t.size());
+//    }
 }

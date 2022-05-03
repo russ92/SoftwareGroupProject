@@ -67,4 +67,53 @@ public class Configuration {
             // TODO: handle exception
         }
     }
+
+    // Hashtable to track the usernames in the dataset.
+    private static Hashtable<Long, String> storedTweets;
+
+    public static Hashtable<Long, String> getStoredTweets() {
+        return storedTweets;
+    }
+
+    public static void setStoredTweets(Hashtable<Long, String> storedTweets) {
+        Configuration.storedTweets = storedTweets;
+    }
+
+    public static Hashtable<Long, String> readStoredTweets(){
+        GetProperties prop = new GetProperties();
+
+        Hashtable<Long, String> tweets = new Hashtable<>();
+        try{
+            //BufferedReader buf = new BufferedReader(new FileReader("swe-project\\VaxData\\provided\\vax tweets.txt"));
+            BufferedReader buf = new BufferedReader(new FileReader(prop.getTweetFilepath()));
+            String lineJustFetched;
+
+            while(true){
+                lineJustFetched = buf.readLine();
+                if(lineJustFetched == null){
+                    break;
+                }else{
+                    String[] lineIn = lineJustFetched.split("\t");
+                    //if (lineIn.length == 4 && lineIn[1].startsWith("@")) {
+                    if (lineIn.length == 5 && lineIn[1].startsWith("@")) {
+                        long id = Long.parseLong(lineIn[0]);
+                        String name = lineIn[1];
+                        tweets.put(id, name);
+                    }
+                }
+            }
+
+            buf.close();
+
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+
+        return tweets;
+    }
+
+    public static void main(String[] args){
+        Hashtable<Long, String> t = readStoredTweets();
+        System.out.println(t.size());
+    }
 }
