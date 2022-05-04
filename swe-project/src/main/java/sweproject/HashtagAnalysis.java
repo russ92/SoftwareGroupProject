@@ -81,13 +81,13 @@ public class HashtagAnalysis {
 
         for (int i = 0; i < rights.length; i++) {
             if (hashtag.contains(rights[i])) {
-                type = "RIGHTS";
+                type = "RIGHTS ";
             }
         }
 
         for (int i = 0; i < responsibilities.length; i++) {
             if (hashtag.contains(responsibilities[i])) {
-                type = "RESPONSIBILITIES";
+                type = "RESPONSIBILITIES ";
             }
         }
 
@@ -156,6 +156,13 @@ public class HashtagAnalysis {
             tagTarget += rightsResponsibilities;
         }
 
+        if (!rightsResponsibilities.isEmpty() && acceptRejectNum == 0) {
+            tagTarget += "ANTI";
+        }
+
+        if (!rightsResponsibilities.isEmpty() && acceptRejectNum == 1) {
+            tagTarget += "PRO";
+        }
         return tagTarget;
     }
 
