@@ -68,6 +68,32 @@ public class HashtagAnalysis {
         return type;
     }
 
+    public static String rightsResponsibilities(String hashtag) {
+
+        String[] rights = { "Mandate", "Mandates", "Vaccine Mandate", "No Mandates", "Vaccine Mandates", "Restrictions",
+                "Lockdown", "Prison",
+                "Prisoner", "Prisoners", "Freedom" };
+        String[] responsibilities = { "Stay At Home", "Get Vaccinated", "Wear A Mask", "Mask", "Masks", "Booster",
+                "Booster Vaccine", "Social Distance",
+                "Social Distancing", "Gatherings" };
+
+        String type = "";
+
+        for (int i = 0; i < rights.length; i++) {
+            if (hashtag.contains(rights[i])) {
+                type = "RIGHTS";
+            }
+        }
+
+        for (int i = 0; i < responsibilities.length; i++) {
+            if (hashtag.contains(responsibilities[i])) {
+                type = "RESPONSIBILITIES";
+            }
+        }
+
+        return type;
+    }
+
     public static int location(String hashtag) {
 
         String[] place = { "USA", "America", "Europe", "Australia", "New Zealand", "Japan", "China", "Ireland",
@@ -90,6 +116,7 @@ public class HashtagAnalysis {
         int acceptRejectNum = acceptingOrRejecting(hashtag);
         int individualNum = individual(hashtag);
         int locationNUm = location(hashtag);
+        String rightsResponsibilities = rightsResponsibilities(hashtag);
 
         // ACCEPTING OR REJECTING
         if (acceptRejectNum == 0) {
@@ -122,6 +149,11 @@ public class HashtagAnalysis {
         }
         if (acceptRejectNum == 0 && individualNum == 1) {
             tagTarget += "LEFT-WING ";
+        }
+
+        // RIGHTS AND RESPONSIBILITIES
+        if (!rightsResponsibilities.isEmpty()) {
+            tagTarget += rightsResponsibilities;
         }
 
         return tagTarget;
