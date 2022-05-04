@@ -9,13 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="Duplicate Users handled.&#10;Streaming tweets checks if the user is in the dataset before adding them now. Roughly 40,000 duplicate users in vax tweets users.txt. (about 70,260 unique users).">
+    <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="Tweets collected (138,128).">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swe-project/VaxData/vax tweets users.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/vax tweets users.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swe-project/VaxData/vax tweets.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/vax tweets.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/Configuration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/Configuration.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/Configuration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint2/TwitterListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint2/TwitterListener.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,8 +164,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Configuration" />
-        <item itemvalue="Application.TwitterListener" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.TwitterListener" />
         <item itemvalue="Application.WriteAnalysis" />
         <item itemvalue="Application.DatasetProbabilities" />
       </list>
@@ -182,13 +179,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1648254455717</updated>
-    </task>
-    <task id="LOCAL-00043" summary="Official working JAR?&#10;Run from outside the /swe-project folder i.e. &gt; java -jar swe-project/out/artifacts/swe-project.jar">
-      <created>1649633049949</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1649633049949</updated>
     </task>
     <task id="LOCAL-00044" summary="Cleaned up folder, end of sprint 4.">
       <created>1649633318069</created>
@@ -526,7 +516,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651528240893</updated>
     </task>
-    <option name="localTasksCounter" value="92" />
+    <task id="LOCAL-00092" summary="Tweets collected (138,128).">
+      <created>1651587257399</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1651587257399</updated>
+    </task>
+    <option name="localTasksCounter" value="93" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -542,7 +539,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Assign stances to hashtags.&#10;Working however, not sure if the math behind the way the stances are assigned is correct i.e. the stance of every user that uses that hashtag is summed and then divided by the number of times the hashtag is used." />
     <MESSAGE value="User assignStances updated to Sprint4 requirements&#10;I think this is correct." />
     <MESSAGE value="Hashtag stances written to file.&#10;Option 4 in the WriteHashtags file writes the all hashtags and their associated stance to a file. &#10;hashtagStances saved with the output." />
     <MESSAGE value="Hashtag stances written to file.&#10;Option 4 in the WriteHashtags file writes the all hashtags and their associated stance to a file. &#10;hashtagStances saved with the output. However, still errors with some hashtags like trailing... and miscellaneous characters before as well as after the hashtag." />
@@ -567,7 +563,8 @@
     <MESSAGE value="More tweets collected." />
     <MESSAGE value="More tweets collected (107,677 users)." />
     <MESSAGE value="Duplicate Users handled.&#10;Streaming tweets checks if the user is in the dataset before adding them now. Roughly 40,000 duplicate users in vax tweets users.txt. (about 70,260 unique users)." />
-    <option name="LAST_COMMIT_MESSAGE" value="Duplicate Users handled.&#10;Streaming tweets checks if the user is in the dataset before adding them now. Roughly 40,000 duplicate users in vax tweets users.txt. (about 70,260 unique users)." />
+    <MESSAGE value="Tweets collected (138,128)." />
+    <option name="LAST_COMMIT_MESSAGE" value="Tweets collected (138,128)." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
