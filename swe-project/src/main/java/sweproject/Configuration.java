@@ -114,6 +114,9 @@ public class Configuration {
 
     public static void main(String[] args){
         Hashtable<Long, String> t = readStoredTweets();
-        System.out.println(t.size());
+        System.out.println("Number of tweets: " + t.size());
+
+        Hashtable<String, Integer> u = TwitterListener.readStoredUsers();
+        System.out.println("Number of users: " + u.size());
     }
 }
