@@ -1,3 +1,4 @@
+package sweproject;
 
 public class HashtagAnalysis {
 
