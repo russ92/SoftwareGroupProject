@@ -34,6 +34,7 @@ public class Main {
                 Configuration.collectTweets();
             } else if (choice == 2) {
                 Configuration.configureStream();
+                incomplete = false;
             } else if (choice == 3) {
                 GraphIO.graphIO();
             } else if (choice == 4) {

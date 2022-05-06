@@ -9,10 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="Tweets collected (138,128).">
+    <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="Tweets collected (164,725).&#10;Number of tweets: 164725&#10;Number of users: 93290">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swe-project/VaxData/vax tweets users.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/vax tweets users.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swe-project/VaxData/vax tweets.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/vax tweets.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,20 +180,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1648254455717</updated>
-    </task>
-    <task id="LOCAL-00044" summary="Cleaned up folder, end of sprint 4.">
-      <created>1649633318069</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1649633318069</updated>
-    </task>
-    <task id="LOCAL-00045" summary="Cleaned up folder, end of sprint 4.">
-      <created>1649633346924</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1649633346924</updated>
     </task>
     <task id="LOCAL-00046" summary="Cleaned up folder, end of sprint 4.">
       <created>1649633596232</created>
@@ -523,7 +510,21 @@
       <option name="project" value="LOCAL" />
       <updated>1651587257399</updated>
     </task>
-    <option name="localTasksCounter" value="93" />
+    <task id="LOCAL-00093" summary="Tweets collected (164,725).&#10;Number of tweets: 164725&#10;Number of users: 93290">
+      <created>1651691098073</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1651691098073</updated>
+    </task>
+    <task id="LOCAL-00094" summary="Tweets collected (164,725).&#10;Number of tweets: 164725&#10;Number of users: 93290">
+      <created>1651691103713</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1651691103713</updated>
+    </task>
+    <option name="localTasksCounter" value="95" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -539,8 +540,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="User assignStances updated to Sprint4 requirements&#10;I think this is correct." />
-    <MESSAGE value="Hashtag stances written to file.&#10;Option 4 in the WriteHashtags file writes the all hashtags and their associated stance to a file. &#10;hashtagStances saved with the output." />
     <MESSAGE value="Hashtag stances written to file.&#10;Option 4 in the WriteHashtags file writes the all hashtags and their associated stance to a file. &#10;hashtagStances saved with the output. However, still errors with some hashtags like trailing... and miscellaneous characters before as well as after the hashtag." />
     <MESSAGE value="JAR added.&#10;Run from outside the swe-project directory: java -jar swe-project/out/artifacts/swe-project.jar&#10;Output is written to swe-project/VaxData/Sprint5" />
     <MESSAGE value="Updated Stances.&#10;1 iteration to 15." />
@@ -564,7 +563,9 @@
     <MESSAGE value="More tweets collected (107,677 users)." />
     <MESSAGE value="Duplicate Users handled.&#10;Streaming tweets checks if the user is in the dataset before adding them now. Roughly 40,000 duplicate users in vax tweets users.txt. (about 70,260 unique users)." />
     <MESSAGE value="Tweets collected (138,128)." />
-    <option name="LAST_COMMIT_MESSAGE" value="Tweets collected (138,128)." />
+    <MESSAGE value="Tweets collected (164,725)." />
+    <MESSAGE value="Tweets collected (164,725).&#10;Number of tweets: 164725&#10;Number of users: 93290" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tweets collected (164,725).&#10;Number of tweets: 164725&#10;Number of users: 93290" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
