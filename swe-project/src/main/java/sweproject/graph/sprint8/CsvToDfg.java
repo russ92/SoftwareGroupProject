@@ -5,7 +5,19 @@ import java.util.Scanner;
 
 public class CsvToDfg {
 
-    public static void main(String[] args) throws Exception {
+    public static void csvToDfg(){
+        try {
+            hashtagToUser();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+        try {
+            userToHashtag();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+    public static void hashtagToUser() throws Exception {
         String dfgFilePath = "swe-project/VaxData/Sprint8/hashtagToUser.dfg";
         String text = "",key ="",header="nodedef>name",nodeHeader="edgedef>node1,node2";
         int i = 0;
@@ -36,7 +48,7 @@ public class CsvToDfg {
          sc.close();
          //closes the scanner
     }
-    public static void userToHashtag(String[] args) throws Exception {
+    public static void userToHashtag() throws Exception {
         String dfgFilePath = "swe-project/VaxData/Sprint8/userToHashtag.dfg";
         String text = "",key ="",header="nodedef>name",nodeHeader="edgedef>node1,node2";
         int i = 0;

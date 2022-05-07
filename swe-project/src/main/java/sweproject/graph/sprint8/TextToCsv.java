@@ -9,7 +9,7 @@ import java.util.StringTokenizer;
 
 public class TextToCsv {
 
-    public static void main(String[] args) throws Exception {
+    public static void textToCsv() throws Exception {
 
         String textFilePath = "swe-project/VaxData/Sprint6/hashtagToUser.txt";
         String csvFilePath = "swe-project/src/main/java/sweproject/graph/giphi/hashtagToUser.csv";
