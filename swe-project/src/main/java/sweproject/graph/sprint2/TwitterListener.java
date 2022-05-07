@@ -45,7 +45,7 @@ public class TwitterListener extends StatusAdapter {
         //ToDo: Catch any duplicate users before writing them to the file
         //This should work
         if(!storedUsers.containsKey(user.getUserhandle())) {
-            storedUsers.put(user.getUserhandle(), storedUsers.size() - 1);
+            storedUsers.put(user.getUserhandle(), user);
             try (FileWriter fw2 = new FileWriter(prop.getUserFilepath(), true);
                  BufferedWriter bw2 = new BufferedWriter(fw2);
                  PrintWriter out = new PrintWriter(bw2)) {
@@ -57,19 +57,19 @@ public class TwitterListener extends StatusAdapter {
     }
 
     // Hashtable to track the usernames in the dataset.
-    private static Hashtable<String, Integer> storedUsers;
+    private static Hashtable<String, User> storedUsers;
 
-    public static Hashtable<String, Integer> getStoredUsers() {
+    public static Hashtable<String, User> getStoredUsers() {
         return storedUsers;
     }
-    public static void setStoredUsers(Hashtable<String, Integer> storedUsers) {
+    public static void setStoredUsers(Hashtable<String, User> storedUsers) {
         TwitterListener.storedUsers = storedUsers;
     }
 
-    public static Hashtable<String, Integer> readStoredUsers(){
+    public static Hashtable<String, User> readStoredUsers(){
         GetProperties prop = new GetProperties();
 
-        Hashtable<String, Integer> users = new Hashtable<>();
+        Hashtable<String, User> users = new Hashtable<>();
         try{
             BufferedReader buf = new BufferedReader(new FileReader(prop.getUserFilepath()));
             String lineJustFetched;
@@ -83,10 +83,11 @@ public class TwitterListener extends StatusAdapter {
                     String[] lineIn = lineJustFetched.split("\t");
                     if (lineIn.length == 4 && lineIn[0].startsWith("@")) {
                         String name = lineIn[0];
-                        users.put(name, count);
+                        int followers = Integer.parseInt(lineIn[3]);
+                        User user = new User(name.substring(1), lineIn[1], lineIn[2], followers);
+                        users.put(name, user);
                     }
                 }
-                count++;
             }
 
             buf.close();

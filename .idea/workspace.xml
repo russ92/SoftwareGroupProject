@@ -9,11 +9,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="Tweets collected (164,725).&#10;Number of tweets: 164725&#10;Number of users: 93290">
+    <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="Tweets collected (211,337).&#10;Number of tweets: 211337&#10;Number of users: 112186">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swe-project/VaxData/vax tweets users.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/vax tweets users.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swe-project/VaxData/vax tweets.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/vax tweets.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/Configuration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint2/TwitterListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint2/TwitterListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/Configuration.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/Configuration.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,20 +182,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1648254455717</updated>
-    </task>
-    <task id="LOCAL-00046" summary="Cleaned up folder, end of sprint 4.">
-      <created>1649633596232</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1649633596232</updated>
-    </task>
-    <task id="LOCAL-00047" summary="Initial implementation of Hashtag Graph.&#10;Not working overall. Main error, extracting only the hashtags.&#10;Also, errors when creating the inverted graph -NullPointException">
-      <created>1650039223762</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1650039223762</updated>
     </task>
     <task id="LOCAL-00048" summary="Bug fixed.&#10;Scanner scans next integer, instead of having to enter choice multiple times.">
       <created>1650059748325</created>
@@ -524,7 +512,21 @@
       <option name="project" value="LOCAL" />
       <updated>1651691103713</updated>
     </task>
-    <option name="localTasksCounter" value="95" />
+    <task id="LOCAL-00095" summary="Tweets collected (211,337).&#10;Number of tweets: 211337&#10;Number of users: 112186">
+      <created>1651841977741</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1651841977751</updated>
+    </task>
+    <task id="LOCAL-00096" summary="Tweets collected (211,337).&#10;Number of tweets: 211337&#10;Number of users: 112186">
+      <created>1651842016921</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1651842016921</updated>
+    </task>
+    <option name="localTasksCounter" value="97" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -540,7 +542,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Hashtag stances written to file.&#10;Option 4 in the WriteHashtags file writes the all hashtags and their associated stance to a file. &#10;hashtagStances saved with the output. However, still errors with some hashtags like trailing... and miscellaneous characters before as well as after the hashtag." />
     <MESSAGE value="JAR added.&#10;Run from outside the swe-project directory: java -jar swe-project/out/artifacts/swe-project.jar&#10;Output is written to swe-project/VaxData/Sprint5" />
     <MESSAGE value="Updated Stances.&#10;1 iteration to 15." />
     <MESSAGE value="Part 3b." />
@@ -565,7 +566,8 @@
     <MESSAGE value="Tweets collected (138,128)." />
     <MESSAGE value="Tweets collected (164,725)." />
     <MESSAGE value="Tweets collected (164,725).&#10;Number of tweets: 164725&#10;Number of users: 93290" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tweets collected (164,725).&#10;Number of tweets: 164725&#10;Number of users: 93290" />
+    <MESSAGE value="Tweets collected (211,337).&#10;Number of tweets: 211337&#10;Number of users: 112186" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tweets collected (211,337).&#10;Number of tweets: 211337&#10;Number of users: 112186" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
