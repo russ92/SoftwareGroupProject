@@ -117,9 +117,10 @@ public class CollectData {
         //collectTweets();
         Hashtable<Long, Tweet> t = StoredData.readStoredTweets();
         System.out.println("Number of tweets: " + t.size());
+        System.out.println( t);
 
         Hashtable<String, User> u = StoredData.readStoredUsers();
-        System.out.println("Number of users: " + u.size());
+        //System.out.println("Number of users: " + u.size());
 
 //        try (FileWriter fw2 = new FileWriter("swe-project/VaxData/vax tweets.txt", true);
 //             BufferedWriter bw2 = new BufferedWriter(fw2);

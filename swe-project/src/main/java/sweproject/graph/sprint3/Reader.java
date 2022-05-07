@@ -32,7 +32,7 @@ public class Reader {
                     // Using the data we collected.
                     // if (lineIn.length == 5 && lineIn[2].startsWith("RT @")) {
 
-                    if (lineIn.length == 3 && lineIn[2].startsWith("RT @")) {
+                    if (lineIn.length == 5 && lineIn[2].startsWith("RT @")) {
                         String user1 = lineIn[1];
                         String user2 = lineIn[2].substring(lineIn[2].indexOf("@"), lineIn[2].indexOf(":"));
                         tweetsGraph.addArc(user1, user2, 1);

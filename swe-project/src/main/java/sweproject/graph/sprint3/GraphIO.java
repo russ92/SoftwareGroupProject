@@ -20,9 +20,9 @@ public class GraphIO {
                 Scanner scn = new Scanner(System.in);
                 System.out.println("1 to write the graph to a text file \n" +
                                     "OR 2 to read a graph in from text file \n" +
-                                    "OR 3 to print top 100 angels to a file \n" +
-                                    "OR 4 to print top 100 retweeted angels to a file \n" +
-                                    "OR 5 to print stances of users to a file:");
+                                    "OR 3 to print top 100 users who retweet the most to a text file (Default stances of '0') \n" +
+                                    "OR 4 to print top 100 angels (evangelists) to a text file (Default stances of '0') \n" +
+                                    "OR 5 to print stances of all users to a file:");
 
                 int choice = scn.nextInt();
 
@@ -89,11 +89,11 @@ public class GraphIO {
 
     private static void writeAngelsToFile(List<Evangelists> angels) {
         String path = fileName(1);
-        File graph = new File(path);
+        File file = new File(path);
         BufferedWriter bf = null;
         try {
             System.out.println("Writing to file...");
-            bf = new BufferedWriter(new FileWriter(graph));
+            bf = new BufferedWriter(new FileWriter(file));
             // String to be written to file.
             StringBuilder toFile = new StringBuilder();
             for (int i = 0; i < 100; i++){

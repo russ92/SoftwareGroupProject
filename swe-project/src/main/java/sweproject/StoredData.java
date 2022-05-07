@@ -25,14 +25,13 @@ public class StoredData {
 
     public static Hashtable<Long, Tweet> readStoredTweets(){
         GetProperties prop = new GetProperties();
+        DateFormat df = new SimpleDateFormat("EEE MMM dd kk:mm:ss z yyyy", Locale.ENGLISH);
 
         Hashtable<Long, Tweet> tweets = new Hashtable<>();
         try{
             //BufferedReader buf = new BufferedReader(new FileReader("swe-project\\VaxData\\provided\\vax tweets.txt"));
             BufferedReader buf = new BufferedReader(new FileReader(prop.getTweetFilepath()));
             String lineJustFetched;
-
-            DateFormat df = new SimpleDateFormat("EEE MMM dd kk:mm:ss z yyyy", Locale.ENGLISH);
 
             while(true){
                 lineJustFetched = buf.readLine();
@@ -43,7 +42,7 @@ public class StoredData {
                     //if (lineIn.length == 4 && lineIn[1].startsWith("@")) {
                     if (lineIn.length == 5 && lineIn[1].startsWith("@")) {
                         long id = Long.parseLong(lineIn[0]);
-                        String name = lineIn[1];
+                        String name = lineIn[1].substring(1);
                         Date date =  df.parse(lineIn[4]);
                         Tweet tweet = new Tweet(Long.parseLong(lineIn[0]), name, lineIn[2], Integer.parseInt(lineIn[3]), date);
                         tweets.put(id, tweet);
