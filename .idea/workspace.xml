@@ -9,14 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="Sprint 1: Collecting old tweets working.&#10;Searches for each hashtag individually.&#10;New class added, StoredData, which reads the data already collected into hashtables to avoid duplication.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/vax tweets users.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/vax tweets.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/Configuration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/Configuration.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/Configuration.class" afterDir="false" />
-    </list>
+    <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="Old Tweets collected (229,942).&#10;Number of tweets: 229942&#10;Number of users: 119255" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -182,13 +175,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1648254455717</updated>
-    </task>
-    <task id="LOCAL-00052" summary="Rearranged folders by sprint/week">
-      <created>1650061837378</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1650061837378</updated>
     </task>
     <task id="LOCAL-00053" summary="Rearranged folders by sprint/week">
       <created>1650062315937</created>
@@ -526,7 +512,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651925266138</updated>
     </task>
-    <option name="localTasksCounter" value="101" />
+    <task id="LOCAL-00101" summary="Old Tweets collected (229,942).&#10;Number of tweets: 229942&#10;Number of users: 119255">
+      <created>1651927564435</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1651927564435</updated>
+    </task>
+    <option name="localTasksCounter" value="102" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -542,7 +535,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Write to file.&#10;Sprint 5." />
     <MESSAGE value="JARs added.&#10;Sprint 5" />
     <MESSAGE value="Working Maven JAR.&#10;Sprint 5" />
     <MESSAGE value="HashtagGraph class created.&#10;Not working." />
@@ -567,7 +559,8 @@
     <MESSAGE value="Tweets collected (227,890).&#10;Number of tweets: 227890&#10;Number of users: 118244" />
     <MESSAGE value="Duplicate users removed from: vax tweets users.txt&#10;Number of tweets: 227945&#10;Number of users: 118267" />
     <MESSAGE value="Sprint 1: Collecting old tweets working.&#10;Searches for each hashtag individually.&#10;New class added, StoredData, which reads the data already collected into hashtables to avoid duplication." />
-    <option name="LAST_COMMIT_MESSAGE" value="Sprint 1: Collecting old tweets working.&#10;Searches for each hashtag individually.&#10;New class added, StoredData, which reads the data already collected into hashtables to avoid duplication." />
+    <MESSAGE value="Old Tweets collected (229,942).&#10;Number of tweets: 229942&#10;Number of users: 119255" />
+    <option name="LAST_COMMIT_MESSAGE" value="Old Tweets collected (229,942).&#10;Number of tweets: 229942&#10;Number of users: 119255" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -576,11 +569,6 @@
           <properties class="java.lang.NullPointerException" package="java.lang" />
           <option name="timeStamp" value="1" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/swe-project/src/main/java/sweproject/Configuration.java</url>
-          <line>121</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

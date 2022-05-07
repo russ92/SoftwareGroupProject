@@ -7,7 +7,6 @@ import twitter4j.Twitter;
 import twitter4j.conf.ConfigurationBuilder;
 
 import java.io.*;
-import java.lang.reflect.Array;
 import java.util.*;
 
 public class CollectData {
@@ -24,11 +23,12 @@ public class CollectData {
     }
 
     //Todo: Find a way to stop streaming tweets without closing the whole application/JAR
-    public static void streamTweets(TwitterStreamRunner tsr) throws TwitterException, IOException {
+    public static void streamTweets(TwitterStreamRunner tsr){
         try {
             tsr.start();
         } catch (Exception e) {
             stopStreamTweets(tsr);
+            System.out.println("--- SEARCH FAILED ---\n" + e.getLocalizedMessage());
         }
     }
     public static void stopStreamTweets(TwitterStreamRunner tsr) {
@@ -36,8 +36,7 @@ public class CollectData {
         tsr.shutdown();
     }
 
-    //Todo: Collecting old tweets doesn't work
-    public static void collectTweets() throws TwitterException, IOException {
+    public static void collectTweets() {
 
         GetProperties prop = new GetProperties();
 
@@ -98,7 +97,6 @@ public class CollectData {
                  PrintWriter out = new PrintWriter(bw)) {
                 out.print(tweet);
             } catch (Exception e) {
-                // TODO: handle exception
                 System.out.println("--- ERROR WRITING TWEET ---\t\t" + e.getLocalizedMessage() + "\n");
             }
         }
@@ -110,7 +108,6 @@ public class CollectData {
                  PrintWriter out = new PrintWriter(bw)) {
                 out.print(user);
             } catch (Exception e) {
-                // TODO: handle exception
                 System.out.println("--- ERROR WRITING USER ---\t\t" + e.getLocalizedMessage() + "\n");
             }
         }
