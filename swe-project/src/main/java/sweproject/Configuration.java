@@ -119,14 +119,14 @@ public class Configuration {
         Hashtable<String, User> u = TwitterListener.readStoredUsers();
         System.out.println("Number of users: " + u.size());
 
-        try (FileWriter fw2 = new FileWriter("swe-project/VaxData/vax tweetsusers.txt", true);
-             BufferedWriter bw2 = new BufferedWriter(fw2);
-             PrintWriter out = new PrintWriter(bw2)) {
-            for(String user: u.keySet()) {
-                out.print(u.get(user));
-            }
-        } catch (Exception e) {
-            System.out.println("--- ERROR WRITING USER ---\n" + e.getLocalizedMessage());
-        }
+//        try (FileWriter fw2 = new FileWriter("swe-project/VaxData/vax tweets users.txt", true);
+//             BufferedWriter bw2 = new BufferedWriter(fw2);
+//             PrintWriter out = new PrintWriter(bw2)) {
+//            for(String user: u.keySet()) {
+//                out.print(u.get(user));
+//            }
+//        } catch (Exception e) {
+//            System.out.println("--- ERROR WRITING USER ---\n" + e.getLocalizedMessage());
+//        }
     }
 }
