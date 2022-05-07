@@ -9,16 +9,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="Duplicate users removed from: vax tweets users.txt&#10;Number of tweets: 227945&#10;Number of users: 118267">
-      <change afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/StoredData.java" afterDir="false" />
+    <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="Sprint 1: Collecting old tweets working.&#10;Searches for each hashtag individually.&#10;New class added, StoredData, which reads the data already collected into hashtables to avoid duplication.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/vax tweets users.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/vax tweets users.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/vax tweets.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/vax tweets.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/vax tweets users.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/vax tweets.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/Configuration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint2/TwitterListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint2/TwitterListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint2/TwitterStreamRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint2/TwitterStreamRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/Configuration.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/Configuration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint2/TwitterListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint2/TwitterListener.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,9 +91,9 @@
       <recent name="C:\Users\nickl\OneDrive\Desktop\SoftwareEngineering\git\swe-project\VaxData\Graphs" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Configuration">
-    <configuration name="Configuration" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="sweproject.Configuration" />
+  <component name="RunManager" selected="Application.CollectData">
+    <configuration name="CollectData" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="sweproject.CollectData" />
       <module name="swe" />
       <extension name="coverage">
         <pattern>
@@ -161,17 +158,17 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Configuration" />
       <item itemvalue="Application.WriteAnalysis" />
       <item itemvalue="Application.Main" />
       <item itemvalue="Application.TwitterListener" />
       <item itemvalue="Application.HashtagAnalysis" />
+      <item itemvalue="Application.CollectData" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Configuration" />
-        <item itemvalue="Application.HashtagAnalysis" />
+        <item itemvalue="Application.CollectData" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.HashtagAnalysis" />
         <item itemvalue="Application.TwitterListener" />
         <item itemvalue="Application.WriteAnalysis" />
       </list>
@@ -185,20 +182,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1648254455717</updated>
-    </task>
-    <task id="LOCAL-00050" summary="Hashtags Graph working.&#10;By splitting the tweet text into a string array, the graph is able to read all the hashtags separately.&#10;Prints the graph through the WriteHashtags class.">
-      <created>1650060819125</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1650060819125</updated>
-    </task>
-    <task id="LOCAL-00051" summary="Rearranged folders by sprint/week">
-      <created>1650061673912</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1650061673912</updated>
     </task>
     <task id="LOCAL-00052" summary="Rearranged folders by sprint/week">
       <created>1650061837378</created>
@@ -529,7 +512,21 @@
       <option name="project" value="LOCAL" />
       <updated>1651912756224</updated>
     </task>
-    <option name="localTasksCounter" value="99" />
+    <task id="LOCAL-00099" summary="Sprint 1: Collecting old tweets working.&#10;Searches for each hashtag individually.&#10;New class added, StoredData, which reads the data already collected into hashtables to avoid duplication.">
+      <created>1651925128226</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1651925128226</updated>
+    </task>
+    <task id="LOCAL-00100" summary="Sprint 1: Collecting old tweets working.&#10;Searches for each hashtag individually.&#10;New class added, StoredData, which reads the data already collected into hashtables to avoid duplication.">
+      <created>1651925266138</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1651925266138</updated>
+    </task>
+    <option name="localTasksCounter" value="101" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -545,7 +542,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Part 3b." />
     <MESSAGE value="Write to file.&#10;Sprint 5." />
     <MESSAGE value="JARs added.&#10;Sprint 5" />
     <MESSAGE value="Working Maven JAR.&#10;Sprint 5" />
@@ -570,7 +566,8 @@
     <MESSAGE value="Tweets collected (211,337).&#10;Number of tweets: 211337&#10;Number of users: 112186" />
     <MESSAGE value="Tweets collected (227,890).&#10;Number of tweets: 227890&#10;Number of users: 118244" />
     <MESSAGE value="Duplicate users removed from: vax tweets users.txt&#10;Number of tweets: 227945&#10;Number of users: 118267" />
-    <option name="LAST_COMMIT_MESSAGE" value="Duplicate users removed from: vax tweets users.txt&#10;Number of tweets: 227945&#10;Number of users: 118267" />
+    <MESSAGE value="Sprint 1: Collecting old tweets working.&#10;Searches for each hashtag individually.&#10;New class added, StoredData, which reads the data already collected into hashtables to avoid duplication." />
+    <option name="LAST_COMMIT_MESSAGE" value="Sprint 1: Collecting old tweets working.&#10;Searches for each hashtag individually.&#10;New class added, StoredData, which reads the data already collected into hashtables to avoid duplication." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -579,13 +576,10 @@
           <properties class="java.lang.NullPointerException" package="java.lang" />
           <option name="timeStamp" value="1" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
+        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/swe-project/src/main/java/sweproject/Configuration.java</url>
-          <line>119</line>
-          <properties class="sweproject.Configuration" method="main">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="3" />
+          <line>121</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

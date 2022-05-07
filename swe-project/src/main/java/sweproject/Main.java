@@ -31,9 +31,9 @@ public class Main {
             if (choice == 0) {
                 incomplete = false;
             } else if (choice == 1) {
-                Configuration.collectTweets();
+                CollectData.collectTweets();
             } else if (choice == 2) {
-                Configuration.configureStream();
+                CollectData.configureStream();
                 incomplete = false;
             } else if (choice == 3) {
                 GraphIO.graphIO();
