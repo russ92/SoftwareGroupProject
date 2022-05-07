@@ -2,6 +2,7 @@ package sweproject.graph.sprint2;
 
 import org.springframework.stereotype.Component;
 import sweproject.GetProperties;
+import sweproject.StoredData;
 import sweproject.graph.sprint2.StreamRunner;
 import sweproject.graph.sprint2.TwitterListener;
 import twitter4j.FilterQuery;
@@ -32,7 +33,7 @@ public class TwitterStreamRunner implements StreamRunner {
     public void start() throws TwitterException {
         GetProperties prop = new GetProperties();
 
-        TwitterListener.setStoredUsers(TwitterListener.readStoredUsers());
+        StoredData.setStoredUsers(StoredData.readStoredUsers());
 
         twitterStream = new TwitterStreamFactory().getInstance();
         twitterStream.addListener(twitterListener);
