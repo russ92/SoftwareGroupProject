@@ -3,7 +3,7 @@ package sweproject.graph.sprint3;
 import sweproject.graph.sprint4.Evangelists;
 
 import java.util.*;
-public class TwitterGraph implements Graph, Arc {
+public class TwitterGraph extends RetweetGraph implements Arc {
 
     private final Map<String, Set<String>> list = new HashMap<>();
     private final Map<String, Map<String, Integer>> weightedList = new HashMap<>();
@@ -90,6 +90,7 @@ public class TwitterGraph implements Graph, Arc {
         return angels;
     }
 
+    @Override
     public int getTotalRetweets(String user){
         int count = 0;
         if(weightedList.containsKey(user)) {
@@ -99,18 +100,20 @@ public class TwitterGraph implements Graph, Arc {
         }
         return count;
     }
-
-    public int getTotalTimesRetweeted(String user){
+    @Override
+    public int getTotalRetweetsInverted(String user){
         int count = 0;
-        for(String u : invertedWeightedList.get(user).keySet()){
-            count += invertedWeightedList.get(user).get(u);
+        if(invertedList.containsKey(user)) {
+            for (String u : invertedWeightedList.get(user).keySet()) {
+                count += invertedWeightedList.get(user).get(u);
+            }
         }
         return count;
     }
 
     // 2b, 2c, 2d of Sprint 3
     @Override
-    public Set getVertex(String user){
+    public Set<String> getVertex(String user){
         return list.getOrDefault(user, null);
     }
 
@@ -118,21 +121,19 @@ public class TwitterGraph implements Graph, Arc {
     public Boolean doesArcExist(String user1, String user2){
         return list.get(user1).contains(user2);
     }
-
     @Override
-    public int getNumOfRetweets(String user1, String user2){
+    public int getNumOfRetweetsBetweenUsers(String user1, String user2){
+        if(list.get(user1).contains(user2)){
+            return weightedList.get(user1).get(user2);
+        }
+        else return 0;
+    }
+    @Override
+    public int getNumOfRetweetsBetweenInvertedUsers(String user1, String user2){
         if(invertedList.get(user1).contains(user2)){
             return invertedWeightedList.get(user1).get(user2);
         }
         else return 0;
     }
-
-//    public static void main(String [] args){
-//        TwitterGraph g = Reader.Read_Tweets();
-//        Map<String, Map<String, Integer>> m = g.getEdges();
-//        for(String n : m.keySet()) {
-//            System.out.println(g.getTotalRetweets(n));
-//        }
-//    }
 
 }

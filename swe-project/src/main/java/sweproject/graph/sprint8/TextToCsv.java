@@ -57,35 +57,35 @@ public class TextToCsv {
     }
 
     public static void retweetGephiCSV(){
-        TwitterGraph graph = Reader.Read_Tweets();
+        TwitterGraph graph = Reader.readTweets();
         Map<String, Map<String, Integer>> map = graph.invert();
         Hashtable<String, User> users = StoredData.readStoredUsers();
 
         BufferedWriter bf = null;
 
-        try {
-            System.out.println("Creating CSV Nodes...");
-            bf = new BufferedWriter(new FileWriter("swe-project/VaxData/Gephi/nodesRetweetGraph.csv"));
-            // String to be written to file.
-            StringBuilder toFile = new StringBuilder();
-            toFile.append("id").append(",").append("label").append(",").append("numFollowers").append("\n");
-            for(String id: users.keySet()){
-                if(map.containsKey(id)) {
-                    toFile.append(id).append(",").append(id).append(",").append(users.get(id).getNum_followers()).append("\n");
-                }
-            }
-            bf.write(toFile.toString().trim());
-            bf.flush();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            try {
-                assert bf != null;
-                bf.close();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
+//        try {
+//            System.out.println("Creating CSV Nodes...");
+//            bf = new BufferedWriter(new FileWriter("swe-project/VaxData/Gephi/nodesRetweetGraph.csv"));
+//            // String to be written to file.
+//            StringBuilder toFile = new StringBuilder();
+//            toFile.append("id").append(",").append("label").append(",").append("numFollowers").append("\n");
+//            for(String id: users.keySet()){
+//                if(map.containsKey(id)) {
+//                    toFile.append(id).append(",").append(id).append(",").append(users.get(id).getNum_followers()).append("\n");
+//                }
+//            }
+//            bf.write(toFile.toString().trim());
+//            bf.flush();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        } finally {
+//            try {
+//                assert bf != null;
+//                bf.close();
+//            } catch (Exception e) {
+//                e.printStackTrace();
+//            }
+//        }
 
         try {
             System.out.println("Creating CSV Edges... ");
@@ -98,9 +98,6 @@ public class TextToCsv {
                     toFile.append(source).append(",").append(target).append(",").append(weight).append("\n");
                 });
             });
-            for(String id: users.keySet()){
-                toFile.append(id).append(",").append(id).append(",").append(users.get(id).getNum_followers()).append("\n");
-            }
             bf.write(toFile.toString().trim());
             bf.flush();
         } catch (IOException e) {
