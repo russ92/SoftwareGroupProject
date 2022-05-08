@@ -9,27 +9,79 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="Old Tweets collected (229,942).&#10;Number of tweets: 229942&#10;Number of users: 119255">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+    <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="Renamed various methods.&#10;More tweets collected as well.">
+      <change afterPath="$PROJECT_DIR$/swe-project/VaxData/output/testHashtagLexicon.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swe-project/VaxData/output/testRetweetGraph.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swe-project/VaxData/output/testUserStances.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swe-project/VaxData/output/testUserToHashtag.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swe-project/VaxData/output/testsychProfiles.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint8/CsvToDfg.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/vax tweets users.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/vax tweets users.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/vax tweets.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/Gephi/edgesRetweetGraph.csv" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/generated/Gephi/edgesRetweetGraph.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/Gephi/nodesRetweetGraph.csv" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/generated/Gephi/nodesRetweetGraph.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/Graphs/angels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/generated/Graphs/angels.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/Graphs/hashMapStances.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/generated/Graphs/hashMapStances.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/Graphs/mostPopularHashtags.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/generated/Graphs/mostPopularHashtags.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/Graphs/stances.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/generated/Graphs/stances.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/Sprint5/hashtagStances.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/generated/Sprint5/hashtagStances.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/Sprint5/hashtagToUser.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/generated/Sprint5/hashtagToUser.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/Sprint5/userStances.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/generated/Sprint5/userStances.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/Sprint5/userToHashtag.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/generated/Sprint5/userToHashtag.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/Sprint6/100popularHashtags.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/generated/Sprint6/100popularHashtags.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/Sprint6/givenLexicon.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/generated/Sprint6/givenLexicon.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/Sprint6/hashtagGists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/generated/Sprint6/hashtagGists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/Sprint6/hashtagLexicon.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/generated/Sprint6/hashtagLexicon.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/Sprint6/hashtagStances.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/generated/Sprint6/hashtagStances.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/Sprint6/hashtagToUser.dfg" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/generated/Sprint6/hashtagToUser.dfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/Sprint6/hashtagToUser.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/generated/Sprint6/hashtagToUser.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/Sprint6/userToHashtag.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/generated/Sprint6/userToHashtag.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/Sprint7/graphSprint7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/generated/Sprint7/graphSprint7.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/Sprint7/userHashtagReference.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/generated/Sprint7/userHashtagReference.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/Sprint8/hashtagToUser.dfg" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/generated/Sprint8/hashtagToUser.dfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/other/FullGraph.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/generated/other/FullGraph.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/other/Math.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/generated/other/Math.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/other/UpdateList.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/generated/other/UpdateList.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/other/assignedStances.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/generated/other/assignedStances.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/other/listOfAngels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/generated/other/listOfAngels.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/other/listOfInvertedAngels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/generated/other/listOfInvertedAngels.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/output/angels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/output/testAngels.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/output/ourAngels.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/vax tweets users.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/collected/vax tweets users.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/vax tweets.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/collected/vax tweets.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/CollectData.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/CollectData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/StoredData.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/StoredData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint3/Arc.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint3/Arc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint3/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint3/Graph.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint3/GraphIO.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint3/GraphIO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint3/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint3/Reader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint6/HashtagReference.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint6/HashtagReference.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint3/RetweetGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint3/RetweetGraph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint3/TwitterGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint3/TwitterGraph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint4/Stances.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint4/Stances.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint5/Hashtags.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint5/Hashtags.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint5/WriteHashtags.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint5/WriteHashtags.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint6/WriteHashtagGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint6/WriteHashtagGraph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint7/DatasetProbabilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint7/DatasetProbabilities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint7/ReferenceAnalysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint7/ReferenceAnalysis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint7/WriteAnalysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint7/WriteAnalysis.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint8/TextToCsv.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint8/TextToCsv.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swe-project/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swe-project/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/CollectData.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/CollectData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/StoredData.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/StoredData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint3/Arc.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint3/Arc.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint3/Graph.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint3/Graph.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint3/GraphIO.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint3/GraphIO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint3/Reader.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint3/Reader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint6/HashtagReference.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint6/HashtagReference.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint3/RetweetGraph.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint3/RetweetGraph.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint3/TwitterGraph.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint3/TwitterGraph.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint4/Stances.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint4/Stances.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint5/Hashtags.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint5/Hashtags.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint5/WriteHashtags.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint5/WriteHashtags.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint6/WriteHashtagGraph.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint6/WriteHashtagGraph.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint7/DatasetProbabilities.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint7/DatasetProbabilities.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint7/ReferenceAnalysis.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint7/ReferenceAnalysis.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint7/WriteAnalysis.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint7/WriteAnalysis.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint8/TextToCsv.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint8/TextToCsv.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,14 +153,14 @@
       <recent name="C:\Users\nickl\OneDrive\Desktop\SoftwareEngineering\git\swe-project\VaxData" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\nickl\OneDrive\Desktop\SoftwareEngineering\project\swe-project\VaxData\genereated" />
+      <recent name="C:\Users\nickl\OneDrive\Desktop\SoftwareEngineering\project\swe-project\VaxData\collected" />
       <recent name="C:\Users\nickl\OneDrive\Desktop\SoftwareEngineering\project\swe-project\VaxData\Sprint5" />
       <recent name="C:\Users\nickl\OneDrive\Desktop\SoftwareEngineering\project\swe-project\out\artifacts" />
       <recent name="C:\Users\nickl\OneDrive\Desktop\SoftwareEngineering\project\swe-project\VaxData\Graphs" />
-      <recent name="C:\Users\nickl\OneDrive\Desktop\SoftwareEngineering\project\swe-project\VaxData\other" />
-      <recent name="C:\Users\nickl\OneDrive\Desktop\SoftwareEngineering\git\swe-project\VaxData\Graphs" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TextToCsv">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="CollectData" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="sweproject.CollectData" />
       <module name="swe" />
@@ -161,15 +213,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TwitterListener" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="sweproject.graph.sprint2.TwitterListener" />
+    <configuration name="TwitterGraphTests.testGetNumOfRetweets" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="swe" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="sweproject.graph.sprint2.*" />
+          <option name="PATTERN" value="sweproject.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="sweproject" />
+      <option name="MAIN_CLASS_NAME" value="sweproject.TwitterGraphTests" />
+      <option name="METHOD_NAME" value="testGetNumOfRetweets" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -177,17 +232,17 @@
     <list>
       <item itemvalue="Application.TextToCsv" />
       <item itemvalue="Application.Main" />
-      <item itemvalue="Application.TwitterListener" />
       <item itemvalue="Application.HashtagAnalysis" />
       <item itemvalue="Application.CollectData" />
+      <item itemvalue="JUnit.TwitterGraphTests.testGetNumOfRetweets" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TextToCsv" />
+        <item itemvalue="JUnit.TwitterGraphTests.testGetNumOfRetweets" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.CollectData" />
+        <item itemvalue="Application.TextToCsv" />
         <item itemvalue="Application.HashtagAnalysis" />
-        <item itemvalue="Application.TwitterListener" />
       </list>
     </recent_temporary>
   </component>
@@ -199,13 +254,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1648254455717</updated>
-    </task>
-    <task id="LOCAL-00054" summary="Tweets collected.">
-      <created>1650114086294</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1650114086294</updated>
     </task>
     <task id="LOCAL-00055" summary="More tweets collected.">
       <created>1650145686658</created>
@@ -543,7 +591,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651928274949</updated>
     </task>
-    <option name="localTasksCounter" value="103" />
+    <task id="LOCAL-00103" summary="Initial Gephi implementation.">
+      <created>1651956031627</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1651956031627</updated>
+    </task>
+    <option name="localTasksCounter" value="104" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -558,8 +613,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="JARs added.&#10;Sprint 5" />
-    <MESSAGE value="Working Maven JAR.&#10;Sprint 5" />
     <MESSAGE value="HashtagGraph class created.&#10;Not working." />
     <MESSAGE value="HashtagGraph class created.&#10;For the lexicon provided, the #hashtag for the graph is set to the string &quot;Given-Lexicon&quot; in Read_LexiconToHashmap()." />
     <MESSAGE value="Filter out hashtags that are fully uppercase." />
@@ -583,7 +636,9 @@
     <MESSAGE value="Duplicate users removed from: vax tweets users.txt&#10;Number of tweets: 227945&#10;Number of users: 118267" />
     <MESSAGE value="Sprint 1: Collecting old tweets working.&#10;Searches for each hashtag individually.&#10;New class added, StoredData, which reads the data already collected into hashtables to avoid duplication." />
     <MESSAGE value="Old Tweets collected (229,942).&#10;Number of tweets: 229942&#10;Number of users: 119255" />
-    <option name="LAST_COMMIT_MESSAGE" value="Old Tweets collected (229,942).&#10;Number of tweets: 229942&#10;Number of users: 119255" />
+    <MESSAGE value="Initial Gephi implementation." />
+    <MESSAGE value="Renamed various methods.&#10;More tweets collected as well." />
+    <option name="LAST_COMMIT_MESSAGE" value="Renamed various methods.&#10;More tweets collected as well." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -594,7 +649,7 @@
         </breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/swe-project/src/main/java/sweproject/CollectData.java</url>
-          <line>124</line>
+          <line>123</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
