@@ -9,12 +9,13 @@ import java.util.concurrent.ConcurrentHashMap;
 public class Stances {
 
     public static Map<String, Integer> assignStances(){
+
         System.out.println("Creating graph...");
-        TwitterGraph graph = Reader.Read_Tweets();
+        TwitterGraph graph = Reader.readTweets();
         Map<String, Map<String, Integer>> map = graph.getEdges();
         System.out.println("Getting angels (most influential users)...");
 
-        List<Evangelists> angels = Reader.Read_Angels();
+        List<Evangelists> angels = Reader.readAngels();
         ConcurrentHashMap<String, Integer> angelMap = new ConcurrentHashMap<>();
 
         for (Evangelists n : angels) {
@@ -40,7 +41,7 @@ public class Stances {
             }
             iterations++;
         }
-        angelMap.replaceAll((a, v) -> v / (graph.getTotalTimesRetweeted(a)));
+        angelMap.replaceAll((a, v) -> v / (graph.getTotalRetweetsInverted(a)));
 
         return angelMap;
     }
@@ -52,34 +53,13 @@ public class Stances {
         int countPro = 0;
 
         for (String n : angels.keySet()) {
-            if(angels.get(n) == -1000){
+            if(angels.get(n) < 0){
                 countAnti++;
-            } else if(angels.get(n) == 1000){
+            } else if(angels.get(n) > 0){
                 countPro++;
             }
         }
 
         System.out.println("Anti stances: " + countAnti + "\nPro stances: " + countPro);
     }
-
-//    public static void main(String [] args){
-//        Map<String, Integer> n = Stances.assignStances();
-//        System.out.println(n + "\n" + n.size() + " size" );
-//        int max = 0;
-//        int count = 0;
-//        int avg = 0;
-//        for(String u: n.keySet()){
-//            if(n.get(u) > max){
-//                max = n.get(u);
-//            }
-//            if(n.get(u) != 0){
-//                count++;
-//            }
-//            avg += n.get(u);
-//        }
-//        System.out.println("Max = " + max);
-//        System.out.println("Avg = " + avg/n.size());
-//        System.out.println("Count '0' = " + count);
-//        System.out.println("Size: " + n.size());
-//    }
 }
