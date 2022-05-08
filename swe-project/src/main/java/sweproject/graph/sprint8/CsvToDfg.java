@@ -1,6 +1,7 @@
 package sweproject.graph.sprint8;
 import java.io. * ;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class CsvToDfg {
@@ -26,27 +27,32 @@ public class CsvToDfg {
         HashMap<String, String> edge = new HashMap<String, String>();
 
         Scanner sc = new Scanner(new File("swe-project/src/main/java/sweproject/graph/giphi/hashtagToUser.csv"));
-         sc.useDelimiter(",");
+        sc.useDelimiter(",");
 
-         edge.put(key,text);
-         while (sc.hasNext()) {
-             if(text.contains("#")) {
-                 key = sc.toString();
-                 text = sc.next();
-             }
-             else
-                text = sc.next();
-             if(!node.containsValue(text)) {
-                 node.put(i, text);
-                 i++;
-             }
-             edge.put(key,text);
-             //System.out.print(sc.next());
+        edge.put(key,text);
+
+        writer.write(header + "\n");
+        text = sc.next();
+
+        while (sc.hasNext()) {
+            if(sc.toString().contains("#")) {
+                key = sc.toString();
+            }
+            writer.append(text + "\n");
+            text = sc.next();
+            edge.put(key,text);
+            //System.out.print(sc.next());
          }
-         writer.write(header + node.values() + nodeHeader + edge);
-         writer.close();
-         sc.close();
-         //closes the scanner
+
+        writer.append(nodeHeader + "\n");
+
+        for(Map.Entry<String,String> entry : edge.entrySet()){
+            writer.append(edge.get(key)+ "," + edge.get(text) + "\n");
+        }
+
+        writer.close();
+        sc.close();
+        //closes the scanner
     }
     public static void userToHashtag() throws Exception {
         String dfgFilePath = "swe-project/VaxData/Sprint8/userToHashtag.dfg";
@@ -60,21 +66,26 @@ public class CsvToDfg {
         sc.useDelimiter(",");
 
         edge.put(key,text);
+
+        writer.write(header + "\n");
+        text = sc.next();
+
         while (sc.hasNext()) {
-            if(text.contains("@")) {
+            if(sc.toString().contains("@")) {
                 key = sc.toString();
-                text = sc.next();
             }
-            else
-                text = sc.next();
-            if(!node.containsValue(text)) {
-                node.put(i, text);
-                i++;
-            }
+            writer.append(text + "\n");
+            text = sc.next();
             edge.put(key,text);
             //System.out.print(sc.next());
         }
-        writer.write(header + node.values() + nodeHeader + edge);
+
+        writer.append(nodeHeader + "\n");
+
+        for(Map.Entry<String,String> entry : edge.entrySet()){
+            writer.append(edge.get(key)+ "," + edge.get(text) + "\n");
+        }
+
         writer.close();
         sc.close();
         //closes the scanner
