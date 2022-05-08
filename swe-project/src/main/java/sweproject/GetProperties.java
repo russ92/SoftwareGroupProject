@@ -27,45 +27,45 @@ public class GetProperties {
         return hashtags.split(",");
     }
 
-    public String getTweetFilepath() { return myProperties.getProperty("tweets");}
+    public String getTweetFilepath() { return myProperties.getProperty("collectTweets");}
 
-    public String getUserFilepath() { return myProperties.getProperty("users");}
+    public String getUserFilepath() { return myProperties.getProperty("collectUsers");}
 
-    public String getGraphFilepath() { return myProperties.getProperty("graph");}
+    public String getGraphFilepath() { return myProperties.getProperty("retweetGraph");}
 
     public String getAngelFilepath() {
-        return myProperties.getProperty("angels");
+        return myProperties.getProperty("listAngels");
     }
 
     public String getHashMapFilepath() {
-        return myProperties.getProperty("hashmap");
+        return myProperties.getProperty("retweetHashmap");
     }
 
     public String getStancesFilepath() {
-        return myProperties.getProperty("stances");
+        return myProperties.getProperty("stanceGraph");
     }
 
     public String getUserToHashtagFilepath() {
-        return myProperties.getProperty("hashtagToUser");
+        return myProperties.getProperty("hashtagToUserGraph");
     }
 
     public String getHashtagToUserFilepath() {
-        return myProperties.getProperty("userToHashtag");
+        return myProperties.getProperty("userToHashtagGraph");
     }
 
     public String getSprintFolderFilepath() {
-        return myProperties.getProperty("sprint");
+        return myProperties.getProperty("sprintOutput");
     }
 
     public String getPrintToFilepath() {
-        return myProperties.getProperty("print");
+        return myProperties.getProperty("printOutput");
     }
 
     public String getLexiconFilepath() { return myProperties.getProperty("lexicon"); }
 
-    public String getHashtagFilepath() { return myProperties.getProperty("hashtag"); }
+    public String getHashtagFilepath() { return myProperties.getProperty("hashtagStances"); }
 
-    public String getHashtagReferenceFilepath() { return myProperties.getProperty("references"); }
+    public String getHashtagReferenceFilepath() { return myProperties.getProperty("profileReferences"); }
 
     public String getUserStancesFilepath() { return myProperties.getProperty("userStances"); }
 }

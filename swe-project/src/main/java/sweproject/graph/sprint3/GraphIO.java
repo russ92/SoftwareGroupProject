@@ -45,7 +45,7 @@ public class GraphIO {
                     incomplete = false;
                 } else if (choice == 4) {
                     System.out.println("Creating graph...");
-                    TwitterGraph graph = Reader.readHashMap();
+                    TwitterGraph graph = Reader.readTweets();
                     System.out.println("Creating list of retweet angels...");
                     List<Evangelists> angels = graph.getInvertedEvangelists();
                     writeAngelsToFile(angels);

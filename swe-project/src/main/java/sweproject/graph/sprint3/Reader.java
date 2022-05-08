@@ -14,7 +14,7 @@ public class Reader {
 
         TwitterGraph tweetsGraph = new TwitterGraph();
         try{
-            BufferedReader buf = new BufferedReader(new FileReader(prop.getGraphFilepath()));
+            BufferedReader buf = new BufferedReader(new FileReader(prop.getTweetFilepath()));
             String lineJustFetched;
 
             while(true){

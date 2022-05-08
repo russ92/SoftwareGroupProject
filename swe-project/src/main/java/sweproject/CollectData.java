@@ -112,23 +112,4 @@ public class CollectData {
             }
         }
     }
-
-    public static void main(String[] args) {
-        //collectTweets();
-        Hashtable<Long, Tweet> t = StoredData.readStoredTweets();
-        System.out.println("Number of tweets: " + t.size());
-
-        Hashtable<String, User> u = StoredData.readStoredUsers();
-        System.out.println("Number of users: " + u.size());
-
-//        try (FileWriter fw2 = new FileWriter("swe-project/VaxData/vax tweets.txt", true);
-//             BufferedWriter bw2 = new BufferedWriter(fw2);
-//             PrintWriter out = new PrintWriter(bw2)) {
-//            for(long tweet: t.keySet()) {
-//                out.print(t.get(tweet));
-//            }
-//        } catch (Exception e) {
-//            System.out.println("--- ERROR WRITING USER ---\n" + e.getLocalizedMessage());
-//        }
-    }
 }

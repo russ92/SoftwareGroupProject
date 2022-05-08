@@ -10,20 +10,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="Renamed various methods.&#10;More tweets collected as well.">
-      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/Gephi/nodesRetweetGraph.csv" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/generated/Gephi/nodesRetweetGraph.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/Graphs/mostPopularHashtags.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/generated/Graphs/mostPopularHashtags.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/Graphs/stances.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/generated/Graphs/stances.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/Sprint5/userStances.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/generated/Sprint5/userStances.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/Sprint5/userToHashtag.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/generated/Sprint5/userToHashtag.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/Sprint6/hashtagToUser.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/generated/Sprint6/hashtagToUser.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/Sprint6/userToHashtag.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/generated/Sprint6/userToHashtag.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/Sprint7/userHashtagReference.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/generated/Sprint7/userHashtagReference.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/other/Math.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/generated/other/Math.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/other/UpdateList.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/generated/other/UpdateList.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/other/listOfAngels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/generated/other/listOfAngels.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/other/listOfInvertedAngels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/generated/other/listOfInvertedAngels.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/vax tweets users.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/collected/vax tweets users.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swe-project/VaxData/vax tweets.txt" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/VaxData/collected/vax tweets.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/CollectData.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/CollectData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/GetProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/GetProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint3/GraphIO.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint3/GraphIO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint3/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint3/Reader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/CollectData.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/CollectData.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint3/Reader.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint3/Reader.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,9 +178,9 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TwitterGraphTests.testGetNumOfRetweets" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.CollectData" />
+        <item itemvalue="JUnit.TwitterGraphTests.testGetNumOfRetweets" />
         <item itemvalue="Application.TextToCsv" />
         <item itemvalue="Application.HashtagAnalysis" />
       </list>
@@ -199,20 +194,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1648254455717</updated>
-    </task>
-    <task id="LOCAL-00065" summary="Write to file.&#10;Sprint 5.">
-      <created>1650235499909</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1650235499909</updated>
-    </task>
-    <task id="LOCAL-00066" summary="JARs added.&#10;Sprint 5">
-      <created>1650235858161</created>
-      <option name="number" value="00066" />
-      <option name="presentableId" value="LOCAL-00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1650235858161</updated>
     </task>
     <task id="LOCAL-00067" summary="JARs added.&#10;Sprint 5">
       <created>1650236193684</created>
@@ -543,7 +524,21 @@
       <option name="project" value="LOCAL" />
       <updated>1652014600152</updated>
     </task>
-    <option name="localTasksCounter" value="114" />
+    <task id="LOCAL-00114" summary="Renamed various methods.&#10;More tweets collected as well.">
+      <created>1652014713362</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1652014713362</updated>
+    </task>
+    <task id="LOCAL-00115" summary="Renamed various methods.&#10;More tweets collected as well.">
+      <created>1652014780547</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1652014780547</updated>
+    </task>
+    <option name="localTasksCounter" value="116" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -592,11 +587,6 @@
           <properties class="java.lang.NullPointerException" package="java.lang" />
           <option name="timeStamp" value="1" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/swe-project/src/main/java/sweproject/CollectData.java</url>
-          <line>123</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
