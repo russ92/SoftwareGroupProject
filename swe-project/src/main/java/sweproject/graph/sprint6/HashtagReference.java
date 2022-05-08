@@ -18,7 +18,7 @@ public class HashtagReference {
         this.split = splitUpdate;
     }
 
-    public void updateWeight(String referenceUpdate){
+    public void updateReference(String referenceUpdate){
         this.ref = referenceUpdate;
     }
 

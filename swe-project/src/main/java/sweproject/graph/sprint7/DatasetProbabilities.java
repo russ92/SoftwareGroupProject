@@ -52,8 +52,8 @@ public class DatasetProbabilities {
 
     public static void probabilitiesDriver(){
 
-        HashtagGraph graph = ReferenceAnalysis.graphSprint7();
-        List<Integer> userStances = Reader.Read_UserStances();
+        HashtagGraph graph = ReferenceAnalysis.psychologicalProfileGraph();
+        List<Integer> userStances = Reader.readUserStances();
 
         boolean incomplete = true;
         while (incomplete) {

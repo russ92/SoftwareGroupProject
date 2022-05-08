@@ -18,7 +18,7 @@ public class TwitterGraphTests {
 
     @Test
     public void testGetNumOfRetweets(){
-        assertEquals(graph().getNumOfRetweets("@source", "@Potato"), 10);
+        assertEquals(graph().getNumOfRetweetsBetweenUsers("@source", "@Potato"), 10);
     }
 
     @Test

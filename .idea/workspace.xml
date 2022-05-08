@@ -9,7 +9,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="Old Tweets collected (229,942).&#10;Number of tweets: 229942&#10;Number of users: 119255" />
+    <list default="true" id="73a2f195-ddef-4672-8b38-c080bd790002" name="Changes" comment="Renamed various methods.&#10;More tweets collected as well.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/CollectData.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/CollectData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/GetProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/GetProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint3/GraphIO.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint3/GraphIO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint3/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/java/sweproject/graph/sprint3/Reader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/CollectData.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/CollectData.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint3/Reader.class" beforeDir="false" afterPath="$PROJECT_DIR$/swe-project/target/classes/sweproject/graph/sprint3/Reader.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,6 +63,12 @@
       </map>
     </option>
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectId" id="26tswACS7cHJdQFDlwywtVEGmJh" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -77,14 +93,14 @@
       <recent name="C:\Users\nickl\OneDrive\Desktop\SoftwareEngineering\git\swe-project\VaxData" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\nickl\OneDrive\Desktop\SoftwareEngineering\project\swe-project\VaxData\genereated" />
+      <recent name="C:\Users\nickl\OneDrive\Desktop\SoftwareEngineering\project\swe-project\VaxData\collected" />
       <recent name="C:\Users\nickl\OneDrive\Desktop\SoftwareEngineering\project\swe-project\VaxData\Sprint5" />
       <recent name="C:\Users\nickl\OneDrive\Desktop\SoftwareEngineering\project\swe-project\out\artifacts" />
       <recent name="C:\Users\nickl\OneDrive\Desktop\SoftwareEngineering\project\swe-project\VaxData\Graphs" />
-      <recent name="C:\Users\nickl\OneDrive\Desktop\SoftwareEngineering\project\swe-project\VaxData\other" />
-      <recent name="C:\Users\nickl\OneDrive\Desktop\SoftwareEngineering\git\swe-project\VaxData\Graphs" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.CollectData">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="CollectData" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="sweproject.CollectData" />
       <module name="swe" />
@@ -124,12 +140,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TwitterListener" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="sweproject.graph.sprint2.TwitterListener" />
+    <configuration name="TextToCsv" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="sweproject.graph.sprint8.TextToCsv" />
       <module name="swe" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="sweproject.graph.sprint2.*" />
+          <option name="PATTERN" value="sweproject.graph.sprint8.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -137,33 +153,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WriteAnalysis" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="sweproject.graph.sprint7.WriteAnalysis" />
+    <configuration name="TwitterGraphTests.testGetNumOfRetweets" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="swe" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="sweproject.graph.sprint7.*" />
+          <option name="PATTERN" value="sweproject.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="sweproject" />
+      <option name="MAIN_CLASS_NAME" value="sweproject.TwitterGraphTests" />
+      <option name="METHOD_NAME" value="testGetNumOfRetweets" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.WriteAnalysis" />
+      <item itemvalue="Application.TextToCsv" />
       <item itemvalue="Application.Main" />
-      <item itemvalue="Application.TwitterListener" />
       <item itemvalue="Application.HashtagAnalysis" />
       <item itemvalue="Application.CollectData" />
+      <item itemvalue="JUnit.TwitterGraphTests.testGetNumOfRetweets" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.CollectData" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.CollectData" />
+        <item itemvalue="JUnit.TwitterGraphTests.testGetNumOfRetweets" />
+        <item itemvalue="Application.TextToCsv" />
         <item itemvalue="Application.HashtagAnalysis" />
-        <item itemvalue="Application.TwitterListener" />
-        <item itemvalue="Application.WriteAnalysis" />
       </list>
     </recent_temporary>
   </component>
@@ -175,104 +194,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1648254455717</updated>
-    </task>
-    <task id="LOCAL-00053" summary="Rearranged folders by sprint/week">
-      <created>1650062315937</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1650062315937</updated>
-    </task>
-    <task id="LOCAL-00054" summary="Tweets collected.">
-      <created>1650114086294</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1650114086294</updated>
-    </task>
-    <task id="LOCAL-00055" summary="More tweets collected.">
-      <created>1650145686658</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1650145686658</updated>
-    </task>
-    <task id="LOCAL-00056" summary="Assign stances to hashtags.&#10;Working however, not sure if the math behind the way the stances are assigned is correct i.e. the stance of every user that uses that hashtag is summed and then divided by the number of times the hashtag is used.">
-      <created>1650200294542</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1650200294542</updated>
-    </task>
-    <task id="LOCAL-00057" summary="Assign stances to hashtags.&#10;Working however, not sure if the math behind the way the stances are assigned is correct i.e. the stance of every user that uses that hashtag is summed and then divided by the number of times the hashtag is used.">
-      <created>1650200540923</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1650200540923</updated>
-    </task>
-    <task id="LOCAL-00058" summary="User assignStances updated to Sprint4 requirements&#10;I think this is correct.">
-      <created>1650208142123</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1650208142123</updated>
-    </task>
-    <task id="LOCAL-00059" summary="User assignStances updated to Sprint4 requirements&#10;I think this is correct.">
-      <created>1650210397818</created>
-      <option name="number" value="00059" />
-      <option name="presentableId" value="LOCAL-00059" />
-      <option name="project" value="LOCAL" />
-      <updated>1650210397818</updated>
-    </task>
-    <task id="LOCAL-00060" summary="Hashtag stances written to file.&#10;Option 4 in the WriteHashtags file writes the all hashtags and their associated stance to a file. &#10;hashtagStances saved with the output. However, still errors with some hashtags like trailing... and miscellaneous characters before as well as after the hashtag.">
-      <created>1650211167541</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1650211167541</updated>
-    </task>
-    <task id="LOCAL-00061" summary="JAR added.&#10;Run from outside the swe-project directory: java -jar swe-project/out/artifacts/swe-project.jar&#10;Output is written to swe-project/VaxData/Sprint5">
-      <created>1650213175931</created>
-      <option name="number" value="00061" />
-      <option name="presentableId" value="LOCAL-00061" />
-      <option name="project" value="LOCAL" />
-      <updated>1650213175931</updated>
-    </task>
-    <task id="LOCAL-00062" summary="Updated Stances.&#10;1 iteration to 15.">
-      <created>1650232697846</created>
-      <option name="number" value="00062" />
-      <option name="presentableId" value="LOCAL-00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1650232697846</updated>
-    </task>
-    <task id="LOCAL-00063" summary="Part 3b.">
-      <created>1650235129316</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1650235129316</updated>
-    </task>
-    <task id="LOCAL-00064" summary="Write to file.&#10;Sprint 5.">
-      <created>1650235385663</created>
-      <option name="number" value="00064" />
-      <option name="presentableId" value="LOCAL-00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1650235385663</updated>
-    </task>
-    <task id="LOCAL-00065" summary="Write to file.&#10;Sprint 5.">
-      <created>1650235499909</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1650235499909</updated>
-    </task>
-    <task id="LOCAL-00066" summary="JARs added.&#10;Sprint 5">
-      <created>1650235858161</created>
-      <option name="number" value="00066" />
-      <option name="presentableId" value="LOCAL-00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1650235858161</updated>
     </task>
     <task id="LOCAL-00067" summary="JARs added.&#10;Sprint 5">
       <created>1650236193684</created>
@@ -519,7 +440,105 @@
       <option name="project" value="LOCAL" />
       <updated>1651927564435</updated>
     </task>
-    <option name="localTasksCounter" value="102" />
+    <task id="LOCAL-00102" summary="Old Tweets collected (229,942).&#10;Number of tweets: 229942&#10;Number of users: 119255">
+      <created>1651928274949</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1651928274949</updated>
+    </task>
+    <task id="LOCAL-00103" summary="Initial Gephi implementation.">
+      <created>1651956031627</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1651956031627</updated>
+    </task>
+    <task id="LOCAL-00104" summary="Renamed various methods.&#10;More tweets collected as well.">
+      <created>1652014145260</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1652014145320</updated>
+    </task>
+    <task id="LOCAL-00105" summary="Renamed various methods.&#10;More tweets collected as well.">
+      <created>1652014169954</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1652014169954</updated>
+    </task>
+    <task id="LOCAL-00106" summary="Renamed various methods.&#10;More tweets collected as well.">
+      <created>1652014220330</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1652014220330</updated>
+    </task>
+    <task id="LOCAL-00107" summary="Renamed various methods.&#10;More tweets collected as well.">
+      <created>1652014259339</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1652014259339</updated>
+    </task>
+    <task id="LOCAL-00108" summary="Renamed various methods.&#10;More tweets collected as well.">
+      <created>1652014353019</created>
+      <option name="number" value="00108" />
+      <option name="presentableId" value="LOCAL-00108" />
+      <option name="project" value="LOCAL" />
+      <updated>1652014353019</updated>
+    </task>
+    <task id="LOCAL-00109" summary="Renamed various methods.&#10;More tweets collected as well.">
+      <created>1652014381444</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1652014381444</updated>
+    </task>
+    <task id="LOCAL-00110" summary="Renamed various methods.&#10;More tweets collected as well.">
+      <created>1652014405959</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1652014405959</updated>
+    </task>
+    <task id="LOCAL-00111" summary="Renamed various methods.&#10;More tweets collected as well.">
+      <created>1652014437259</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1652014437259</updated>
+    </task>
+    <task id="LOCAL-00112" summary="Renamed various methods.&#10;More tweets collected as well.">
+      <created>1652014477977</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1652014477977</updated>
+    </task>
+    <task id="LOCAL-00113" summary="Renamed various methods.&#10;More tweets collected as well.">
+      <created>1652014600152</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1652014600152</updated>
+    </task>
+    <task id="LOCAL-00114" summary="Renamed various methods.&#10;More tweets collected as well.">
+      <created>1652014713362</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1652014713362</updated>
+    </task>
+    <task id="LOCAL-00115" summary="Renamed various methods.&#10;More tweets collected as well.">
+      <created>1652014780547</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1652014780547</updated>
+    </task>
+    <option name="localTasksCounter" value="116" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -532,11 +551,8 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="JARs added.&#10;Sprint 5" />
-    <MESSAGE value="Working Maven JAR.&#10;Sprint 5" />
     <MESSAGE value="HashtagGraph class created.&#10;Not working." />
     <MESSAGE value="HashtagGraph class created.&#10;For the lexicon provided, the #hashtag for the graph is set to the string &quot;Given-Lexicon&quot; in Read_LexiconToHashmap()." />
     <MESSAGE value="Filter out hashtags that are fully uppercase." />
@@ -560,7 +576,9 @@
     <MESSAGE value="Duplicate users removed from: vax tweets users.txt&#10;Number of tweets: 227945&#10;Number of users: 118267" />
     <MESSAGE value="Sprint 1: Collecting old tweets working.&#10;Searches for each hashtag individually.&#10;New class added, StoredData, which reads the data already collected into hashtables to avoid duplication." />
     <MESSAGE value="Old Tweets collected (229,942).&#10;Number of tweets: 229942&#10;Number of users: 119255" />
-    <option name="LAST_COMMIT_MESSAGE" value="Old Tweets collected (229,942).&#10;Number of tweets: 229942&#10;Number of users: 119255" />
+    <MESSAGE value="Initial Gephi implementation." />
+    <MESSAGE value="Renamed various methods.&#10;More tweets collected as well." />
+    <option name="LAST_COMMIT_MESSAGE" value="Renamed various methods.&#10;More tweets collected as well." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

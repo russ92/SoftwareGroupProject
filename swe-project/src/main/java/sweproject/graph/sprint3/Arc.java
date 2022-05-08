@@ -3,10 +3,16 @@ package sweproject.graph.sprint3;
 import java.util.Set;
 
 public interface Arc {
-    public Set<String> getVertex(String source);
+     Set<String> getVertex(String source);
 
-    public Boolean doesArcExist(String s, String d);
+     Boolean doesArcExist(String s, String d);
 
-    public int getNumOfRetweets(String s, String d);
+     int getNumOfRetweetsBetweenInvertedUsers(String s, String d);
+
+     int getNumOfRetweetsBetweenUsers(String s, String d);
+
+     int getTotalRetweets(String user);
+
+     int getTotalRetweetsInverted(String user);
 
 }

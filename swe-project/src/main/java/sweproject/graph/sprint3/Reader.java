@@ -9,12 +9,12 @@ import java.util.*;
 
 public class Reader {
 
-    public static TwitterGraph Read_Tweets(){
+    public static TwitterGraph readTweets(){
         GetProperties prop = new GetProperties();
 
         TwitterGraph tweetsGraph = new TwitterGraph();
         try{
-            BufferedReader buf = new BufferedReader(new FileReader(prop.getGraphFilepath()));
+            BufferedReader buf = new BufferedReader(new FileReader(prop.getTweetFilepath()));
             String lineJustFetched;
 
             while(true){
@@ -32,7 +32,7 @@ public class Reader {
                     // Using the data we collected.
                     // if (lineIn.length == 5 && lineIn[2].startsWith("RT @")) {
 
-                    if (lineIn.length == 3 && lineIn[2].startsWith("RT @")) {
+                    if ((lineIn.length == 5 || lineIn.length == 3) && lineIn[2].startsWith("RT @")) {
                         String user1 = lineIn[1];
                         String user2 = lineIn[2].substring(lineIn[2].indexOf("@"), lineIn[2].indexOf(":"));
                         tweetsGraph.addArc(user1, user2, 1);
@@ -49,7 +49,7 @@ public class Reader {
         return tweetsGraph;
     }
 
-    public static List<Evangelists> Read_Angels(){
+    public static List<Evangelists> readAngels(){
         GetProperties prop = new GetProperties();
         List<Evangelists> angels = new ArrayList<>();
 
@@ -80,7 +80,7 @@ public class Reader {
         return angels;
     }
 
-    public static TwitterGraph Read_HashMap() {
+    public static TwitterGraph readHashMap() {
         GetProperties prop = new GetProperties();
         TwitterGraph graph = new TwitterGraph();
 
@@ -116,7 +116,7 @@ public class Reader {
     }
 
 
-    public static Map<String, Integer> Read_Stances() {
+    public static Map<String, Integer> readStances() {
         GetProperties prop = new GetProperties();
         Map<String, Integer> stances = new HashMap<>();
 
@@ -145,7 +145,7 @@ public class Reader {
         }
         return stances;
     }
-    public static Map<String, Integer> Read_StancesHashtags() {
+    public static Map<String, Integer> readHashtagStances() {
         GetProperties prop = new GetProperties();
         Map<String, Integer> stances = new HashMap<>();
 
@@ -175,7 +175,7 @@ public class Reader {
         return stances;
     }
 
-    public static List<Integer> Read_UserStances(){
+    public static List<Integer> readUserStances(){
         GetProperties prop = new GetProperties();
         List<Integer> stances = new ArrayList<>();
 

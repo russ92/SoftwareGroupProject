@@ -10,9 +10,9 @@ public class ReferenceAnalysis {
 
     private static final Hashtable<String, String> opposites = new Hashtable<>();
 
-    public static HashtagGraph graphSprint7() {
+    public static HashtagGraph psychologicalProfileGraph() {
         HashtagGraph graph = new HashtagGraph();
-        Map<String, Map<String, Integer>> userToHashtagMap = Hashtags.Read_Hashtags().getEdges();
+        Map<String, Map<String, Integer>> userToHashtagMap = Hashtags.readHashtags().getEdges();
         Map<String, Map<String, Set<String>>> hashtagSplitMap = HashtagAnalysis.hashtagSplitAsGraph().getEdges();
 
         initializeOpposites();
@@ -37,7 +37,7 @@ public class ReferenceAnalysis {
 
     public static HashtagGraph userHashtagReferenceGraph() {
         HashtagGraph graph = new HashtagGraph();
-        Map<String, Map<String, Integer>> userToHashtagMap = Hashtags.Read_Hashtags().getEdges();
+        Map<String, Map<String, Integer>> userToHashtagMap = Hashtags.readHashtags().getEdges();
         Map<String, Map<String, Set<String>>> hashtagSplitMap = HashtagAnalysis.hashtagSplitAsGraph().getEdges();
 
         for (String user : userToHashtagMap.keySet()) {
@@ -107,19 +107,4 @@ public class ReferenceAnalysis {
         opposites.put("personal", "social");
         opposites.put("social", "personal");
     }
-
-//    public static  void main(String [] args){
-//        Map<String, Map<String, Set<String>>> hashtagSplitMap = ReferenceAnalysis.userHashtagReferenceGraph().getEdges();
-//        System.out.println(hashtagSplitMap);
-//        initializeOpposites();
-//        Set<String> example = new TreeSet<>();
-//        example.add("rejecting");
-//        example.add("accepting");
-//        example.add("ref:vaccine");
-//        example.add("solution");
-//
-//        Set<String> ref = assignReferences(example);
-//        System.out.println(ref);
-//    }
-
 }

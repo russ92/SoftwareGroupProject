@@ -5,14 +5,13 @@ import sweproject.graph.sprint3.Reader;
 import sweproject.graph.sprint3.TwitterGraph;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class Hashtags {
 
-    public static TwitterGraph Read_Hashtags(){
+    public static TwitterGraph readHashtags(){
         GetProperties prop = new GetProperties();
 
         TwitterGraph hashtagGraph = new TwitterGraph();
@@ -33,7 +32,7 @@ public class Hashtags {
                     // Using the data we collected.
                     // if (lineIn.length == 5 && lineIn[2].startsWith("RT @")) {
 
-                    if (lineIn.length == 3 && lineIn[2].contains("#")) {
+                    if ((lineIn.length == 5 || lineIn.length == 3) && lineIn[2].contains("#")) {
                         String user = lineIn[1].trim();
                         String text = lineIn[2].replace("\n", " ").replace("\t", " ").replace(".", " ").replace(",", " ");
                         List<String> hashtags = checkHashtags(text);
@@ -79,12 +78,12 @@ public class Hashtags {
 
     public static Map<String, Integer> assignHashtagStances(){
         System.out.println("Creating graph...");
-        TwitterGraph graph = Read_Hashtags();
+        TwitterGraph graph = readHashtags();
 
         Map<String, Map<String, Integer>> map = graph.getEdges();
         System.out.println("Getting hashtags...");
 
-        Map<String, Integer> users = Reader.Read_Stances();
+        Map<String, Integer> users = Reader.readStances();
 
         ConcurrentHashMap<String, Integer> hashtagMap = new ConcurrentHashMap<>();
 
@@ -101,7 +100,7 @@ public class Hashtags {
             }
         }
 
-        hashtagMap.replaceAll((h, v) -> v / (graph.getTotalTimesRetweeted(h)));
+        hashtagMap.replaceAll((h, v) -> v / (graph.getTotalRetweets(h)));
 
         return hashtagMap;
     }
@@ -109,12 +108,12 @@ public class Hashtags {
     public static Map<String, Integer> assignUserStancesFromHashtags() {
 
         System.out.println("Creating graph...");
-        TwitterGraph hashtags = Hashtags.Read_Hashtags();
+        TwitterGraph hashtags = Hashtags.readHashtags();
         // Hashmap of all Hashtag stances
         Map<String, Map<String, Integer>> initialHashmap = hashtags.getEdges();
 
         System.out.println("Getting hashtag stances...");
-        Map<String, Integer> stances = Reader.Read_StancesHashtags();
+        Map<String, Integer> stances = Reader.readHashtagStances();
 
         // Hashmap with all other users that are going to be assigned a stance
         System.out.println("Getting users who don't have a stance...");

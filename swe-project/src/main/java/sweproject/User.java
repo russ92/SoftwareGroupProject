@@ -2,7 +2,6 @@ package sweproject;
 
 public class User {
 
-
     private String userhandle;
     private String location;
     private String bio;

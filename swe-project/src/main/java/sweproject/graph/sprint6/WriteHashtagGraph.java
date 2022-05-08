@@ -1,8 +1,6 @@
 package sweproject.graph.sprint6;
 
-import sweproject.GetProperties;
-import sweproject.graph.sprint4.Evangelists;
-import sweproject.graph.sprint5.Hashtags;
+import sweproject.graph.sprint3.GraphIO;
 
 import java.io.*;
 import java.util.Map;
@@ -11,7 +9,7 @@ import java.util.Set;
 
 public class WriteHashtagGraph {
 
-    public static void writeHashtagGraph() throws FileNotFoundException {
+    public static void writeHashtagGraph(){
         System.out.println("LEXICON");
 
         boolean incomplete = true;
@@ -43,7 +41,7 @@ public class WriteHashtagGraph {
 
 
     public static void writeToFile(Map<String, Map<String, Set<String>>> map) {
-        String path = fileName(1);
+        String path = GraphIO.fileName(1);
         File graph = new File(path);
         BufferedWriter bf = null;
         try {
@@ -53,9 +51,7 @@ public class WriteHashtagGraph {
             StringBuilder toFile = new StringBuilder();
             map.forEach((K, V)->{
                 toFile.append("\n").append(K).append("\t");
-                V.forEach((X,Y)->{
-                    toFile.append(X).append(":").append(Y).append("\t");
-                });
+                V.forEach((X,Y)-> toFile.append(X).append(":").append(Y).append("\t"));
             });
             bf.write(toFile.toString().trim());
             bf.flush();
@@ -69,46 +65,5 @@ public class WriteHashtagGraph {
                 e.printStackTrace();
             }
         }
-    }
-
-    public static String fileName(int rW) {
-        GetProperties prop = new GetProperties();
-        String name = prop.getSprintFolderFilepath(); // CHANGE THIS PATH IN application.properties (sprint)
-        if (rW == 1) {
-            boolean exists = true;
-            while (exists) {
-                System.out.println("Writing to file...");
-                Scanner scn = new Scanner(System.in);
-                System.out.println("ENTER FILE NAME:");
-                //ToDo : Error handling
-                // String name isn't reset to null if file already exist,
-                // resulting in 'ExistingName.txtNewName.txt' as file's name.
-                name = name + scn.nextLine() + ".txt";
-                File f = new File(name);
-                if (f.exists()) {
-                    System.out.println("FILE: " + name + " ALREADY EXISTS");
-                    //name = "";
-                } else {
-                    exists = false;
-                }
-            }
-        } else {
-            boolean exists = false;
-            while (!exists) {
-                System.out.println("Reading file...");
-                Scanner scn = new Scanner(System.in);
-                System.out.println("ENTER FILE NAME:");
-                name = name + scn.nextLine() + ".txt";
-                System.out.println(name);
-                File f = new File(name);
-                if (f.exists()) {
-                    exists = true;
-                } else {
-                    System.out.println("FILE: " + name + " DOESN'T EXISTS");
-                    //name = "";
-                }
-            }
-        }
-        return name;
     }
 }
