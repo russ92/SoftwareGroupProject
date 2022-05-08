@@ -11,8 +11,8 @@ import java.util.Scanner;
 
 public class GraphIO {
 
-        public static void graphIO() throws FileNotFoundException {
-            System.out.println("GIT");
+        public static void graphIO() {
+            System.out.println("SPRINT 3: RETWEET GRAPH");
 
             boolean incomplete = true;
 
@@ -28,24 +28,24 @@ public class GraphIO {
 
                 if (choice == 1) {
                     System.out.println("Creating graph...");
-                    Map<String, Map<String, Integer>> map = Reader.Read_Tweets().getEdges();
+                    Map<String, Map<String, Integer>> map = Reader.readTweets().getEdges();
                     System.out.println("Writing graph...");
                     writeToFile(map);
                     incomplete = false;
                 } else if (choice == 2) {
-                    TwitterGraph g = Reader.Read_HashMap();
+                    TwitterGraph g = Reader.readHashMap();
                     incomplete = false;
                     System.out.println(g.getEdges());
                 } else if (choice == 3) {
                     System.out.println("Creating graph...");
-                    TwitterGraph graph = Reader.Read_Tweets();
+                    TwitterGraph graph = Reader.readTweets();
                     System.out.println("Creating list of angels...");
                     List<Evangelists> angels = graph.getEvangelists();
                     writeAngelsToFile(angels);
                     incomplete = false;
                 } else if (choice == 4) {
                     System.out.println("Creating graph...");
-                    TwitterGraph graph = Reader.Read_HashMap();
+                    TwitterGraph graph = Reader.readHashMap();
                     System.out.println("Creating list of retweet angels...");
                     List<Evangelists> angels = graph.getInvertedEvangelists();
                     writeAngelsToFile(angels);
@@ -70,9 +70,7 @@ public class GraphIO {
             bf = new BufferedWriter(new FileWriter(graph));
             // String to be written to file.
             StringBuilder toFile = new StringBuilder();
-            map.forEach((K, V)->{
-                toFile.append("\n").append(K).append("\t").append(V);
-            });
+            map.forEach((K, V)-> toFile.append("\n").append(K).append("\t").append(V));
             bf.write(toFile.toString().trim());
             bf.flush();
         } catch (IOException e) {
@@ -124,9 +122,7 @@ public class GraphIO {
             StringBuilder toFile = new StringBuilder();
             map.forEach((K, V)->{
                     toFile.append("\n").append(K).append("\t");
-                V.forEach((X,Y)->{
-                    toFile.append(X).append(":").append(Y).append("\t");
-                });
+                V.forEach((X,Y)-> toFile.append(X).append(":").append(Y).append("\t"));
             });
             bf.write(toFile.toString().trim());
             bf.flush();
@@ -142,8 +138,6 @@ public class GraphIO {
         }
     }
 
-    // int passed in so that the code can differentiate between creating a new
-    // file and loading a file
     public static String fileName(int rW) {
         GetProperties prop = new GetProperties();
         String name = prop.getPrintToFilepath(); // CHANGE THIS PATH IN application.properties
