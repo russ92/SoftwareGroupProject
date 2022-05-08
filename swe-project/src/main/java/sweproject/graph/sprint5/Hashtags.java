@@ -16,7 +16,7 @@ public class Hashtags {
 
         TwitterGraph hashtagGraph = new TwitterGraph();
         try{
-            BufferedReader buf = new BufferedReader(new FileReader(prop.getGraphFilepath()));
+            BufferedReader buf = new BufferedReader(new FileReader(prop.getTweetFilepath()));
             String lineJustFetched;
 
             while(true){
@@ -38,7 +38,7 @@ public class Hashtags {
                         List<String> hashtags = checkHashtags(text);
 
                         for (String h : hashtags) {
-                            if (h.contains("#")) {
+                            if (h.contains("#") && !h.equals("#")) {
                                 hashtagGraph.addArc(user, h, 1);
                             }
                         }
@@ -57,10 +57,17 @@ public class Hashtags {
 
     public static List<String> checkHashtags(String input){
         String[] uncheckedHashtags = input.split(" ");
+        List<String> unchecked = Arrays.asList(uncheckedHashtags);
         List<String> confirmedHashtags = new ArrayList<>();
         for (String uncheckedHashtag : uncheckedHashtags) {
-            if (uncheckedHashtag.contains("#")) {
+            if (uncheckedHashtag.contains("#") && removeLeadingHashtags(uncheckedHashtag).size() == 1) {
                 confirmedHashtags.add(removeLeadingChars(uncheckedHashtag).replaceAll("[^#a-zA-Z ]", ""));
+            } else {
+                //Separate hashtags that are joined eg #NoVaccine#NoBooster
+                List<String> splitUnchecked = removeLeadingHashtags(uncheckedHashtag);
+                for(String split : splitUnchecked) {
+                    confirmedHashtags.add(removeLeadingChars(split).replaceAll("[^#a-zA-Z ]", ""));
+                }
             }
         }
         return confirmedHashtags;
@@ -72,6 +79,15 @@ public class Hashtags {
             sb.deleteCharAt(0);
         }
         return sb.toString();
+    }
+
+    public static List<String> removeLeadingHashtags(String s) {
+        List<String> hashtags = new ArrayList<>();
+        String[] split = s.split("#");
+        for(int i = 1; i < split.length; i++){
+            hashtags.add("#" + split[i].trim());
+        }
+        return hashtags;
     }
 
     //ToDo: Assign mean stances for hashtags from user
@@ -100,7 +116,12 @@ public class Hashtags {
             }
         }
 
-        hashtagMap.replaceAll((h, v) -> v / (graph.getTotalRetweets(h)));
+        for (String a : hashtagMap.keySet()) {
+            int old = hashtagMap.get(a);
+            if((graph.getTotalRetweets(a) - graph.getTotalRetweetsInverted(a)) > 0) {
+                hashtagMap.replace(a, old, (old / (graph.getTotalRetweets(a) - graph.getTotalRetweetsInverted(a))));
+            }
+        }
 
         return hashtagMap;
     }
@@ -140,8 +161,20 @@ public class Hashtags {
             }
         }
 
-        completeHashmap.replaceAll((h, v) -> v / (hashtags.getTotalRetweets(h)));
+//        for (String h : completeHashmap.keySet()) {
+//            if(hashtags.getTotalRetweets(h)-1 > 0) {
+//                completeHashmap.replaceAll((t, v) -> v / (hashtags.getTotalRetweets(t)));
+//            }
+//        }
+
+        for (String a : completeHashmap.keySet()) {
+            int old = completeHashmap.get(a);
+            if((hashtags.getTotalRetweets(a) - hashtags.getTotalRetweetsInverted(a)) > 0) {
+                completeHashmap.replace(a, old, (old / (hashtags.getTotalRetweets(a) - hashtags.getTotalRetweetsInverted(a))));
+            }
+        }
 
         return completeHashmap;
     }
+
 }

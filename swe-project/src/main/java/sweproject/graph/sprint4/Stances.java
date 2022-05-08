@@ -41,7 +41,14 @@ public class Stances {
             }
             iterations++;
         }
-        angelMap.replaceAll((a, v) -> v / (graph.getTotalRetweetsInverted(a)));
+
+        //if you retweet more times than you are retweeted, you influence is considered more neutral
+        for (String a : angelMap.keySet()) {
+            int old = angelMap.get(a);
+            if((graph.getTotalRetweets(a) - graph.getTotalRetweetsInverted(a)) > 0) {
+                angelMap.replace(a, old, (old / (graph.getTotalRetweets(a) - graph.getTotalRetweetsInverted(a))));
+            }
+        }
 
         return angelMap;
     }
@@ -62,4 +69,5 @@ public class Stances {
 
         System.out.println("Anti stances: " + countAnti + "\nPro stances: " + countPro);
     }
+
 }
